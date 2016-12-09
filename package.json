@@ -1,0 +1,20 @@
+{
+  "name": "a-la-mod-mockup",
+  "version": "1.0.0",
+  "description": "site for alamod",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbmills327/alamod.git"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbmills327/alamod/issues"
+  },
+  "homepage": "https://github.com/jbmills327/alamod#readme"
+}

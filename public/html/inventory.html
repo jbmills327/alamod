@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <title>Inventory</title>
+</head>
+
+<body ng-controller="MainCtrl as main">
+
+    <h1>{{ main.greeting }}</h1>
+
+    <ul ng-repeat="inventory in main.inventoryList">
+        <li> {{ inventory.reference }}</li>
+        <li>{{ inventory.description }}</li>
+        <li>{{ inventory.height }}</li>
+        <li>{{ inventory.width }}</li>
+        <li>{{ inventory.depth }}</li>
+        <li>{{ inventory.price }}</li>
+    </ul>
+
+
+    <script type="text/javascript" src="../javascript/module.js"></script>
+    <script type="text/javascript" src="../javascript/myScripts.js"></script>
+    <script type="text/javascript" src="../javascript/factory.js"></script>
+
+</body>
+
+</html>
