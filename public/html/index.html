@@ -6,20 +6,43 @@
     <title>A La Mod</title>
     <link rel="stylesheet" href="../css/main.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 </head>
 
 <body>
     <div class="navBar">
         <h1>a La MOD</h1>
-        <h6><strong>INVENTORY</strong></h6>
+        <a href="javascript:void(0)" style="text-decoration: none; color: black" onclick="openNav()"><h6><strong>INVENTORY</strong></h6></a>
         <h6><strong>LOCATION</strong></h6>
 
     </div>
     <div class="line"></div>
     <img class="mainImage" src="./resources/alamodain.png" alt="" />
     <div class="lineBottom"></div>
+
+    <!-- This is the hamburger menu button that opens the slide menu -->
+    <!-- <button type="button" class="btn btn-default btn-lg openMenu" onclick="openNav()">
+      <span class = "glyphicon glyphicon-menu-hamburger" aria-hidden = "true"></span>MENU
+    </button> -->
+
+    <!-- This is the slide menu -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a data-toggle="modal" data-target="#myModal">Add Adventurer</a>
+        <a data-toggle="modal" data-target="#adventModal">Choose Adventurer</a>
+        <a href="#jumpToAboutUs">About Us</a>
+        <a href="javascript:void(0)" onclick="openNestedNav(); closeNav()">Genres</a>
+        <a href="#howToHelpJump">How to Help</a>
+        <a href="#contactUsJump">Contact</a>
+        <a href="/logout">Logout</a>
+    </div>
+
     <footer>
-        <h5>886 N PALM CANYON DR., PALM SPRINGS, CA 92262, US • PHONE: 760-327-0707 • E-MAIL: <span style = "color: black">Alamodps@icloud.com</span> </h5></footer>
+        <h5>886 N PALM CANYON DR., PALM SPRINGS, CA 92262, US • PHONE: 760-327-0707 • E-MAIL: <span style = "color: black">Alamodps@icloud.com</span> </h5>
+    </footer>
+
+    <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
 </body>
 
 </html>

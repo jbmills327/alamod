@@ -11,6 +11,7 @@ function mainController($http, alamodfactory) {
 
     main.greeting = "This is only a test";
 
+    // Populate the Inventory List from the DB
     main.getInvent = function() {
         // var userId = idToGet
         alamodfactory.getInvent()
@@ -22,4 +23,5 @@ function mainController($http, alamodfactory) {
             });
     }
     main.getInvent();
+
 }
