@@ -10,11 +10,11 @@ function openNav() {
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
-// function openNestedNav() {
-//     document.getElementById("myNestedSidenav").style.width = "250px";
-//     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-//
-// }
+function openNestedSeating() {
+    document.getElementById("myNestedSeating").style.height = "75vh";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+}
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 
@@ -24,7 +24,7 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 
-// function closeNestedNav() {
-//     document.getElementById("myNestedSidenav").style.width = "0";
-//     document.body.style.backgroundColor = "white";
-// }
+function closeNestedSeating() {
+    document.getElementById("myNestedSeating").style.height = "0";
+    document.body.style.backgroundColor = "white";
+}

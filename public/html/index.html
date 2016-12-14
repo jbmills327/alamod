@@ -28,13 +28,25 @@
     <!-- This is the slide menu -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Home</a>
+        <a href="javascript:void(0)" onclick="openNestedSeating(); closeNav()">SEATING</a>
         <a data-toggle="modal" data-target="#myModal">Add Adventurer</a>
         <a data-toggle="modal" data-target="#adventModal">Choose Adventurer</a>
         <a href="#jumpToAboutUs">About Us</a>
         <a href="javascript:void(0)" onclick="openNestedNav(); closeNav()">Genres</a>
         <a href="#howToHelpJump">How to Help</a>
         <a href="#contactUsJump">Contact</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <!-- This is the nested slide menu -->
+    <div id="myNestedSeating" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedSeating()">&times;</a>
+        <a href="/fantasy">Fantasy</a>
+        <a href="/scifi">SciFi</a>
+        <a href="/love">Love</a>
+        <a href="/horror">Spooky</a>
+        <a href="/kids">By Kids for Kids</a>
+        <a href="javascript:void(0)" onclick="closeNestedNav(); openNav()">Back</a>
         <a href="/logout">Logout</a>
     </div>
 
