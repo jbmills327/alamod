@@ -5,13 +5,13 @@
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 
 function openNav() {
-    document.getElementById("mySidenav").style.height = "75vh";
+    document.getElementById("mySidenav").style.height = "50vh";
     // document.getElementById("main").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function openNestedSeating() {
-    document.getElementById("myNestedSeating").style.height = "75vh";
+    document.getElementById("myNestedSeating").style.height = "100vh";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
