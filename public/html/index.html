@@ -4,9 +4,14 @@
 <head>
     <meta charset="utf-8">
     <title>A La Mod</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <!-- My CSS -->
     <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+
 </head>
 
 <body>
@@ -17,8 +22,94 @@
 
     </div>
     <div class="line"></div>
-    <img class="mainImage" src="./resources/alamodain.png" alt="" />
+    <!-- <img class="mainImage" src="./resources/alamodain.png" alt="" /> -->
     <div class="lineBottom"></div>
+
+    <!-- Carousel div -->
+    <div id="genreCarousel" class="carousel slide" data-ride="carousel">
+        <!-- These are the carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#genreCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#genreCarousel" data-slide-to="1"></li>
+            <!-- <li data-target="#genreCarousel" data-slide-to="2"></li>
+            <li data-target="#genreCarousel" data-slide-to="3"></li> -->
+        </ol>
+
+        <!-- This is wrapper that holds the slides -->
+        <div class="carousel-inner" role="listbox">
+            <!-- these are the carousel slides -->
+            <div class="item active">
+
+                <!-- Slide number 1 -->
+                <img id="scifiCarousel" class="carouselPhotos" src="./resources/alamodPractice.jpg" alt="Featured Item" />
+                <div class="carousel-caption">
+                    <a href="/scifi"></a>
+                </div>
+            </div>
+
+            <!-- Slide number 2-->
+            <div class="item">
+                <img class="carouselPhotos" src="./resources/alamodPracticeTwo.jpg" alt="Fantasy" />
+                <div class="carousel-caption">
+                    <a href="/fantasy"></a>
+                </div>
+                <div class="carousel-caption"></div>
+            </div>
+
+            <!-- Slide number 3 -->
+
+            <!-- <div class="item">
+                <div class="sliderSize">
+                    <img class="carouselPhotos" src="" alt="Horror" />
+                </div>
+                <div class="carousel-caption">
+                    <a href="/horror"></a>
+                </div>
+                <div class="carousel-caption"></div>
+            </div> -->
+
+            <!-- Slide number 4 -->
+
+            <!-- <div class="item">
+                <div class="sliderSize">
+                    <img class="carouselPhotos" src="" alt="Love Stories" />
+                </div>
+                <div class="carousel-caption">
+                    <a href="/love"></a>
+                </div>
+                <div class="carousel-caption"></div>
+            </div> -->
+
+            <!-- Slide number 5-->
+
+            <!-- <div class="item">
+                <div class="sliderSize">
+                    <img class="carouselPhotos" src="" alt="Kids" />
+                </div>
+                <div class="carousel-caption">
+                    <a href="/kids"></a>
+                </div>
+                <div class="carousel-caption"></div>
+            </div> -->
+        </div>
+
+
+
+        <!-- controls for carousel -->
+
+        <!-- right control to rotate carousel forward -->
+        <a class="left carousel-control" href="#genreCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <!-- left control to move carousel back to previous -->
+        <a class="right carousel-control" href="#genreCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
 
     <!-- This is the hamburger menu button that opens the slide menu -->
     <!-- <button type="button" class="btn btn-default btn-lg openMenu" onclick="openNav()">

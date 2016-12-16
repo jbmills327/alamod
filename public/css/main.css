@@ -4,13 +4,17 @@ body html {
     text-align: center;
 }
 
+body {
+    /*background: radial-gradient(circle, white 70%, black);*/
+}
+
 .line {
     position: relative;
     width: 1139px;
     height: 3px;
     background-color: grey;
     left: 50%;
-    top: -20px;
+    top: -10px;
     transform: translate(-50%);
 }
 
@@ -20,9 +24,9 @@ body html {
     height: 3px;
     background-color: grey;
     left: 50%;
-    top: 105%;
+    top: 90%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 1;
 }
 
 .mainImage {
@@ -38,7 +42,7 @@ body html {
     /*text-align: center;*/
     justify-content: center;
     align-items: center;
-    margin-top: -25px;
+    margin-top: 10px;
 }
 
 .navBar h1 {
@@ -65,7 +69,7 @@ footer {
     text-align: center;
     font-weight: bold;
     color: #999999;
-    top: 105%;
+    top: 90%;
     /*left: 50%;*/
     /*transform: translate( -50%);*/
 }
@@ -81,12 +85,12 @@ footer {
     /* 0 width - change this with JavaScript */
     position: fixed;
     /* Stay in place */
-    z-index: 2;
+    z-index: 3;
     /* Stay on top */
     top: 0;
     left: 0;
     /*background-color: #111;*/
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     /* Black*/
     overflow-x: hidden;
     /* Disable horizontal scroll */
@@ -127,4 +131,15 @@ footer {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+
+.carouselPhotos {
+    width: 35%;
+    height: 35%;
+    margin: auto;
+}
+
+.carousel {
+    position: absolute;
+    top: 16%;
 }
