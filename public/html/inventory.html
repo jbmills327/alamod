@@ -12,6 +12,10 @@
 
     <h1>{{ main.greeting }}</h1>
 
+    <form class="">
+        <input type="text" placeholder="Search">
+    </form>
+
     <ul ng-repeat="inventory in main.inventoryList">
         <li> {{ inventory.reference }}</li>
         <li>{{ inventory.description }}</li>

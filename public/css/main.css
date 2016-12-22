@@ -4,10 +4,6 @@ body html {
     text-align: center;
 }
 
-body {
-    /*background: radial-gradient(circle, white 70%, black);*/
-}
-
 .line {
     position: relative;
     width: 1139px;
@@ -134,12 +130,24 @@ footer {
 }
 
 .carouselPhotos {
-    width: 35%;
-    height: 35%;
+    position: relative;
+    width: 75%;
+    height: auto;
     margin: auto;
 }
 
 .carousel {
-    position: absolute;
+    /*position: absolute;*/
     top: 16%;
+    width: 100vw;
+    height: 100%;
+}
+
+
+/*.carousel, .item, .active {
+    height: 100%;
+}*/
+
+.carousel-inner {
+    height: 77vh;
 }
