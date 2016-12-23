@@ -52,22 +52,35 @@ function openNestedRugs() {
 }
 
 function openNestedServeware() {
-    document.getElementById("myNestedServeware").style.height = "30vh";
+    document.getElementById("myNestedServeware").style.height = "70vh";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
 function openNestedWallDec() {
-    document.getElementById("myNestedWallDec").style.height = "30vh";
+    document.getElementById("myNestedWallDec").style.height = "50vh";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
 function openNestedGarden() {
-    document.getElementById("myNestedGarden").style.height = "30vh";
+    document.getElementById("myNestedGarden").style.height = "50vh";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
+
+function openNestedDecObj() {
+    document.getElementById("myNestedDecObj").style.height = "50vh";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+}
+
+function openNestedMoreFurn() {
+    document.getElementById("myNestedMoreFurn").style.height = "50vh";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+}
+
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 
 function closeNav() {
@@ -123,5 +136,15 @@ function closeNestedWallDec() {
 
 function closeNestedGarden() {
     document.getElementById("myNestedGarden").style.height = "0";
+    document.body.style.backgroundColor = "white";
+}
+
+function closeNestedDecObj() {
+    document.getElementById("myNestedDecObj").style.height = "0";
+    document.body.style.backgroundColor = "white";
+}
+
+function closeNestedMoreFurn() {
+    document.getElementById("myNestedMoreFurn").style.height = "0";
     document.body.style.backgroundColor = "white";
 }
