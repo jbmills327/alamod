@@ -14,6 +14,12 @@
 
     <form class="">
         <input type="text" placeholder="Search">
+        <!-- This will be for all creators -->
+        <select class="form-control" ng-model="main.newAdventurer.race" ng-options="x for x in main.races"></select>
+        <!-- This will be for all categories -->
+        <select class="form-control" ng-model="main.newAdventurer.race" ng-options="x for x in main.races"></select>
+        <!-- This will be for all periods -->
+        <select class="form-control" ng-model="main.newAdventurer.race" ng-options="x for x in main.races"></select>
     </form>
 
     <ul ng-repeat="inventory in main.inventoryList">

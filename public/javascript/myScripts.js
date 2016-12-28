@@ -10,6 +10,9 @@ function mainController($http, alamodfactory) {
     main.inventoryList = [];
 
     main.greeting = "This is only a test";
+    main.creators = [];
+    main.categories = [];
+    main.periods = [];
 
     // Populate the Inventory List from the DB
     main.getInvent = function() {

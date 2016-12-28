@@ -10,6 +10,12 @@ module.exports = (app) => {
         });
     });
 
+    app.get('/location', (req, res) => {
+        res.sendFile("location.html", {
+            root: './public/html'
+        });
+    });
+
     app.get("/api/inventory", Inv.get);
     app.post("/api/inventory", Inv.create);
 
