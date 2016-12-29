@@ -9,11 +9,7 @@ function mainController($http, alamodfactory) {
     var main = this;
     main.inventoryList = [];
     main.greeting = "This is only a test";
-    main.creator = {
-        "creator": " ",
-        "period": " ",
-        "category": " "
-    };
+    main.search = {};
     main.creators = [
         "Yaakov Agam",
         "Alessandro Albrizzi",
@@ -111,7 +107,6 @@ function mainController($http, alamodfactory) {
 
     // Populate the Inventory List from the DB
     main.getInvent = function() {
-        // var userId = idToGet
         alamodfactory.getInvent()
             .then(function(returnData) {
                 console.log("This is the returndata: ", returnData.data);
@@ -121,5 +116,15 @@ function mainController($http, alamodfactory) {
             });
     }
     main.getInvent();
+
+    // main.searchInventory = function(data) {
+    //     alamodfactory.searchInvent(data)
+    //         .then(function(returnData) {
+    //             console.log("This is the return data: ", returnData.data);
+    //             main.inventoryList = returnData.data;
+    //         }).catch(function(err) {
+    //             console.log("This is the error", err);
+    //         })
+    // }
 
 }

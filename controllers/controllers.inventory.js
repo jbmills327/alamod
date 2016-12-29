@@ -22,6 +22,16 @@ module.exports = {
             res.json(docs);
         })
 
-    }
+    },
+    // search: (req, res) => {
+    //     INV.findOne({
+    //         req.params
+    //     }, (err, docs) => {
+    //         if (err) {
+    //             res.send("This is the error", err)
+    //         }
+    //         res.JSON(docs)
+    //     })
+    // }
 
 }

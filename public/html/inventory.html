@@ -13,20 +13,20 @@
     <h1>{{ main.greeting }}</h1>
 
     <form class="">
-        <input class="form-control" type="text" placeholder="Search">
+        <input class="form-control" type="text" placeholder="Search" ng-model="main.search">
 
         <!-- This will be for all creators -->
-        <select class="form-control" ng-model="main.search.creator" ng-options="x for x in main.creators">
+        <select class="form-control" ng-model="main.search" ng-options="x for x in main.creators">
           <option value="">Browse by Creator</option>
         </select>
 
         <!-- This will be for all categories -->
-        <select class="form-control" ng-model="main.search.category" ng-options="x for x in main.categories">
+        <select class="form-control" ng-model="main.search" ng-options="x for x in main.categories">
           <option value="">Browse by Category</option>
         </select>
 
         <!-- This will be for all periods -->
-        <select class="form-control" ng-model="main.search.period" ng-options="x for x in main.periods">
+        <select class="form-control" ng-model="main.search" ng-options="x for x in main.periods">
           <option value="">Browse by Period</option>
         </select>
     </form>
