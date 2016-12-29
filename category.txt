@@ -1,0 +1,13 @@
+"Seating",
+"Lighting",
+"Case Pieces and Storage",
+"Tables",
+"Mirrors",
+"Folk Art",
+"Asian Art and Furniture",
+"Rug and Carpets",
+"Serve ware, Ceramics, Silver and Glass",
+"Wall Decorations",
+"Building and Garden Elements",
+"Decorative Objects",
+"More Furniture and Collectibles"

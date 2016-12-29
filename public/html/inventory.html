@@ -13,13 +13,22 @@
     <h1>{{ main.greeting }}</h1>
 
     <form class="">
-        <input type="text" placeholder="Search">
+        <input class="form-control" type="text" placeholder="Search">
+
         <!-- This will be for all creators -->
-        <select class="form-control" ng-model="main.newAdventurer.race" ng-options="x for x in main.races"></select>
+        <select class="form-control" ng-model="main.search.creator" ng-options="x for x in main.creators">
+          <option value="">Browse by Creator</option>
+        </select>
+
         <!-- This will be for all categories -->
-        <select class="form-control" ng-model="main.newAdventurer.race" ng-options="x for x in main.races"></select>
+        <select class="form-control" ng-model="main.search.category" ng-options="x for x in main.categories">
+          <option value="">Browse by Category</option>
+        </select>
+
         <!-- This will be for all periods -->
-        <select class="form-control" ng-model="main.newAdventurer.race" ng-options="x for x in main.races"></select>
+        <select class="form-control" ng-model="main.search.period" ng-options="x for x in main.periods">
+          <option value="">Browse by Period</option>
+        </select>
     </form>
 
     <ul ng-repeat="inventory in main.inventoryList">
