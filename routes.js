@@ -16,6 +16,12 @@ module.exports = (app) => {
         });
     });
 
+    app.get('/newListings', (req, res) => {
+        res.sendFile("newListings.html", {
+            root: './public/html'
+        });
+    });
+
     app.get("/api/inventory", Inv.get);
     app.post("/api/inventory", Inv.create);
 

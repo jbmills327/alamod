@@ -7,115 +7,55 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
     <!-- My CSS -->
+    <link rel="stylesheet" href="../css/normalize.css" type="text/css">
     <link rel="stylesheet" href="../css/main.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <!-- Google Font Poiret -->
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
 
 </head>
 
 <body>
-    <div class="navBar">
+    <!-- <div class="navBar">
         <h1>a La MOD</h1>
         <a href="javascript:void(0)" style="text-decoration: none; color: black" onclick="openNav()"><h6><strong>INVENTORY</strong></h6></a>
         <a href="/location" style="text-decoration: none; color: black">
             <h6><strong>LOCATION</strong></h6></a>
-    </div>
+    </div> -->
 
-    <div class="line"></div>
+    <header>
+        <!-- This is the hamburger menu button that opens the slide menu -->
+        <button type="button" class="btn btn-default btn-lg openMenu" onclick="openMainNav()">
+        <span class = "glyphicon glyphicon-menu-hamburger" aria-hidden = "true"></span>
+      </button>
+
+        <h1 class="storeName">a La MOD</h1>
+
+    </header>
+
+    <!-- <div class="line"></div> -->
     <!-- <img class="mainImage" src="./resources/alamodain.png" alt="" /> -->
-    <div class="lineBottom"></div>
-
-    <!-- Carousel div -->
-
-
-    <div id="genreCarousel" class="carousel slide" data-ride="carousel">
-        <!-- These are the carousel indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#genreCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#genreCarousel" data-slide-to="1"></li>
-            <!-- <li data-target="#genreCarousel" data-slide-to="2"></li>
-            <li data-target="#genreCarousel" data-slide-to="3"></li> -->
-        </ol>
-
-        <!-- This is wrapper that holds the slides -->
-        <div class="carousel-inner" role="listbox">
-            <!-- these are the carousel slides -->
-            <div class="item active">
-
-                <!-- Slide number 1 -->
-                <img class="carouselPhotos" src="./resources/alamodain.png" alt="Store" />
-                <div class="carousel-caption">
-                    <a href="/scifi"></a>
-                </div>
-            </div>
-
-            <!-- Slide number 2-->
-            <div class="item">
-                <img class="carouselPhotos" src="./resources/alamodPracticeTwo.jpg" alt="Featured Item" />
-                <div class="carousel-caption">
-                    <a href="/fantasy"></a>
-                </div>
-                <div class="carousel-caption"></div>
-            </div>
-
-            <!-- Slide number 3 -->
-
-            <div class="item">
-                <img class="carouselPhotos" src="./resources/alamodPracticeTwo.jpg" alt="Featured Item" />
-                <div class="carousel-caption">
-                    <a href="/horror"></a>
-                </div>
-                <div class="carousel-caption"></div>
-            </div>
-
-            <!-- Slide number 4 -->
-
-            <!-- <div class="item">
-                <div class="sliderSize">
-                    <img class="carouselPhotos" src="" alt="Love Stories" />
-                </div>
-                <div class="carousel-caption">
-                    <a href="/love"></a>
-                </div>
-                <div class="carousel-caption"></div>
-            </div> -->
-
-            <!-- Slide number 5-->
-
-            <!-- <div class="item">
-                <div class="sliderSize">
-                    <img class="carouselPhotos" src="" alt="Kids" />
-                </div>
-                <div class="carousel-caption">
-                    <a href="/kids"></a>
-                </div>
-                <div class="carousel-caption"></div>
-            </div> -->
-        </div>
 
 
 
-        <!-- controls for carousel -->
-
-        <!-- right control to rotate carousel forward -->
-        <a class="left carousel-control" href="#genreCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-
-        <!-- left control to move carousel back to previous -->
-        <a class="right carousel-control" href="#genreCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-
-    </div>
 
     <!-- This is the hamburger menu button that opens the slide menu -->
     <!-- <button type="button" class="btn btn-default btn-lg openMenu" onclick="openNav()">
       <span class = "glyphicon glyphicon-menu-hamburger" aria-hidden = "true"></span>MENU
     </button> -->
+
+    <!-- This is the nested slide menu for More Furniture-->
+    <div id="myMainNav" class="sidenav">
+        <a href="#"></a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMainNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="openNav(); closeMainNav()">Inventory</a>
+        <a href="/location">Location</a>
+        <a href="/newListings">New Listings</a>
+
+    </div>
 
     <!-- This is the slide menu -->
     <div id="mySidenav" class="sidenav">
@@ -298,9 +238,7 @@
         <a href="javascript:void(0)" onclick="closeNestedMoreFurn(); openNav()">Back</a>
     </div>
 
-    <footer>
-        <h5>886 N PALM CANYON DR., PALM SPRINGS, CA 92262, US • PHONE: 760-327-0707 • E-MAIL: <span style = "color: black">Alamodps@icloud.com</span> </h5>
-    </footer>
+
 
     <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
 </body>

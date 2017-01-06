@@ -2,6 +2,56 @@ body html {
     position: relative;
     height: 100%;
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    border: 0;
+    overflow: hidden;
+    background-image: url(./resources/desertTwo.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+.storeName {
+    position: fixed;
+    font-family: "Helvetica", "Arial", sans-serif;
+    top: 15%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    /*font-size: 35px;*/
+    font-size: 4em;
+    /*color: #b8b8b8;*/
+    color: black;
+    text-shadow: -1px -1px 2px white, 2px 2px 2px white;
+    font-family: sans-serif;
+    font-weight: bold;
+    /*height: 44px;
+  width: 147px;*/
+}
+
+.openMenu {
+    position: fixed;
+    color: white;
+    top: 2%;
+    left: 93%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /*background-color: transparent;*/
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+/*Turns hamburger white and background black when hover*/
+
+.openMenu:hover {
+    color: white;
+    background-color: black;
 }
 
 .line {
@@ -15,7 +65,7 @@ body html {
 }
 
 .lineBottom {
-    position: absolute;
+    position: relative;
     width: 1139px;
     height: 3px;
     background-color: grey;
@@ -23,6 +73,7 @@ body html {
     top: 90%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    margin-top: 10px;
 }
 
 .mainImage {
@@ -45,21 +96,22 @@ body html {
     padding-right: 30px;
     font-size: 35px;
     color: #b8b8b8;
-    font-family: sans-serif;
+    font-family: "Helvetica", "Arial", sans-serif;
     font-weight: bold;
     /*height: 44px;
     width: 147px;*/
 }
 
-.navBar h6 {
+.navBar h5 {
     padding: 0 60px 0 40px;
     font-weight: bolder;
     /*height: 38px;
     width: 160px;*/
+    font-family: 'Poiret One', cursive;
 }
 
 footer {
-    position: absolute;
+    position: relative;
     height: auto;
     width: 100vw;
     text-align: center;
@@ -100,6 +152,7 @@ footer {
 /* The navigation menu links */
 
 .sidenav a {
+    font-family: 'Poiret One', cursive;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 20px;
@@ -140,7 +193,7 @@ footer {
     /*position: absolute;*/
     top: 16%;
     width: 100vw;
-    height: 100%;
+    /*height: 100vh;*/
 }
 
 
