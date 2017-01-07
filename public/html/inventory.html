@@ -32,12 +32,15 @@
     </form>
 
     <ul ng-repeat="inventory in main.inventoryList">
-        <li> {{ inventory.reference }}</li>
-        <li>{{ inventory.description }}</li>
-        <li>{{ inventory.height }}</li>
-        <li>{{ inventory.width }}</li>
-        <li>{{ inventory.depth }}</li>
-        <li>{{ inventory.price }}</li>
+        <li><img ng-src="{{ inventory.imageUrl }}" alt="Huh?" /></li>
+        <li> Name: {{ inventory.name }}</li>
+        <li> Reference: {{ inventory.reference }}</li>
+        <li> Description: {{ inventory.description }}</li>
+        <li> Height: {{ inventory.measurements.height }}</li>
+        <li> Width: {{ inventory.measurements.width }}</li>
+        <li> Depth: {{ inventory.measurements.depth }}</li>
+        <li> Diameter: {{ inventory.measurements.diameter }}</li>
+        <li> Price: {{ inventory.price }}</li>
     </ul>
 
 
