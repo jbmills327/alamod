@@ -3,16 +3,28 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <!-- My CSS -->
     <link rel="stylesheet" href="../css/main.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+
+    <!-- Google Font Poiret -->
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <title>Inventory</title>
 </head>
 
 <body ng-controller="MainCtrl as main">
+    <div class="navBar">
+        <a href="/" style="text-decoration: none;">
+            <h1>a La MOD</h1></a>
+        <a href="/location" style="text-decoration: none; color: black"><h5><strong>LOCATION</strong></h5></a>
+        <a href="/newListings" style="text-decoration: none; color: black"><h5><strong>NEW LISTINGS</strong></h5></a>
+    </div>
+    <div class="line"></div>
+    <!-- <h1>{{ main.greeting }}</h1> -->
 
-    <h1>{{ main.greeting }}</h1>
-
-    <form class="">
+    <form class="searchForm">
         <input class="form-control" type="text" placeholder="Search" ng-model="main.search">
 
         <!-- This will be for all creators -->
@@ -31,19 +43,20 @@
         </select>
     </form>
 
-    <ul ng-repeat="inventory in main.inventoryList">
-        <li><img ng-src="{{ inventory.imageUrl }}" alt="Huh?" /></li>
-        <li> Name: {{ inventory.name }}</li>
-        <li> Reference: {{ inventory.reference }}</li>
-        <li> Description: {{ inventory.description }}</li>
+    <ul class="invList" dir-paginate="inventory in main.inventoryList |orderBy: inventory.dateCreated |itemsPerPage: 30| filter: main.search">
+        <li><img ng-src="{{ inventory.imageUrl }}" alt="Huh?" style="width: 200px; height: 200px" /></li>
+        <li> <b>{{ inventory.name }} </b></li>
+        <li> Reference: {{ inventory._id }}</li>
+        <!-- <li> Description: {{ inventory.description }}</li> -->
         <li> Height: {{ inventory.measurements.height }}</li>
         <li> Width: {{ inventory.measurements.width }}</li>
         <li> Depth: {{ inventory.measurements.depth }}</li>
         <li> Diameter: {{ inventory.measurements.diameter }}</li>
-        <li> Price: {{ inventory.price }}</li>
+        <li> <b>Price: {{ inventory.price }}</b></li>
     </ul>
 
-
+    <dir-pagination-controls class="invControls" max-size="5" direction-links="true" boundary-links="true" auto-hide="false"></dir-pagination-controls>
+    <script type="text/javascript" src="../javascript/dirPagination.js"></script>
     <script type="text/javascript" src="../javascript/module.js"></script>
     <script type="text/javascript" src="../javascript/myScripts.js"></script>
     <script type="text/javascript" src="../javascript/factory.js"></script>

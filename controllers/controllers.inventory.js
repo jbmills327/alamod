@@ -14,7 +14,6 @@ module.exports = {
         });
     },
     get: (req, res) => {
-
         INV.find({}, (err, docs) => {
             if (err) {
                 res.send(err);

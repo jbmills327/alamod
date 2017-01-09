@@ -46,7 +46,12 @@ InventorySchema = new mongoose.Schema({
         },
     },
     "numOfItems": String,
-    "imageUrl": String
+    "imageUrl": String,
+    "dateCreated": {
+        type: Date,
+        default: new Date()
+    },
+    "category": String
 
 });
 

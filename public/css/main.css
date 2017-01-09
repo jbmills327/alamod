@@ -252,3 +252,21 @@ footer {
     box-shadow: 3px 3px 2px grey, -3px -3px 2px grey;
     border-radius: 7px;
 }
+
+.invList {
+    display: inline-block;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.searchForm {
+    position: relative;
+    left: 5%;
+    width: 20%;
+}
+
+.invControls {
+    position: relative;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}

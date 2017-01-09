@@ -22,6 +22,12 @@ module.exports = (app) => {
         });
     });
 
+    app.get('/inventory', (req, res) => {
+        res.sendFile("inventory.html", {
+            root: './public/html'
+        });
+    });
+
     app.get("/api/inventory", Inv.get);
     app.post("/api/inventory", Inv.create);
 

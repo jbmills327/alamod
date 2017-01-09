@@ -9,7 +9,7 @@ function mainController($http, alamodfactory) {
     var main = this;
     main.inventoryList = [];
     main.greeting = "This is only a test";
-    main.search = {};
+    // main.search = {};
     main.creators = [
         "Yaakov Agam",
         "Alessandro Albrizzi",
@@ -95,15 +95,16 @@ function mainController($http, alamodfactory) {
         "21st Century and New",
         "All 20th Century",
         "1980-2000",
-        "1970’s",
-        "1960’s",
-        "1950’s",
-        "1940’s",
-        "1930’s",
+        "1970s",
+        "1960s",
+        "1950s",
+        "1940s",
+        "1930s",
         "1900-1920",
         "19th Century",
         "18th Century and Earlier"
     ];
+
 
     // Populate the Inventory List from the DB
     main.getInvent = function() {
