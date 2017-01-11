@@ -43,7 +43,7 @@
         </select>
     </form>
 
-    <ul class="invList" dir-paginate="inventory in main.inventoryList |orderBy: inventory.dateCreated |itemsPerPage: 30| filter: main.search">
+    <ul class="invList" dir-paginate="inventory in main.inventoryList | itemsPerPage: 30 | filter: main.search">
         <li><img ng-src="{{ inventory.imageUrl }}" alt="Huh?" style="width: 200px; height: 200px" /></li>
         <li> <b>{{ inventory.name }} </b></li>
         <li> Reference: {{ inventory._id }}</li>

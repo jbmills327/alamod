@@ -14,23 +14,36 @@ module.exports = {
         });
     },
     get: (req, res) => {
-        INV.find({}, (err, docs) => {
-            if (err) {
-                res.send(err);
+            if (req.params.category) {
+                INV.findOne({
+                    category: req.params.category
+                }, (err, docs) => {
+                    if (err) {
+                        res.send("This is the error", err)
+                    }
+                    if (!docs) {
+                        return res.send("Nothing in that category");
+                    }
+                    res.json(docs)
+                });
+            } else {
+                INV.find({}, (err, docs) => {
+                    if (err) {
+                        res.send(err);
+                    }
+                    res.json(docs);
+                })
             }
-            res.json(docs);
-        })
-
-    },
-    // search: (req, res) => {
-    //     INV.findOne({
-    //         req.params
-    //     }, (err, docs) => {
-    //         if (err) {
-    //             res.send("This is the error", err)
-    //         }
-    //         res.JSON(docs)
-    //     })
-    // }
+        }
+        // search: (req, res) => {
+        //     INV.findOne({
+        //         category: req.params.category
+        //     }, (err, docs) => {
+        //         if (err) {
+        //             res.send("This is the error", err)
+        //         }
+        //         res.JSON(docs)
+        //     })
+        // }
 
 }

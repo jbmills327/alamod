@@ -29,6 +29,8 @@ module.exports = (app) => {
     });
 
     app.get("/api/inventory", Inv.get);
+    app.get("/api/inventory/:category", Inv.get);
+    // app.get("/api/inventory", Inv.search);
     app.post("/api/inventory", Inv.create);
 
 

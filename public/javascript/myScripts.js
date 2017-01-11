@@ -107,15 +107,18 @@ function mainController($http, alamodfactory) {
 
 
     // Populate the Inventory List from the DB
-    main.getInvent = function() {
-        alamodfactory.getInvent()
-            .then(function(returnData) {
-                console.log("This is the returndata: ", returnData.data);
-                main.inventoryList = returnData.data;
-            }).catch(function(err) {
-                console.log("This is the error: ", err);
-            });
-    }
+    main.getInvent = function(category) {
+            alamodfactory.getInvent(category)
+                .then(function(returnData) {
+                    console.log("This is the returndata: ", returnData.data);
+                    main.inventoryList = returnData.data;
+                    // main.inventoryList.push(returnData.data);
+                    console.log("This is main.inventoryList", main.inventoryList);
+                }).catch(function(err) {
+                    console.log("This is the error: ", err);
+                });
+        }
+        // main.getInvent("seating");
     main.getInvent();
 
     // main.searchInventory = function(data) {
@@ -127,5 +130,6 @@ function mainController($http, alamodfactory) {
     //             console.log("This is the error", err);
     //         })
     // }
+
 
 }

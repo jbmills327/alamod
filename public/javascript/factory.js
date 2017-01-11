@@ -7,15 +7,14 @@ alamodfactory.$inject = ['$http'];
 function alamodfactory($http) {
 
     return {
-        getInvent: function() {
-            return $http.get("/api/inventory");
+        getInvent: function(category) {
+            category = category ? "/" + category : " "
+            return $http.get("/api/inventory" + category);
         },
 
         createInvent: function(adventData) {
             return $http.post("/api/inventory", adventData);
-        },
-        // searchInvent: function(data) {
-        //     return $http.get("/api/search" + data)
-        // }
+        }
+
     }
 }
