@@ -15,7 +15,7 @@ module.exports = {
     },
     get: (req, res) => {
             if (req.params.category) {
-                INV.findOne({
+                INV.find({
                     category: req.params.category
                 }, (err, docs) => {
                     if (err) {
@@ -24,7 +24,8 @@ module.exports = {
                     if (!docs) {
                         return res.send("Nothing in that category");
                     }
-                    res.json(docs)
+                    res.json(docs);
+                    // res.redirect("/inventory");
                 });
             } else {
                 INV.find({}, (err, docs) => {

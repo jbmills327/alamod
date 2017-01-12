@@ -25,7 +25,10 @@ InventorySchema = new mongoose.Schema({
     "name": String,
     "period": String,
     "description": String,
-    "price": String,
+    "price": {
+        type: String,
+        default: "SOLD!"
+    },
     "condition": String,
     "measurements": {
         "width": {
@@ -51,7 +54,11 @@ InventorySchema = new mongoose.Schema({
         type: Date,
         default: new Date()
     },
-    "category": String
+    "category": String,
+    "location": {
+        type: String,
+        default: "886 N Palm Canyon Dr. Palm Springs, CA 92262 US"
+    },
 
 });
 
