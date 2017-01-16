@@ -3,6 +3,31 @@
 // This is to make the slide menu work
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+
+function openInventNav() {
+    document.getElementById("myIventoryNav").style.width = "250px";
+    // document.getElementById("main").style.marginLeft = "250px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function openNestedCreator() {
+    document.getElementById("myNestedCreator").style.width = "350px";
+    // document.getElementById("main").style.marginLeft = "250px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function openNestedCategory() {
+    document.getElementById("myNestedCategory").style.width = "400px";
+    // document.getElementById("main").style.marginLeft = "250px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function openNestedPeriod() {
+    document.getElementById("myNestedPeriod").style.width = "350px";
+    // document.getElementById("main").style.marginLeft = "250px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
 function openMainNav() {
     document.getElementById("myMainNav").style.height = "30vh";
     // document.getElementById("main").style.marginLeft = "250px";
@@ -87,6 +112,32 @@ function openNestedMoreFurn() {
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+
+function closeInventNav() {
+    document.getElementById("myIventoryNav").style.width = "0";
+    // document.getElementById("main").style.marginLeft = "0";
+    // document.body.style.backgroundColor = "white";
+}
+
+function closeNestedCreator() {
+    document.getElementById("myNestedCreator").style.width = "0";
+    // document.getElementById("main").style.marginLeft = "0";
+    // document.body.style.backgroundColor = "white";
+}
+
+function closeNestedCategory() {
+    document.getElementById("myNestedCategory").style.width = "0";
+    // document.getElementById("main").style.marginLeft = "0";
+    // document.body.style.backgroundColor = "white";
+}
+
+function closeNestedPeriod() {
+    document.getElementById("myNestedPeriod").style.width = "0";
+    // document.getElementById("main").style.marginLeft = "0";
+    // document.body.style.backgroundColor = "white";
+}
+
+
 function closeMainNav() {
     document.getElementById("myMainNav").style.height = "0";
     // document.getElementById("main").style.marginLeft = "0";
@@ -158,3 +209,9 @@ function closeNestedMoreFurn() {
     document.getElementById("myNestedMoreFurn").style.height = "0";
     document.body.style.backgroundColor = "white";
 }
+
+// This is for working with the Modal
+
+// $('#inventModal').on('show.bs.modal', function (id) {
+//
+// })

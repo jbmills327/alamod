@@ -3,11 +3,18 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <!-- bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
     <!-- My CSS -->
     <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <!-- Angular -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <!-- Angular Routing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
 
     <!-- Google Font Poiret -->
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
@@ -20,31 +27,154 @@
             <h1>a La MOD</h1></a>
         <a href="/location" style="text-decoration: none; color: black"><h5><strong>LOCATION</strong></h5></a>
         <a href="/newListings" style="text-decoration: none; color: black"><h5><strong>NEW LISTINGS</strong></h5></a>
+        <a href="javascript:void(0)" onclick="openInventNav()" style="text-decoration: none; color: black"><h5><strong>REFINE SEARCH</strong></h5></a>
     </div>
     <div class="line"></div>
     <!-- <h1>{{ main.greeting }}</h1> -->
+    <!-- This is the nested slide menu for More Furniture-->
+    <div id="myIventoryNav" class="inventorySidenav">
+        <a href="#"></a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeInventNav()">&times;</a>
+        <!-- <a href="javascript:void(0)" onclick="openNav(); closeMainNav()">Inventory</a> -->
+        <a href="javascript: void(0)" onclick="openNestedCreator(); closeInventNav()">BROWSE BY CREATOR</a>
+        <a href="javascript: void(0)" onclick="openNestedCategory(); closeInventNav()">BROWSE BY CATEGORY</a>
+        <a href="javascript: void(0)" onclick="openNestedPeriod(); closeInventNav()">BROWSE BY PERIOD</a>
+
+    </div>
+
+    <!-- This is the nested slide menu for Creators-->
+    <div id="myNestedCreator" class="inventorySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedCreator()">&times;</a>
+        <a href="javascript: void(0)" ng-model="main.search" value="Yaakov Agam" onclick="closeNestedCreator()">Yaakov Agam</a>
+        <a href="#">Alessandro Albrizzi</a>
+        <a href="#">Architectural Pottery</a>
+        <a href="#">ATT:FONTANA ARTE</a>
+        <a href="#">Arteluce</a>
+        <a href="#">Sergio Asti</a>
+        <a href="#">Gas Aplenty</a>
+        <a href="#">MILO BAUGHMAN</a>
+        <a href="#">Brent Bennet</a>
+        <a href="#">Breton</a>
+        <a href="#">Paolo Buffa</a>
+        <a href="#">Chapman</a>
+        <a href="#">Raul Coronel</a>
+        <a href="#">David Cressey</a>
+        <a href="#">Curtis Jere</a>
+        <a href="#">D.I.A. Design Institute of America</a>
+        <a href="#">Del Campo</a>
+        <a href="#">Drylund</a>
+        <a href="#">Dunbar</a>
+        <a href="#">Charles Eames</a>
+        <a href="#">Paul Evans</a>
+        <a href="#">Fontana Arte</a>
+        <a href="#">Garouste et Bonetti</a>
+        <a href="#">Frank Gehry</a>
+        <a href="#">General Electric</a>
+        <a href="#">Milton H. Greene</a>
+        <a href="#">Grosfeld House</a>
+        <a href="#">Guillermo et Chambray</a>
+        <a href="#">GARY GUTTERMAN
+        <a href="#">Charles Hollis Jones</a>
+        <a href="#">Robert Josten</a>
+        <a href="#">Kittinger</a>
+        <a href="#">Florence Knoll</a>
+        <a href="#">Koch and Lowry</a>
+        <a href="#">Cesare Lacca</a>
+        <a href="#">Percival Lafer</a>
+        <a href="#">Victoria Littlejohn</a>
+        <a href="#">Maitland-Smith</a>
+        <a href="#">Angelo Mangiarotti</a>
+        <a href="#">Mastercraft</a>
+        <a href="#">Phyllis Morris</a>
+        <a href="#">George Nelson</a>
+        <a href="#">Arne Norell</a>
+        <a href="#">Pace Collection</a>
+        <a href="#">Pierre Paulin</a>
+        <a href="javascript: void(0)" ng-model="main.search" onclick="closeNestedCreator()">Warren Platner</a>
+        <a href="#">Gio Ponti</a>
+        <a href="#">Jens Harald Quistgaard</a>
+        <a href="#">Raymor</a>
+        <a href="#">Willy Rizzo</a>
+        <a href="#">ROUGIER</a>
+        <a href="#">Renzo Rutili</a>
+        <a href="#">Victor Salmones</a>
+        <a href="#">Tobia & Afra Scarpa</a>
+        <a href="#">Karl Springer</a>
+        <a href="#">Steel case</a>
+        <a href="#">Ilmari Tapiovaara</a>
+        <a href="#">Aldo Tura</a>
+        <a href="#">Ludwig Mies van der Rohe</a>
+        <a href="#">Yvaral (Jean-Pierre Vasarely)</a>
+        <a href="#">Venini</a>
+        <a href="#">Vistosi</a>
+        <a href="#">Hans Wegner</a>
+        <a href="#">Bjorn Wiinblad</a>
+        <a href="javascript:void(0)" onclick="closeNestedCreator(); openInventNav()">Back</a>
+    </div>
+
+    <!-- This is the nested slide menu for category-->
+    <div id="myNestedCategory" class="inventorySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedCategory()">&times;</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('seating')" onclick="closeNestedCategory()">Seating</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('lighting')" onclick="closeNestedCategory()">Lighting</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('storage')" onclick="closeNestedCategory()">Case Pieces and Storage</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('tables')" onclick="closeNestedCategory()">Tables</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('mirrors')" onclick="closeNestedCategory()">Mirrors</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('folk')" onclick="closeNestedCategory()">Folk Art</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('asian')" onclick="closeNestedCategory()">Asian Art and Furniture</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('rugs')" onclick="closeNestedCategory()">Rugs and Carpets</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('serveware')" onclick="closeNestedCategory()">Serveware, Ceramics, Silver and Glass</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('wall')" onclick="closeNestedCategory()">Wall Decorations</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('garden')" onclick="closeNestedCategory()">Building and Garden Elements</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('decObj')" onclick="closeNestedCategory()">Decorative Objects</a>
+        <a href="javascript:void(0)" ng-click="main.getInvent('moreFurn')" onclick="closeNestedCategory()">More Furniture and Collectibles</a>
+        <a href="javascript:void(0)" onclick="closeNestedCategory(); openInventNav()">Back</a>
+    </div>
+
+    <!-- This is the nested slide menu for category-->
+    <div id="myNestedPeriod" class="inventorySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedPeriod()">&times;</a>
+        <a href="#">21st Century and New</a>
+        <a href="#">All 20th Century</a>
+        <a href="#">1980-2000</a>
+        <a href="#">1970s</a>
+        <a href="#">1960s</a>
+        <a href="#">1950s</a>
+        <a href="#">1940s</a>
+        <a href="#">1930s</a>
+        <a href="#">1900-1920</a>
+        <a href="#">19th Century</a>
+        <a href="#">18th Century and Earlier</a>
+        <a href="javascript:void(0)" onclick="closeNestedPeriod(); openInventNav()">Back</a>
+    </div>
 
     <form class="searchForm">
+        <h4 class="poiret">Refine Further</h4>
         <input class="form-control" type="text" placeholder="Search" ng-model="main.search">
 
         <!-- This will be for all creators -->
-        <select class="form-control" ng-model="main.search" ng-options="x for x in main.creators">
+
+        <!-- <select class="form-control" ng-model="main.search" ng-options="x for x in main.creators">
           <option value="">Browse by Creator</option>
-        </select>
+        </select> -->
 
         <!-- This will be for all categories -->
-        <select class="form-control" ng-model="main.search" ng-options="x for x in main.categories">
+
+        <!-- <select class="form-control" ng-model="main.search" ng-options="x for x in main.categories">
           <option value="">Browse by Category</option>
-        </select>
+        </select> -->
 
         <!-- This will be for all periods -->
-        <select class="form-control" ng-model="main.search" ng-options="x for x in main.periods">
+
+        <!-- <select class="form-control" ng-model="main.search" ng-options="x for x in main.periods">
           <option value="">Browse by Period</option>
-        </select>
+        </select> -->
     </form>
 
     <ul class="invList" dir-paginate="inventory in main.inventoryList | itemsPerPage: 30 | filter: main.search">
-        <li><img ng-src="{{ inventory.imageUrl }}" alt="Huh?" style="width: 200px; height: 200px" /></li>
+        <li>
+            <a data-toggle="modal" data-target="#inventModal" ng-click="main.setId(inventory)"><img ng-src="{{ inventory.imageUrl }}" alt="Huh?" style="width: 200px; height: 200px"></a>
+        </li>
         <li> <b>{{ inventory.name }} </b></li>
         <li> Reference: {{ inventory._id }}</li>
         <!-- <li> Description: {{ inventory.description }}</li> -->
@@ -55,7 +185,59 @@
         <li> <b>Price: {{ inventory.price }}</b></li>
     </ul>
 
+    <!-- <a data-toggle="modal" data-target="#inventModal"><h1>Add Adventurer</h1></a> -->
+
+    <!-- Choose Inventory Modal -->
+    <div class="modal fade" id="inventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form ng-submit="main.pushAdventurer()">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">{{ main.id.name }}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- <input class="form-control" type="text" ng-model="main.newAdventurer.name" placeholder="Name">
+                        <input class="form-control" type="text" ng-model="main.newAdventurer.age" placeholder="Age"> -->
+                        <!-- <input class="form-control" type="text" ng-model="main.adventurer" placeholder="adventurer"> -->
+                        <h5>{{ main.id.price }}</h5>
+                        <!-- <select class="form-control" ng-model="main.choose" ng-options="x.name for x in main.adventList"> </select>-->
+
+                        <!-- <ul class="invList" ng-repeat="inventory in main.inventoryList">
+                            <li><img ng-src="{{ inventory.imageUrl }}" alt="Huh?" style="width: 200px; height: 200px"> -->
+                        <ul class="invList">
+                            <li><img ng-src="{{ main.id.imageUrl }}" alt="Huh?" style="width: 200px; height: 200px">
+                            </li>
+                            <!-- <li> <b>{{ main.id.name }} </b></li> -->
+                            <li> Reference: {{ main.id._id }}</li>
+                            <li> Description: {{ main.id.description }}</li>
+                            <li> Height: {{ main.id.measurements.height }}</li>
+                            <li> Width: {{ main.id.measurements.width }}</li>
+                            <li> Depth: {{ main.id.measurements.depth }}</li>
+                            <li> Diameter: {{ main.id.measurements.diameter }}</li>
+                            <!-- <li> <b>Price: {{ main.id.price }}</b></li> -->
+                            <li>Location: {{ main.id.location}}</li>
+                        </ul>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" onclick="closeNav()">Save changes</button>
+                </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <a href="#inventoryZoom">Test Yo</a>
+
+    <ng-view>
+
+    </ng-view> -->
+
     <dir-pagination-controls class="invControls" max-size="5" direction-links="true" boundary-links="true" auto-hide="false"></dir-pagination-controls>
+    <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
     <script type="text/javascript" src="../javascript/dirPagination.js"></script>
     <script type="text/javascript" src="../javascript/module.js"></script>
     <script type="text/javascript" src="../javascript/myScripts.js"></script>

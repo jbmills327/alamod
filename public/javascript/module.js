@@ -1,1 +1,3 @@
-angular.module("MyApp", ['angularUtils.directives.dirPagination']);
+angular.module("MyApp", ["angularUtils.directives.dirPagination"]);
+
+// , "ngRoute"

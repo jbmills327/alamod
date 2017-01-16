@@ -1,15 +1,29 @@
 angular.module("MyApp")
     .controller("MainCtrl", mainController);
 
+// angular.module("MyApp")
+//     .config(myRouter);
+
+// myRouter.$inject = ["$routeProvider"];
 mainController.$inject = ["$http", "alamodfactory"];
 
+
+// This is the function that controls where we hop during the routing process
+// function myRouter($routeProvider) {
+//     $routeProvider
+//         .when("/inventoryZoom", {
+//             templateUrl: "./html/inventoryZoom.html"
+//         })
+//
+// }
 
 
 function mainController($http, alamodfactory) {
     var main = this;
+    main.id = "";
     main.inventoryList = [];
     main.greeting = "This is only a test";
-    // main.search = {};
+    // main.search = "";
     main.creators = [
         "Yaakov Agam",
         "Alessandro Albrizzi",
@@ -130,6 +144,26 @@ function mainController($http, alamodfactory) {
     //             console.log("This is the error", err);
     //         })
     // }
+
+    main.setId = function(objId) {
+        main.id = objId;
+        console.log("This is the main.id", main.id);
+
+    }
+
+    main.getInventOne = function(id) {
+        console.log(id);
+        alamodfactory.getInventOne(id)
+            .then(function(returnData) {
+                console.log("This is the returndata: ", returnData.data);
+                // main.inventoryList = returnData.data;
+                // main.inventoryList.push(returnData.data);
+                // console.log("This is main.inventoryList", main.inventoryList);
+                console.log("This is the return data", returnData.data);
+            }).catch(function(err) {
+                console.log("This is the error: ", err);
+            });
+    }
 
 
 }

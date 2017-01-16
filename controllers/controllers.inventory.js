@@ -14,37 +14,53 @@ module.exports = {
         });
     },
     get: (req, res) => {
-            if (req.params.category) {
-                INV.find({
-                    category: req.params.category
-                }, (err, docs) => {
-                    if (err) {
-                        res.send("This is the error", err)
-                    }
-                    if (!docs) {
-                        return res.send("Nothing in that category");
-                    }
-                    res.json(docs);
-                    // res.redirect("/inventory");
-                });
-            } else {
-                INV.find({}, (err, docs) => {
-                    if (err) {
-                        res.send(err);
-                    }
-                    res.json(docs);
-                })
-            }
+        if (req.params.category) {
+            INV.find({
+                category: req.params.category
+            }, (err, docs) => {
+                if (err) {
+                    res.send("This is the error", err)
+                }
+                if (!docs) {
+                    return res.send("Nothing in that category");
+                }
+                res.json(docs);
+                // res.redirect("/inventory");
+            });
         }
-        // search: (req, res) => {
-        //     INV.findOne({
-        //         category: req.params.category
-        //     }, (err, docs) => {
-        //         if (err) {
-        //             res.send("This is the error", err)
-        //         }
-        //         res.JSON(docs)
-        //     })
-        // }
+        if (req.params.id) {
+            console.log(req.params.id);
+            INV.findOne({
+                _id: req.query.id
+            }, (err, docs) => {
+                if (err) {
+                    res.send("This is the error");
+                }
+                if (!docs) {
+                    return res.send("Nothing with that ID");
+                }
+                console.log("Found your stuff!");
+                console.log("This the the item", docs);
+                res.json(docs);
+            });
+        } else {
+            INV.find({}, (err, docs) => {
+                if (err) {
+                    res.send(err);
+                }
+                res.json(docs);
+            })
+        }
+    }
+    // search: (req, res) => {
+    //     INV.findOne({
+    //         category: req.params.category
+    //     }, (err, docs) => {
+    //         if (err) {
+    //             res.send("This is the error", err)
+    //         }
+    //         res.JSON(docs)
+    //     })
+    // }
 
 }

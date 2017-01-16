@@ -22,7 +22,7 @@ header {
     position: fixed;
     font-family: "Helvetica", "Arial", sans-serif;
     top: 15%;
-    left: 15%;
+    left: 20%;
     transform: translate(-50%, -50%);
     /*font-size: 35px;*/
     font-size: 4em;
@@ -95,7 +95,8 @@ header {
 .navBar h1 {
     padding-right: 30px;
     font-size: 35px;
-    color: #b8b8b8;
+    /*color: #b8b8b8;*/
+    color: #5b5b5b;
     font-family: "Helvetica", "Arial", sans-serif;
     font-weight: bold;
     /*height: 44px;
@@ -148,10 +149,47 @@ footer {
     /* 0.5 second transition effect to slide in the sidenav */
 }
 
+.inventorySidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 2;
+    /* Stay on top */
+    top: 0;
+    left: 0;
+    /*background-color: #111;*/
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
 
 /* The navigation menu links */
 
 .sidenav a {
+    font-family: 'Poiret One', cursive;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    /*color: #818181;*/
+    color: white;
+    /*color: black;*/
+    display: block;
+    transition: 0.3s
+}
+
+
+/* The navigation menu links */
+
+.inventorySidenav a {
     font-family: 'Poiret One', cursive;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -172,9 +210,28 @@ footer {
 }
 
 
+/* When you mouse over the navigation links, change their color */
+
+.inventorySidenav a:hover, .offcanvas a:focus {
+    /*color: #f1f1f1;*/
+    color: #818181;
+}
+
+
 /* Position and style the close button (top right corner) */
 
 .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.inventorySidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -257,6 +314,7 @@ footer {
     display: inline-block;
     list-style: none;
     padding-top: 10px;
+    text-align: center;
 }
 
 .searchForm {
@@ -269,4 +327,10 @@ footer {
     position: relative;
     left: 40%;
     transform: translate(-50%, -50%);
+}
+
+.poiret {
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    font-size: 2em;
 }
