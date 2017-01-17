@@ -176,12 +176,16 @@
             <a data-toggle="modal" data-target="#inventModal" ng-click="main.setId(inventory)"><img ng-src="{{ inventory.imageUrl }}" alt="Huh?" style="width: 200px; height: 200px"></a>
         </li>
         <li> <b>{{ inventory.name }} </b></li>
-        <li> Reference: {{ inventory._id }}</li>
+        <li>
+            <strong>Reference:</strong> {{ inventory._id }}</li>
         <!-- <li> Description: {{ inventory.description }}</li> -->
-        <li> Height: {{ inventory.measurements.height }}</li>
-        <li> Width: {{ inventory.measurements.width }}</li>
-        <li> Depth: {{ inventory.measurements.depth }}</li>
-        <li> Diameter: {{ inventory.measurements.diameter }}</li>
+        <li> <strong>Height:</strong> {{ inventory.measurements.height }}</li>
+        <li>
+            <strong>Width:</strong> {{ inventory.measurements.width }}</li>
+        <li>
+            <strong>Depth:</strong> {{ inventory.measurements.depth }}</li>
+        <li>
+            <strong>Diameter: {{ inventory.measurements.diameter }}</li>
         <li> <b>Price: {{ inventory.price }}</b></li>
     </ul>
 
@@ -189,7 +193,7 @@
 
     <!-- Choose Inventory Modal -->
     <div class="modal fade" id="inventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-admin" role="document">
             <div class="modal-content">
                 <form ng-submit="main.pushAdventurer()">
                     <div class="modal-header">
@@ -218,6 +222,8 @@
                             <!-- <li> <b>Price: {{ main.id.price }}</b></li> -->
                             <li>Location: {{ main.id.location}}</li>
                         </ul>
+
+                        <a href="mailto:?subject = Found this item at a la MOD&body={{ main.id.name}} {{ main.id.description}} {{ main.id.price}} {{ main.id.imageUrl}}">Email this item</a>
 
                     </div>
                     <div class="modal-footer">
