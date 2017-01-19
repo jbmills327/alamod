@@ -58,7 +58,8 @@ header {
     position: relative;
     width: 1139px;
     height: 3px;
-    background-color: grey;
+    background-color: #5b5b5b;
+    /*background-color: grey;*/
     left: 50%;
     top: -10px;
     transform: translate(-50%);
@@ -68,7 +69,8 @@ header {
     position: relative;
     width: 1139px;
     height: 3px;
-    background-color: grey;
+    background-color: #5b5b5b;
+    /*background-color: grey;*/
     left: 50%;
     top: 90%;
     transform: translate(-50%, -50%);
@@ -95,7 +97,6 @@ header {
 .navBar h1 {
     padding-right: 30px;
     font-size: 35px;
-    /*color: #b8b8b8;*/
     color: #5b5b5b;
     font-family: "Helvetica", "Arial", sans-serif;
     font-weight: bold;
@@ -106,6 +107,7 @@ header {
 .navBar h5 {
     padding: 0 60px 0 40px;
     font-weight: bolder;
+    color: black;
     /*height: 38px;
     width: 160px;*/
     font-family: 'Poiret One', cursive;
@@ -117,7 +119,8 @@ footer {
     width: 100vw;
     text-align: center;
     font-weight: bold;
-    color: #999999;
+    color: #5b5b5b;
+    /*color: white;*/
     top: 90%;
     /*left: 50%;*/
     /*transform: translate( -50%);*/
@@ -295,6 +298,7 @@ footer {
 .address {
     left: 13%;
     top: 20%;
+    font-size: 20px;
     position: absolute;
     text-align: center;
     color: white;
@@ -314,7 +318,8 @@ footer {
     display: inline-block;
     list-style: none;
     padding-top: 10px;
-    text-align: center;
+    /*padding: 15px;*/
+    /*text-align: center;*/
 }
 
 .searchForm {
@@ -322,6 +327,9 @@ footer {
     left: 5%;
     width: 20%;
 }
+
+
+/*styling pagination controls*/
 
 .invControls {
     position: relative;
@@ -335,7 +343,43 @@ footer {
     font-size: 2em;
 }
 
+
+/*Adjusting the size of the modal*/
+
 body .modal-admin {
     width: 1000px;
     /*margin-left: -375px;*/
+}
+
+.searchWords {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+/*Styling  for send email button*/
+
+.emailStuff {
+    position: absolute;
+    top: 10%;
+    left: 75%;
+    font-size: 20px;
+}
+
+.clearField {
+    display: inline-block;
+}
+
+.thumbnails {
+    height: 160px;
+    width: auto;
+    /*border: 1px solid black;*/
+}
+
+.thumbnailHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
 }

@@ -5,7 +5,7 @@ var app = express();
 
 module.exports = (app) => {
     app.get('/', (req, res) => {
-        res.sendFile("index.html", {
+        res.sendFile("newListings.html", {
             root: './public/html'
         });
     });

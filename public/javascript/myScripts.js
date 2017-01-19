@@ -21,6 +21,7 @@ mainController.$inject = ["$http", "alamodfactory"];
 function mainController($http, alamodfactory) {
     var main = this;
     main.id = "";
+    main.search = [];
     main.inventoryList = [];
     main.greeting = "This is only a test";
     // main.search = "";
@@ -28,11 +29,11 @@ function mainController($http, alamodfactory) {
         "Yaakov Agam",
         "Alessandro Albrizzi",
         "Architectural Pottery",
-        "ATT:FONTANA ARTE",
+        "Fontana Arte",
         "Arteluce",
         "Sergio Asti",
         "Gas Aplenty",
-        "MILO BAUGHMAN",
+        "Milo Baughman",
         "Brent Bennet",
         "Breton",
         "Paolo Buffa",
@@ -53,7 +54,7 @@ function mainController($http, alamodfactory) {
         "Milton H. Greene",
         "Grosfeld House",
         "Guillermo et Chambray",
-        "GARY GUTTERMAN",
+        "Gary Gutterman",
         "Charles Hollis Jones",
         "Robert Josten",
         "Kittinger",
@@ -75,7 +76,7 @@ function mainController($http, alamodfactory) {
         "Jens Harald Quistgaard",
         "Raymor",
         "Willy Rizzo",
-        "ROUGIER",
+        "Rougier",
         "Renzo Rutili",
         "Victor Salmones",
         "Tobia & Afra Scarpa",
@@ -163,6 +164,12 @@ function mainController($http, alamodfactory) {
             }).catch(function(err) {
                 console.log("This is the error: ", err);
             });
+    }
+
+    main.creatorFinder = function(name) {
+        console.log(name);
+        main.search = name;
+        console.log(main.search);
     }
 
 
