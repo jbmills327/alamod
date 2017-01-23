@@ -114,6 +114,9 @@ header {
 }
 
 footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     position: relative;
     height: auto;
     width: 100vw;
@@ -124,6 +127,15 @@ footer {
     top: 90%;
     /*left: 50%;*/
     /*transform: translate( -50%);*/
+}
+
+footer img {
+    vertical-align: middle;
+    margin-top: 7px;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    /*padding-right: 10px;*/
 }
 
 
@@ -270,10 +282,12 @@ footer {
 
 .map {
     position: absolute;
-    height: 300px;
-    width: 600px;
-    top: 40%;
-    left: 65%;
+    height: 250px;
+    width: 500px;
+    /*top: 40%;
+    left: 30%;*/
+    top: 90%;
+    left: 73%;
     transform: translate(-50%, -50%);
     box-shadow: 2px 2px 2px black;
     border-radius: 7px;
@@ -296,21 +310,23 @@ footer {
 }*/
 
 .address {
-    left: 13%;
-    top: 20%;
+    left: 10%;
+    top: 25%;
     font-size: 20px;
+    font-family: "Helvetica", "Arial", sans-serif;
     position: absolute;
     text-align: center;
-    color: white;
-    text-shadow: 2px 2px 2px black, -1px -1px 2px black;
+    color: black;
+    /*color: #5b5b5b;*/
+    text-shadow: 2px 2px 2px white, -1px -1px 2px white;
 }
 
 .backDrop img {
-    position: absolute;
+    position: relative;
     left: 5.5%;
     width: 1139px;
     height: 100vh;
-    box-shadow: 3px 3px 2px grey, -3px -3px 2px grey;
+    box-shadow: 3px 3px 2px #5b5b5b, -3px -3px 2px #5b5b5b;
     border-radius: 7px;
 }
 
@@ -318,22 +334,23 @@ footer {
     display: inline-block;
     list-style: none;
     padding-top: 10px;
-    /*padding: 15px;*/
-    /*text-align: center;*/
+    margin-left: 2%;
 }
 
 .searchForm {
     position: relative;
     left: 5%;
     width: 20%;
+    padding-bottom: 15px;
 }
 
 
 /*styling pagination controls*/
 
 .invControls {
-    position: relative;
-    left: 40%;
+    position: absolute;
+    top: 200%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -368,7 +385,14 @@ body .modal-admin {
 }
 
 .clearField {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.clearField h5 {
+    padding-left: 10px;
+    vertical-align: middle;
 }
 
 .thumbnails {
@@ -382,4 +406,12 @@ body .modal-admin {
     flex-direction: row;
     justify-content: space-around;
     padding: 10px;
+}
+
+.submissionsForm {
+    position: absolute;
+    width: 40%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

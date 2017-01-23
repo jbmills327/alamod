@@ -28,7 +28,7 @@
         <!-- <a href="/newListings" style="text-decoration: none; color: black"><h5><strong>NEW LISTINGS</strong></h5></a> -->
         <a href="javascript:void(0)" onclick="openInventNav()" style="text-decoration: none; color: black"><h5><strong>REFINE SEARCH</strong></h5></a>
         <a href="/location" style="text-decoration: none; color: black"><h5><strong>LOCATION</strong></h5></a>
-        <a href="javascript:void(0)" style="text-decoration: none; color: black"><h5><strong>ALL INVENTORY</strong></h5></a>
+        <a href="/contact" style="text-decoration: none; color: black"><h5><strong>CONTACT US</strong></h5></a>
     </div>
     <div class="line"></div>
     <!-- <h1>{{ main.greeting }}</h1> -->
@@ -117,7 +117,7 @@
     </div>
 
     <!-- This is the nested slide menu for category-->
-    <div id="myNestedCategory" class="inventorySidenav">
+    <!-- <div id="myNestedCategory" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedCategory()">&times;</a>
         <a href="javascript:void(0)" ng-click="main.getInvent('seating')" onclick="closeNestedCategory()">Seating</a>
         <a href="javascript:void(0)" ng-click="main.getInvent('lighting')" onclick="closeNestedCategory()">Lighting</a>
@@ -133,9 +133,31 @@
         <a href="javascript:void(0)" ng-click="main.getInvent('decObj')" onclick="closeNestedCategory()">Decorative Objects</a>
         <a href="javascript:void(0)" ng-click="main.getInvent('moreFurn')" onclick="closeNestedCategory()">More Furniture and Collectibles</a>
         <a href="javascript:void(0)" onclick="closeNestedCategory(); openInventNav()">Back</a>
+    </div> -->
+
+    <!-- This is the nested slide menu for categories-->
+    <div id="myNestedCategory" class="inventorySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedCategory()">&times;</a>
+        <div ng-repeat="items in main.categories" class="">
+            <a href="javascript: void(0)" ng-click=" main.creatorFinder(items)" onclick="closeNestedCategory()"> {{ items }}</a>
+            <!--
+        <a href="#">21st Century and New</a>
+        <a href="#">All 20th Century</a>
+        <a href="#">1980-2000</a>
+        <a href="#">1970s</a>
+        <a href="#">1960s</a>
+        <a href="#">1950s</a>
+        <a href="#">1940s</a>
+        <a href="#">1930s</a>
+        <a href="#">1900-1920</a>
+        <a href="#">19th Century</a>
+        <a href="#">18th Century and Earlier</a> -->
+            <a href="javascript:void(0)" onclick="closeNestedPeriod(); openInventNav()">Back</a>
+        </div>
     </div>
 
-    <!-- This is the nested slide menu for category-->
+
+    <!-- This is the nested slide menu for period-->
     <div id="myNestedPeriod" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedPeriod()">&times;</a>
         <div ng-repeat="items in main.periods" class="">
@@ -161,7 +183,8 @@
         <h4 class="poiret">Refine Further</h4>
         <div class="clearField">
             <input class="form-control" type="text" placeholder="Search" ng-model="main.search">
-            <h6 class="poiret">Clear Field</h6>
+            <a href="JavaScript: void(0)" ng-click="main.resetField()" style="color: black; text-decoration: none">
+                <h5 style="font-family: 'Poiret-One'">CLEAR</h5></a>
         </div>
 
         <!-- This will be for all creators -->
@@ -185,7 +208,7 @@
 
     <ul class="invList" dir-paginate="inventory in main.inventoryList | itemsPerPage: 30 | filter: main.search">
         <li>
-            <a data-toggle="modal" data-target="#inventModal" ng-click="main.setId(inventory)"><img ng-src="{{ inventory.imageUrl[0] }}" alt="Huh?" style="width: 200px; height: 200px"></a>
+            <a data-toggle="modal" data-target="#inventModal" ng-click="main.setId(inventory)"><img ng-src="{{ inventory.imageUrl[0] }}" alt="{{ inventory.name }}" style="width: 200px; height: 200px"></a>
         </li>
         <li> <b>{{ inventory.name }} </b></li>
         <li>

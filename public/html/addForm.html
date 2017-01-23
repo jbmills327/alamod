@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <!-- Google Font Poiret -->
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+
+</head>
+
+<body ng-controller="MainCtrl as main">
+
+    <form class="submissionsForm" ng-submit="main.addInvent()">
+        <input class="form-control" placeholder="Name" ng-model="main.newInvent.name" type="text">
+        <!-- <input class="form-control" placeholder="Period" ng-model="" type="text"> -->
+        <select class="form-control" ng-model="main.newInvent.period" ng-options="x for x in main.periods"></select>
+        <input class="form-control" placeholder="Price" ng-model="main.newInvent.price" type="text">
+        <!-- <input class = "form-control" placeholder = "Description" ng-model = "" type="text"> -->
+        <textarea class="form-control" placeholder="Description" ng-model="main.newInvent.description" rows="8" cols="80"></textarea>
+        <input class="form-control" placeholder="Condition" ng-model="main.newInvent.condition" type="text">
+        <input class="form-control" placeholder="Width" ng-model="main.newInvent.measurements.width" type="text">
+        <input class="form-control" placeholder="Heighth" ng-model="main.newInvent.measurements.height" type="text">
+        <input class="form-control" placeholder="Depth" ng-model="main.newInvent.despth" type="text">
+        <input class="form-control" placeholder="Diameter" ng-model="main.newInvent.diameter" type="text">
+        <input class="form-control" placeholder="Number of Items" ng-model="main.newInvent.numOfItems" type="text">
+        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[0]" type="text">
+        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[1]" type="text">
+        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[2]" type="text">
+        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[3]" type="text">
+        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[4]" type="text">
+
+        <!-- <input class="form-control" placeholder="Category" ng-model="" type="text"> -->
+        <select class="form-control" ng-model="main.newInvent.category" ng-options="x for x in main.categories"></select>
+        <button type="submit" name="button">Submit</button>
+
+    </form>
+
+    <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
+    <script type="text/javascript" src="../javascript/dirPagination.js"></script>
+    <script type="text/javascript" src="../javascript/module.js"></script>
+    <script type="text/javascript" src="../javascript/myScripts.js"></script>
+    <script type="text/javascript" src="../javascript/factory.js"></script>
+
+</body>
+
+</html>

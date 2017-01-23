@@ -21,9 +21,25 @@ mainController.$inject = ["$http", "alamodfactory"];
 function mainController($http, alamodfactory) {
     var main = this;
     main.id = "";
-    main.search = [];
+    main.search = "";
+    main.newInvent = {
+        "name": "",
+        "period": "",
+        "description": "",
+        "price": "",
+        "condition": "",
+        "measurements": {
+            "width": "",
+            "height": "",
+            "depth": "",
+            "diameter": "",
+        },
+        "numOfItems": "",
+        "imageUrl": [],
+        "category": "",
+    };
     main.inventoryList = [];
-    main.greeting = "This is only a test";
+    // main.greeting = "This is only a test";
     // main.search = "";
     main.creators = [
         "Yaakov Agam",
@@ -170,6 +186,24 @@ function mainController($http, alamodfactory) {
         console.log(name);
         main.search = name;
         console.log(main.search);
+    }
+
+    main.addInvent = function() {
+        alamodfactory.createInvent(main.newInvent)
+            .then(function(err, returnData) {
+                if (err) {
+                    console.log("This is the error", err);
+                } else {
+                    console.log("This is the return data", returnData);
+
+                }
+            })
+
+
+    }
+
+    main.resetField = function() {
+        main.search = "";
     }
 
 

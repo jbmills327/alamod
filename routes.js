@@ -28,6 +28,12 @@ module.exports = (app) => {
         });
     });
 
+    app.get('/contact', (req, res) => {
+        res.sendFile("contact.html", {
+            root: './public/html'
+        });
+    });
+
     app.get("/api/inventory", Inv.get);
     app.get("/api/inventory/:category", Inv.get);
     app.get("/api/inventory/:id", Inv.get);
