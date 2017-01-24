@@ -33,11 +33,13 @@
         <input class="form-control" placeholder="Depth" ng-model="main.newInvent.despth" type="text">
         <input class="form-control" placeholder="Diameter" ng-model="main.newInvent.diameter" type="text">
         <input class="form-control" placeholder="Number of Items" ng-model="main.newInvent.numOfItems" type="text">
-        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[0]" type="text">
-        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[1]" type="text">
+        <!-- <textarea rows="8" cols="80" class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl" type="text"></textarea> -->
+
+        <textarea ng-model="main.newImages" rows="8" cols="80"></textarea>
+        <!-- <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[1]" type="text">
         <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[2]" type="text">
         <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[3]" type="text">
-        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[4]" type="text">
+        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[4]" type="text"> -->
 
         <!-- <input class="form-control" placeholder="Category" ng-model="" type="text"> -->
         <select class="form-control" ng-model="main.newInvent.category" ng-options="x for x in main.categories"></select>

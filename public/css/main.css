@@ -348,10 +348,10 @@ footer img {
 /*styling pagination controls*/
 
 .invControls {
-    position: absolute;
-    top: 200%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    /*top: 200%;*/
+    left: 40%;
+    transform: translate(-50%);
 }
 
 .poiret {

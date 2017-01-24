@@ -21,6 +21,8 @@ mainController.$inject = ["$http", "alamodfactory"];
 function mainController($http, alamodfactory) {
     var main = this;
     main.id = "";
+    main.zoomPhoto = "";
+    main.newImages = "";
     main.search = "";
     main.newInvent = {
         "name": "",
@@ -168,6 +170,14 @@ function mainController($http, alamodfactory) {
 
     }
 
+    main.setZoom = function(objPhoto) {
+        main.zoomPhoto = objPhoto;
+        console.log("This is the zoomed photo ID", main.zoomPhoto);
+        // main.zoomPhoto = "";
+
+    }
+
+
     main.getInventOne = function(id) {
         console.log(id);
         alamodfactory.getInventOne(id)
@@ -189,6 +199,7 @@ function mainController($http, alamodfactory) {
     }
 
     main.addInvent = function() {
+        main.newInvent.imageUrl = main.newImages.split(",");
         alamodfactory.createInvent(main.newInvent)
             .then(function(err, returnData) {
                 if (err) {
@@ -197,6 +208,8 @@ function mainController($http, alamodfactory) {
                     console.log("This is the return data", returnData);
 
                 }
+                main.newInvent = {};
+                main.newImages = "";
             })
 
 
