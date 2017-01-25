@@ -20,12 +20,13 @@
 
 <body ng-controller="MainCtrl as main">
 
-    <form class="submissionsForm" ng-submit="main.addInvent()">
+    <button class="btn btn-default" ng-hide="main.showInventoryForm" ng-click="main.showAddInventory()" name="button">Add Inventory</button>
+
+    <!-- This is the form to add data to the database -->
+    <form class="submissionsForm" ng-show="main.showInventoryForm" ng-submit="main.addInvent()">
         <input class="form-control" placeholder="Name" ng-model="main.newInvent.name" type="text">
-        <!-- <input class="form-control" placeholder="Period" ng-model="" type="text"> -->
         <select class="form-control" ng-model="main.newInvent.period" ng-options="x for x in main.periods"></select>
         <input class="form-control" placeholder="Price" ng-model="main.newInvent.price" type="text">
-        <!-- <input class = "form-control" placeholder = "Description" ng-model = "" type="text"> -->
         <textarea class="form-control" placeholder="Description" ng-model="main.newInvent.description" rows="8" cols="80"></textarea>
         <input class="form-control" placeholder="Condition" ng-model="main.newInvent.condition" type="text">
         <input class="form-control" placeholder="Width" ng-model="main.newInvent.measurements.width" type="text">
@@ -33,19 +34,68 @@
         <input class="form-control" placeholder="Depth" ng-model="main.newInvent.despth" type="text">
         <input class="form-control" placeholder="Diameter" ng-model="main.newInvent.diameter" type="text">
         <input class="form-control" placeholder="Number of Items" ng-model="main.newInvent.numOfItems" type="text">
-        <!-- <textarea rows="8" cols="80" class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl" type="text"></textarea> -->
-
         <textarea ng-model="main.newImages" rows="8" cols="80"></textarea>
-        <!-- <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[1]" type="text">
-        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[2]" type="text">
-        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[3]" type="text">
-        <input class="form-control" placeholder="Images" ng-model="main.newInvent.imageUrl[4]" type="text"> -->
-
-        <!-- <input class="form-control" placeholder="Category" ng-model="" type="text"> -->
         <select class="form-control" ng-model="main.newInvent.category" ng-options="x for x in main.categories"></select>
+        <button type="button" name="button" ng-click="main.showAddInventory()">Close</button>
         <button type="submit" name="button">Submit</button>
-
     </form>
+
+    <!-- End of add form -->
+
+    <div ng-hide="main.showInventoryForm">
+
+
+
+        <!-- ng-model="main.editedItem.name"  -->
+
+
+        <form class="referenceNumber" ng-submit="main.getInvent(main.id)">
+            <input type="text" placeholder="Reference Number" ng-model="main.id">
+            <button type="submit">Edit</button>
+        </form>
+        <form ng-submit="main.editItems()" class="" style="width: 40%">
+
+            <h5>Reference:</h5><input ng-model="main.editItem._id" class="form-control" type="text">
+
+            <h5>Name:</h5><input class="form-control" type="text" name="" ng-model="main.editItem.name">
+
+            <h5>Description:</h5><textarea ng-model="main.editItem.description" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+            <h5>Price:</h5><input ng-model="main.editItem.price" class="form-control" type="text">
+
+            <h5>Width:</h5><input ng-model="main.editItem.measurements.width" class="form-control" type="text">
+
+            <h5>Height:</h5><input ng-model="main.editItem.measurements.height" class="form-control" type="text">
+
+            <h5>Depth:</h5><input ng-model="main.editItem.measurements.depth" class="form-control" type="text">
+
+            <h5>Diameter: </h5><input ng-model="main.editItem.measurements.diameter" class="form-control" type="text">
+
+            <h5>Images: </h5><textarea ng-model="main.editItem.imageUrl" class="form-control" rows="8" cols="80"></textarea>
+            <button type="submit" name="button">Submit</button>
+
+        </form>
+    </div>
+
+
+    <!-- This will be the form to edit data in the database -->
+
+    <!-- <form class="submissionsForm" ng-submit="main.editInvent()">
+        <input class="form-control" placeholder="Name" ng-model="main.newInvent.name" type="text">
+        <input type="text" class="form-control" ng-model="main.newInvent.period">
+        <input class="form-control" placeholder="Price" ng-model="main.newInvent.price" type="text">
+        <textarea class="form-control" placeholder="Description" ng-model="main.newInvent.description" rows="8" cols="80"></textarea>
+        <input class="form-control" placeholder="Condition" ng-model="main.newInvent.condition" type="text">
+        <input class="form-control" placeholder="Width" ng-model="main.newInvent.measurements.width" type="text">
+        <input class="form-control" placeholder="Heighth" ng-model="main.newInvent.measurements.height" type="text">
+        <input class="form-control" placeholder="Depth" ng-model="main.newInvent.despth" type="text">
+        <input class="form-control" placeholder="Diameter" ng-model="main.newInvent.diameter" type="text">
+        <input class="form-control" placeholder="Number of Items" ng-model="main.newInvent.numOfItems" type="text">
+        <textarea ng-model="main.newImages" rows="8" cols="80"></textarea>
+        <input type="text" class="form-control" ng-model="main.newInvent.category">
+        <button type="submit" name="button">Submit</button> -->
+
+    <!-- End of edit form -->
 
     <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
     <script type="text/javascript" src="../javascript/dirPagination.js"></script>
@@ -56,3 +106,4 @@
 </body>
 
 </html>
+>

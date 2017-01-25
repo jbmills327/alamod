@@ -18,6 +18,10 @@ function alamodfactory($http) {
 
         createInvent: function(adventData) {
             return $http.post("/api/inventory", adventData);
+        },
+
+        editInvent: function(editData) {
+            return $http.put("/api/inventory", editData)
         }
 
     }

@@ -14,34 +14,18 @@ module.exports = {
         });
     },
     get: (req, res) => {
-        if (req.params.category) {
-            INV.find({
-                category: req.params.category
+        if (req.params.id) {
+            INV.findOne({
+                _id: req.params.id
             }, (err, docs) => {
                 if (err) {
                     res.send("This is the error", err)
                 }
                 if (!docs) {
-                    return res.send("Nothing in that category");
+                    return res.send("Nothing with that id");
                 }
                 res.json(docs);
                 // res.redirect("/inventory");
-            });
-        }
-        if (req.params.id) {
-            console.log(req.params.id);
-            INV.findOne({
-                _id: req.query.id
-            }, (err, docs) => {
-                if (err) {
-                    res.send("This is the error");
-                }
-                if (!docs) {
-                    return res.send("Nothing with that ID");
-                }
-                console.log("Found your stuff!");
-                console.log("This the the item", docs);
-                res.json(docs);
             });
         } else {
             INV.find({}, (err, docs) => {
@@ -51,16 +35,35 @@ module.exports = {
                 res.json(docs);
             })
         }
-    }
-    // search: (req, res) => {
-    //     INV.findOne({
-    //         category: req.params.category
-    //     }, (err, docs) => {
-    //         if (err) {
-    //             res.send("This is the error", err)
-    //         }
-    //         res.JSON(docs)
-    //     })
-    // }
+    },
 
+    edit: (req, res) => {
+        var newVar = {
+            "name": req.body.name,
+            "period": req.body.period,
+            "description": req.body.description,
+            "price": req.body.price,
+            "condition": req.body.condition,
+            "measurements": {
+                "width": req.body.measurements.width,
+                "height": req.body.measurements.height,
+                "depth": req.body.measurements.depth,
+                "diameter": req.body.measurements.diameter,
+            },
+            "numOfItems": req.body.numOfItems,
+            "imageUrl": req.body.imageUrl,
+            "category": req.body.category,
+        };
+        INV.findOneAndUpdate({
+            "_id": req.body._id
+        }, newVar, {
+            new: true
+        }, (err, doc) => {
+            if (err) {
+                return res.send("This is the error", err)
+            }
+            console.log("This is the doc", doc);
+            res.send(doc);
+        });
+    }
 }

@@ -21,8 +21,12 @@ mainController.$inject = ["$http", "alamodfactory"];
 function mainController($http, alamodfactory) {
     var main = this;
     main.id = "";
+    // main.editedItem = {};
     main.zoomPhoto = "";
-    main.newImages = "";
+    main.showInventoryForm = false;
+    main.newImages = [];
+    main.editedImages = "";
+    main.editItem = {};
     main.search = "";
     main.newInvent = {
         "name": "",
@@ -65,7 +69,6 @@ function mainController($http, alamodfactory) {
         "Dunbar",
         "Charles Eames",
         "Paul Evans",
-        "Fontana Arte",
         "Garouste et Bonetti",
         "Frank Gehry",
         "General Electric",
@@ -143,26 +146,20 @@ function mainController($http, alamodfactory) {
     main.getInvent = function(category) {
         alamodfactory.getInvent(category)
             .then(function(returnData) {
-                console.log("This is the returndata: ", returnData.data);
-                main.inventoryList = returnData.data;
-                // main.inventoryList.push(returnData.data);
-                console.log("This is main.inventoryList", main.inventoryList);
+                if (returnData.data.length) {
+                    console.log("This is the returndata: ", returnData.data);
+                    main.inventoryList = returnData.data;
+                    // main.inventoryList.push(returnData.data);
+                    console.log("This is main.inventoryList", main.inventoryList);
+                } else {
+                    main.editItem = returnData.data;
+                }
             }).catch(function(err) {
                 console.log("This is the error: ", err);
             });
     }
     main.getInvent();
     // main.getInvent();
-
-    // main.searchInventory = function(data) {
-    //     alamodfactory.searchInvent(data)
-    //         .then(function(returnData) {
-    //             console.log("This is the return data: ", returnData.data);
-    //             main.inventoryList = returnData.data;
-    //         }).catch(function(err) {
-    //             console.log("This is the error", err);
-    //         })
-    // }
 
     main.setId = function(objId) {
         main.id = objId;
@@ -215,8 +212,29 @@ function mainController($http, alamodfactory) {
 
     }
 
+    main.editItems = function() {
+        if (!main.editItem.imageUrl.length) {
+            main.newImages = main.editItem.imageUrl.split(",");
+            main.editItem.imageUrl = main.newImages;
+        }
+        console.log(main.editItem);
+        alamodfactory.editInvent(main.editItem)
+            .then(function(err, returnData) {
+                if (err) {
+                    console.log("This is the error", err);
+                } else {
+                    console.log("This is the edited data", returnData);
+                }
+            })
+        main.editItem = {};
+    }
+
     main.resetField = function() {
         main.search = "";
+    }
+
+    main.showAddInventory = function() {
+        main.showInventoryForm = !main.showInventoryForm;
     }
 
 
