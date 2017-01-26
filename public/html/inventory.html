@@ -24,7 +24,17 @@
         $(document).on('hidden.bs.modal', '.modal', function() {
             $('.modal:visible').length && $(document.body).addClass('modal-open');
         })
+
+        function printContent(el) {
+            var restorePage = document.body.innerHTML;
+            var printcontent = document.getElementById(el).innerHTML;
+            document.body.innerHTML = printcontent;
+            window.print();
+            location.reload();
+            // resotrePage = document.body.innerHTML;
+        }
     </script>
+
 </head>
 
 <body ng-controller="MainCtrl as main">
@@ -238,9 +248,12 @@
             <div class="modal-content">
                 <form ng-submit="main.pushAdventurer()">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">{{ main.id.name }}</h4>
+                        <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+
+                        <!-- &times; -->
+                        <h4 class="modal-title poiret" id="myModalLabel">{{ main.id.name }}</h4>
                     </div>
+                  <!-- <div id = "printStuff"> -->
                     <div class="modal-body">
                         <!-- <input class="form-control" type="text" ng-model="main.newAdventurer.name" placeholder="Name">
                         <input class="form-control" type="text" ng-model="main.newAdventurer.age" placeholder="Age"> -->
@@ -271,9 +284,15 @@
                           </div>
                         </ul>
 
-                        <a class = "emailStuff" href="mailto:?subject = Found this item at a la MOD&body={{ main.id.name}} {{ main.id.description}} {{ main.id.price}} {{ main.id.imageUrl}}">Email this item</a>
+                        <a class = "emailStuff" target = "_blank" href="mailto:?subject = Found this item at a la MOD&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}">EMAIL THIS ITEM</a>
+                        <!-- <button class = "btn modalButtons"></button> -->
+
+                        <button class = " btn modalButtons"type="button" onclick = "printContent('printStuff')">PRINT THIS ITEM</button>
+
+
 
                     </div>
+                  <!-- </div> -->
                     <div class="modal-footer">
                         <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary" onclick="closeNav()">Save changes</button> -->
@@ -285,13 +304,44 @@
     </div>
 
 
+<div id="printStuff">
+  <h1 style = "text-align: center;font-family: 'Helvetica', 'Arial', sans-serif; color: #5b5b5b">a La MOD</h1>
+
+  <ul class="invList">
+      <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[0])"><img ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: 300px"></a>
+      </li>
+
+  <li> <b>{{ main.id.name }} </b></li>
+  <h5>{{ main.id.price }}</h5>
+  <li> Reference: {{ main.id._id }}</li>
+  <li> Description: {{ main.id.description }}</li>
+  <li> Height: {{ main.id.measurements.height }}</li>
+  <li> Width: {{ main.id.measurements.width }}</li>
+  <li> Depth: {{ main.id.measurements.depth }}</li>
+  <li> Diameter: {{ main.id.measurements.diameter }}</li>
+  <li> <b>Price: {{ main.id.price }}</b></li>
+  <li>Location: {{ main.id.location}}</li>
+
+  <div class="thumbnailHolder">
+  <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[1])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a></li>
+  <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[2])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a></li>
+  <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[3])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a></li>
+  <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[4])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a></li>
+</div>
+
+</ul>
+
+
+</div>
+
 
     <!--  Zoom in on picture modal -->
     <div class="modal fade" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-admin" role="document">
             <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+                        <!-- &times; -->
                         <h4 class="modal-title" id="myModalLabel">{{ main.id.name }}</h4>
                     </div>
                     <div class="modal-body">
