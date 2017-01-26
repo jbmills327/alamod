@@ -18,6 +18,8 @@
 
     <!-- Google Font Poiret -->
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./css/resources/palm_tree.png">
+
     <title>Inventory</title>
 
     <script type="text/javascript">
@@ -200,7 +202,7 @@
         <div class="clearField">
             <input class="form-control" type="text" placeholder="Search" ng-model="main.search">
             <a href="JavaScript: void(0)" ng-click="main.resetField()" style="color: black; text-decoration: none">
-                <h5 style="font-family: 'Poiret-One'">CLEAR</h5></a>
+                <h5 style="font-family: 'Poiret One', cursive">CLEAR</h5></a>
         </div>
 
         <!-- This will be for all creators -->
@@ -284,10 +286,10 @@
                           </div>
                         </ul>
 
-                        <a class = "emailStuff" target = "_blank" href="mailto:?subject = Found this item at a la MOD&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}">EMAIL THIS ITEM</a>
+                        <a class = "emailStuff" target = "_blank" href="mailto:?subject = Found this item at a la MOD&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}"><button class = "btn emailButton" type="button">EMAIL THIS ITEM</button></a>
                         <!-- <button class = "btn modalButtons"></button> -->
 
-                        <button class = " btn modalButtons"type="button" onclick = "printContent('printStuff')">PRINT THIS ITEM</button>
+                        <button class = " btn modalButtons" type="button" onclick = "printContent('printStuff')">PRINT THIS ITEM</button>
 
 
 

@@ -23,7 +23,17 @@ function mainController($http, alamodfactory) {
     main.id = "";
     // main.editedItem = {};
     main.zoomPhoto = "";
+
+    // This is to hold new images for carousel
+    // main.newCarouselStuffOne = "";
+    // main.newCarouselStuffTwo = "";
+    // main.newCarouselStuffThree = "";
+    // main.newCarouselStuffFour = "";
+    // main.newCarouselStuffFive = "";
+
+    main.newCarouselImages = [];
     main.showInventoryForm = false;
+    main.showMyEdit = true;
     main.newImages = [];
     main.editedImages = "";
     main.editItem = {};
@@ -121,7 +131,7 @@ function mainController($http, alamodfactory) {
         "Folk Art",
         "Asian Art and Furniture",
         "Rug and Carpets",
-        "Serve ware, Ceramics, Silver and Glass",
+        "Serveware, Ceramics, Silver and Glass",
         "Wall Decorations",
         "Building and Garden Elements",
         "Decorative Objects",
@@ -236,6 +246,24 @@ function mainController($http, alamodfactory) {
     main.showAddInventory = function() {
         main.showInventoryForm = !main.showInventoryForm;
     }
+
+    main.showEditForm = function() {
+        main.showMyEdit = !main.showMyEdit;
+    }
+
+    main.carouselNewListings = function(one, two, three, four) {
+        console.log("This is firing");
+        main.newCarouselImages = [one, two, three, four];
+        console.log(main.newCarouselImages);
+
+    }
+    main.logThis = function() {
+
+        console.log(main.newCarouselImages[2]);
+
+    }
+
+    main.logThis();
 
 
 }

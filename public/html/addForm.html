@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Contact Us</title>
+    <title>Add Inventory</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
     <!-- My CSS -->
@@ -45,15 +45,13 @@
     <div ng-hide="main.showInventoryForm">
 
 
-
-        <!-- ng-model="main.editedItem.name"  -->
-
+        <!-- This is the form to edit items -->
 
         <form class="referenceNumber" ng-submit="main.getInvent(main.id)">
             <input type="text" placeholder="Reference Number" ng-model="main.id">
-            <button type="submit">Edit</button>
+            <button ng-click="main.showEditForm()" type="submit">Edit</button>
         </form>
-        <form ng-submit="main.editItems()" class="" style="width: 40%">
+        <form ng-hide="main.showMyEdit" ng-submit="main.editItems()" class="" style="width: 40%">
 
             <h5>Reference:</h5><input ng-model="main.editItem._id" class="form-control" type="text">
 
@@ -72,30 +70,27 @@
             <h5>Diameter: </h5><input ng-model="main.editItem.measurements.diameter" class="form-control" type="text">
 
             <h5>Images: </h5><textarea ng-model="main.editItem.imageUrl" class="form-control" rows="8" cols="80"></textarea>
-            <button type="submit" name="button">Submit</button>
+            <button ng-click="main.showEditForm()" type="submit" name="button">Submit</button>
 
         </form>
     </div>
 
+    <!-- End edit items form -->
 
-    <!-- This will be the form to edit data in the database -->
+    <!-- This is the form to add photos to newlisting carousel -->
+    <form class="newListingsForm" ng-submit="main.carouselNewListings(main.newListingStuffOne,main.newListingStuffTwo,main.newListingStuffThree,main.newListingStuffFour,main.newListingStuffFive)">
+        <input class="form-control " type="text" ng-model="main.newListingStuffOne" placeholder="Image 1">
+        <input class="form-control " type="text" ng-model="main.newListingStuffTwo" placeholder="Image 2">
+        <input class="form-control " type="text" ng-model="main.newListingStuffThree" placeholder="Image 3">
+        <input class="form-control " type="text" ng-model="main.newListingStuffFour" placeholder="Image 4">
+        <input class="form-control " type="text" ng-model="main.newListingStuffFive" placeholder="Image 5">
+        <button type="submit">Submit</button>
 
-    <!-- <form class="submissionsForm" ng-submit="main.editInvent()">
-        <input class="form-control" placeholder="Name" ng-model="main.newInvent.name" type="text">
-        <input type="text" class="form-control" ng-model="main.newInvent.period">
-        <input class="form-control" placeholder="Price" ng-model="main.newInvent.price" type="text">
-        <textarea class="form-control" placeholder="Description" ng-model="main.newInvent.description" rows="8" cols="80"></textarea>
-        <input class="form-control" placeholder="Condition" ng-model="main.newInvent.condition" type="text">
-        <input class="form-control" placeholder="Width" ng-model="main.newInvent.measurements.width" type="text">
-        <input class="form-control" placeholder="Heighth" ng-model="main.newInvent.measurements.height" type="text">
-        <input class="form-control" placeholder="Depth" ng-model="main.newInvent.despth" type="text">
-        <input class="form-control" placeholder="Diameter" ng-model="main.newInvent.diameter" type="text">
-        <input class="form-control" placeholder="Number of Items" ng-model="main.newInvent.numOfItems" type="text">
-        <textarea ng-model="main.newImages" rows="8" cols="80"></textarea>
-        <input type="text" class="form-control" ng-model="main.newInvent.category">
-        <button type="submit" name="button">Submit</button> -->
+    </form>
 
-    <!-- End of edit form -->
+
+
+
 
     <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
     <script type="text/javascript" src="../javascript/dirPagination.js"></script>
@@ -106,4 +101,3 @@
 </body>
 
 </html>
->
