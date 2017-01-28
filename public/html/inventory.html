@@ -286,10 +286,17 @@
                           </div>
                         </ul>
 
-                        <a class = "emailStuff" target = "_blank" href="mailto:?subject = Found this item at a la MOD&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}"><button class = "btn emailButton" type="button">EMAIL THIS ITEM</button></a>
+                        <a class = "emailStuff" target = "_blank" href="mailto:?subject= Found this item at a la MOD&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}">
+                          <button class = "btn emailButton" type="button">EMAIL THIS ITEM</button>
+                        </a>
+
+
+
                         <!-- <button class = "btn modalButtons"></button> -->
 
                         <button class = " btn modalButtons" type="button" onclick = "printContent('printStuff')">PRINT THIS ITEM</button>
+
+                        <a target = "_blank" href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}"><button class = "btn questionsButton" type="button">QUESTIONS ABOUT ITEM</button></a>
 
 
 
