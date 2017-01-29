@@ -8,11 +8,11 @@ function alamodfactory($http) {
 
     return {
         getInvent: function(category) {
-            category = category ? "/" + category : " "
+            category = category ? "/" + category : " ";
             return $http.get("/api/inventory" + category);
         },
         getInventOne: function(id) {
-            id = id ? "/" + id : " "
+            id = id ? "/" + id : " ";
             return $http.get("/api/inventory" + id);
         },
 
@@ -21,7 +21,11 @@ function alamodfactory($http) {
         },
 
         editInvent: function(editData) {
-            return $http.put("/api/inventory", editData)
+            return $http.put("/api/inventory", editData);
+        },
+        deleteItem: function(id) {
+            id = id ? "/" + id : " ";
+            return $http.delete("/api/inventory" + id);
         }
 
     }

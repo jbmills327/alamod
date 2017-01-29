@@ -29,6 +29,7 @@ function mainController($http, alamodfactory) {
     // main.newCarouselStuffThree = "";
     // main.newCarouselStuffFour = "";
     // main.newCarouselStuffFive = "";
+    main.removeThatShit = "";
     main.newCarouselImages = [];
     main.showInventoryForm = false;
     main.showMyEdit = true;
@@ -216,8 +217,6 @@ function mainController($http, alamodfactory) {
                 main.newInvent = {};
                 main.newImages = "";
             })
-
-
     }
 
     main.editItems = function() {
@@ -235,6 +234,18 @@ function mainController($http, alamodfactory) {
                 }
             })
         main.editItem = {};
+    }
+
+    main.removeItems = function(id) {
+        alamodfactory.deleteItem(id)
+            .then(function(err, retrunData) {
+                if (err) {
+                    console.log("This is the error", err);
+                } else {
+                    console.log("This is the return data", returnData);
+                }
+            })
+        main.removeThatShit = "";
     }
 
     main.resetField = function() {

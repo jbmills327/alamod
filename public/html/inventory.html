@@ -43,18 +43,15 @@
     <div class="navBar">
         <a href="/newListings" style="text-decoration: none;">
             <h1>a La MOD</h1></a>
-        <!-- <a href="/newListings" style="text-decoration: none; color: black"><h5><strong>NEW LISTINGS</strong></h5></a> -->
         <a href="javascript:void(0)" onclick="openInventNav()" style="text-decoration: none; color: black"><h5><strong>REFINE SEARCH</strong></h5></a>
         <a href="/location" style="text-decoration: none; color: black"><h5><strong>LOCATION</strong></h5></a>
         <a href="/contact" style="text-decoration: none; color: black"><h5><strong>CONTACT US</strong></h5></a>
     </div>
     <div class="line"></div>
-    <!-- <h1>{{ main.greeting }}</h1> -->
     <!-- This is the nested slide menu for More Furniture-->
     <div id="myIventoryNav" class="inventorySidenav">
         <a href="#"></a>
         <a href="javascript:void(0)" class="closebtn" onclick="closeInventNav()">&times;</a>
-        <!-- <a href="javascript:void(0)" onclick="openNav(); closeMainNav()">Inventory</a> -->
         <a href="javascript: void(0)" onclick="openNestedCreator(); closeInventNav()">BROWSE BY CREATOR</a>
         <a href="javascript: void(0)" onclick="openNestedCategory(); closeInventNav()">BROWSE BY CATEGORY</a>
         <a href="javascript: void(0)" onclick="openNestedPeriod(); closeInventNav()">BROWSE BY PERIOD</a>
@@ -66,70 +63,6 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedCreator()">&times;</a>
         <div ng-repeat="items in main.creators" class="">
             <a href="javascript: void(0)" ng-click=" main.creatorFinder(items)" onclick="closeNestedCreator()"> {{ items }}</a>
-            <!-- <a href="#">Yaakov Agam</a>
-            <a href="#">Alessandro Albrizzi</a>
-            <a href="#">Architectural Pottery</a>
-            <a href="#">ATT:FONTANA ARTE</a>
-            <a href="#">Arteluce</a>
-            <a href="#">Sergio Asti</a>
-            <a href="#">Gas Aplenty</a>
-            <a href="#">MILO BAUGHMAN</a>
-            <a href="#">Brent Bennet</a>
-            <a href="#">Breton</a>
-            <a href="#">Paolo Buffa</a>
-            <a href="#">Chapman</a>
-            <a href="#">Raul Coronel</a>
-            <a href="#">David Cressey</a>
-            <a href="#">Curtis Jere</a>
-            <a href="#">D.I.A. Design Institute of America</a>
-            <a href="#">Del Campo</a>
-            <a href="#">Drylund</a>
-            <a href="#">Dunbar</a>
-            <a href="#">Charles Eames</a>
-            <a href="#">Paul Evans</a>
-            <a href="#">Fontana Arte</a>
-            <a href="#">Garouste et Bonetti</a>
-            <a href="#">Frank Gehry</a>
-            <a href="#">General Electric</a>
-            <a href="#">Milton H. Greene</a>
-            <a href="#">Grosfeld House</a>
-            <a href="#">Guillermo et Chambray</a>
-            <a href="#">GARY GUTTERMAN
-            <a href="#">Charles Hollis Jones</a>
-            <a href="#">Robert Josten</a>
-            <a href="#">Kittinger</a>
-            <a href="#">Florence Knoll</a>
-            <a href="#">Koch and Lowry</a>
-            <a href="#">Cesare Lacca</a>
-            <a href="#">Percival Lafer</a>
-            <a href="#">Victoria Littlejohn</a>
-            <a href="#">Maitland-Smith</a>
-            <a href="#">Angelo Mangiarotti</a>
-            <a href="#">Mastercraft</a>
-            <a href="#">Phyllis Morris</a>
-            <a href="#">George Nelson</a>
-            <a href="#">Arne Norell</a>
-            <a href="#">Pace Collection</a>
-            <a href="#">Pierre Paulin</a>
-            <a href="javascript: void(0)" ng-click=" main.creatorFinder()" onclick="closeNestedCreator()" id="data">Warren Platner</a>
-            <a href="#">Gio Ponti</a>
-            <a href="#">Jens Harald Quistgaard</a>
-            <a href="#">Raymor</a>
-            <a href="#">Willy Rizzo</a>
-            <a href="#">ROUGIER</a>
-            <a href="#">Renzo Rutili</a>
-            <a href="#">Victor Salmones</a>
-            <a href="#">Tobia & Afra Scarpa</a>
-            <a href="#">Karl Springer</a>
-            <a href="#">Steel case</a>
-            <a href="#">Ilmari Tapiovaara</a>
-            <a href="#">Aldo Tura</a>
-            <a href="#">Ludwig Mies van der Rohe</a>
-            <a href="#">Yvaral (Jean-Pierre Vasarely)</a>
-            <a href="#">Venini</a>
-            <a href="#">Vistosi</a>
-            <a href="#">Hans Wegner</a>
-            <a href="#">Bjorn Wiinblad</a> -->
         </div>
         <a href="javascript:void(0)" onclick="closeNestedCreator(); openInventNav()">Back</a>
     </div>
@@ -158,18 +91,6 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedCategory()">&times;</a>
         <div ng-repeat="items in main.categories" class="">
             <a href="javascript: void(0)" ng-click=" main.creatorFinder(items)" onclick="closeNestedCategory()"> {{ items }}</a>
-            <!--
-        <a href="#">21st Century and New</a>
-        <a href="#">All 20th Century</a>
-        <a href="#">1980-2000</a>
-        <a href="#">1970s</a>
-        <a href="#">1960s</a>
-        <a href="#">1950s</a>
-        <a href="#">1940s</a>
-        <a href="#">1930s</a>
-        <a href="#">1900-1920</a>
-        <a href="#">19th Century</a>
-        <a href="#">18th Century and Earlier</a> -->
             <a href="javascript:void(0)" onclick="closeNestedPeriod(); openInventNav()">Back</a>
         </div>
     </div>
@@ -180,24 +101,13 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedPeriod()">&times;</a>
         <div ng-repeat="items in main.periods" class="">
             <a href="javascript: void(0)" ng-click=" main.creatorFinder(items)" onclick="closeNestedPeriod()"> {{ items }}</a>
-            <!--
-        <a href="#">21st Century and New</a>
-        <a href="#">All 20th Century</a>
-        <a href="#">1980-2000</a>
-        <a href="#">1970s</a>
-        <a href="#">1960s</a>
-        <a href="#">1950s</a>
-        <a href="#">1940s</a>
-        <a href="#">1930s</a>
-        <a href="#">1900-1920</a>
-        <a href="#">19th Century</a>
-        <a href="#">18th Century and Earlier</a> -->
+
             <a href="javascript:void(0)" onclick="closeNestedPeriod(); openInventNav()">Back</a>
         </div>
     </div>
 
     <form class="searchForm">
-        <!-- <a class="poiret" ng-click="main.getInvent()" style="text-decoration: none; color: black" href="javascript:void(0)">All Inventory</a> -->
+
         <h4 class="poiret">Refine Further</h4>
         <div class="clearField">
             <input class="form-control" type="text" placeholder="Search" ng-model="main.search">
@@ -205,23 +115,6 @@
                 <h5 style="font-family: 'Poiret One', cursive">CLEAR</h5></a>
         </div>
 
-        <!-- This will be for all creators -->
-
-        <!-- <select class="form-control" ng-model="main.search" ng-options="x for x in main.creators">
-          <option value="">Browse by Creator</option>
-        </select> -->
-
-        <!-- This will be for all categories -->
-
-        <!-- <select class="form-control" ng-model="main.search" ng-options="x for x in main.categories">
-          <option value="">Browse by Category</option>
-        </select> -->
-
-        <!-- This will be for all periods -->
-
-        <!-- <select class="form-control" ng-model="main.search" ng-options="x for x in main.periods">
-          <option value="">Browse by Period</option>
-        </select> -->
     </form>
 
     <ul class="invList" dir-paginate="inventory in main.inventoryList | itemsPerPage: 30 | filter: main.search">
@@ -231,154 +124,165 @@
         <li> <b>{{ inventory.name }} </b></li>
         <li>
             <strong>Reference:</strong> {{ inventory._id }}</li>
-        <!-- <li> Description: {{ inventory.description }}</li> -->
         <li> <strong>Height:</strong> {{ inventory.measurements.height }}</li>
         <li>
             <strong>Width:</strong> {{ inventory.measurements.width }}</li>
         <li>
             <strong>Depth:</strong> {{ inventory.measurements.depth }}</li>
         <li>
-            <strong>Diameter: {{ inventory.measurements.diameter }}</li>
+            <strong>Diameter:</strong> {{ inventory.measurements.diameter }}</li>
         <li> <b>Price: {{ inventory.price }}</b></li>
     </ul>
 
-    <!-- <a data-toggle="modal" data-target="#inventModal"><h1>Add Adventurer</h1></a> -->
 
     <!-- Choose Inventory Modal -->
     <div class="modal fade" id="inventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-admin" role="document">
             <div class="modal-content">
-                <form ng-submit="main.pushAdventurer()">
-                    <div class="modal-header">
-                        <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+                <div class="modal-header">
+                    <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
 
-                        <!-- &times; -->
-                        <h4 class="modal-title poiret" id="myModalLabel">{{ main.id.name }}</h4>
-                    </div>
-                  <!-- <div id = "printStuff"> -->
-                    <div class="modal-body">
-                        <!-- <input class="form-control" type="text" ng-model="main.newAdventurer.name" placeholder="Name">
-                        <input class="form-control" type="text" ng-model="main.newAdventurer.age" placeholder="Age"> -->
-                        <!-- <input class="form-control" type="text" ng-model="main.adventurer" placeholder="adventurer"> -->
-                        <h5>{{ main.id.price }}</h5>
-                        <!-- <select class="form-control" ng-model="main.choose" ng-options="x.name for x in main.adventList"> </select>-->
+                    <h4 class="modal-title poiret" id="myModalLabel">{{ main.id.name }}</h4>
+                </div>
+                <div class="modal-body">
 
-                        <!-- <ul class="invList" ng-repeat="inventory in main.inventoryList">
-                            <li><img ng-src="{{ inventory.imageUrl }}" alt="Huh?" style="width: 200px; height: 200px"> -->
-                        <ul class="invList">
-                          <!-- <a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[0])"></a> -->
-                            <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[0])"><img ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: 300px"></a>
+                    <h5>{{ main.id.price }}</h5>
+
+                    <ul class="invList">
+
+                        <li>
+                            <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: 300px"></a>
+                        </li>
+                        <li> Reference: {{ main.id._id }}</li>
+                        <li> Description: {{ main.id.description }}</li>
+                        <li> Height: {{ main.id.measurements.height }}</li>
+                        <li> Width: {{ main.id.measurements.width }}</li>
+                        <li> Depth: {{ main.id.measurements.depth }}</li>
+                        <li> Diameter: {{ main.id.measurements.diameter }}</li>
+                        <li>Location: {{ main.id.location}}</li>
+                        <div class="thumbnailHolder">
+                            <li>
+                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[1])"><img class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
                             </li>
-                            <!-- <li> <b>{{ main.id.name }} </b></li> -->
+                            <li>
+                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[2])"><img class="thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[3])"><img class="thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])"><img class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
+                            </li>
+                        </div>
+                    </ul>
+
+                    <a class="emailStuff" target="_blank" href="mailto:?subject= Found this item at a la MOD&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}">
+                        <button class="btn emailButton" type="button">EMAIL THIS ITEM</button>
+                    </a>
+
+                    <button class=" btn modalButtons" type="button" onclick="printContent('printStuff')">PRINT THIS ITEM</button>
+
+                    <a target="_blank" href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}"><button class = "btn questionsButton" type="button">QUESTIONS ABOUT ITEM</button></a>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Choose Inventory Modal -->
+
+    <!-- Choose PrintStuff Modal -->
+    <div class="modal fade" id=" " tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-admin" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+                </div>
+                <div class="modal-body">
+
+                    <div id="printStuff">
+
+                        <h1 style="text-align: center;font-family: 'Helvetica', 'Arial', sans-serif; color: #5b5b5b">a La MOD</h1>
+
+                        <ul class="invList">
+                            <li>
+                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: 300px"></a>
+                            </li>
+
+                            <li> <b>{{ main.id.name }} </b></li>
+                            <h5>{{ main.id.price }}</h5>
                             <li> Reference: {{ main.id._id }}</li>
                             <li> Description: {{ main.id.description }}</li>
                             <li> Height: {{ main.id.measurements.height }}</li>
                             <li> Width: {{ main.id.measurements.width }}</li>
                             <li> Depth: {{ main.id.measurements.depth }}</li>
                             <li> Diameter: {{ main.id.measurements.diameter }}</li>
-                            <!-- <li> <b>Price: {{ main.id.price }}</b></li> -->
+                            <li> <b>Price: {{ main.id.price }}</b></li>
                             <li>Location: {{ main.id.location}}</li>
+
                             <div class="thumbnailHolder">
-                            <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[1])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a></li>
-                            <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[2])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a></li>
-                            <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[3])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a></li>
-                            <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[4])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a></li>
-                          </div>
+                                <li>
+                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[1])"><img class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[2])"><img class="thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[3])"><img class="thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])"><img class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
+                                </li>
+                            </div>
+
                         </ul>
 
-                        <a class = "emailStuff" target = "_blank" href="mailto:?subject= Found this item at a la MOD&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}">
-                          <button class = "btn emailButton" type="button">EMAIL THIS ITEM</button>
-                        </a>
-
-
-
-                        <!-- <button class = "btn modalButtons"></button> -->
-
-                        <button class = " btn modalButtons" type="button" onclick = "printContent('printStuff')">PRINT THIS ITEM</button>
-
-                        <a target = "_blank" href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}"><button class = "btn questionsButton" type="button">QUESTIONS ABOUT ITEM</button></a>
-
-
-
                     </div>
-                  <!-- </div> -->
-                    <div class="modal-footer">
-                        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" onclick="closeNav()">Save changes</button> -->
-                </form>
                 </div>
-
             </div>
         </div>
     </div>
-
-
-<div id="printStuff">
-  <h1 style = "text-align: center;font-family: 'Helvetica', 'Arial', sans-serif; color: #5b5b5b">a La MOD</h1>
-
-  <ul class="invList">
-      <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[0])"><img ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: 300px"></a>
-      </li>
-
-  <li> <b>{{ main.id.name }} </b></li>
-  <h5>{{ main.id.price }}</h5>
-  <li> Reference: {{ main.id._id }}</li>
-  <li> Description: {{ main.id.description }}</li>
-  <li> Height: {{ main.id.measurements.height }}</li>
-  <li> Width: {{ main.id.measurements.width }}</li>
-  <li> Depth: {{ main.id.measurements.depth }}</li>
-  <li> Diameter: {{ main.id.measurements.diameter }}</li>
-  <li> <b>Price: {{ main.id.price }}</b></li>
-  <li>Location: {{ main.id.location}}</li>
-
-  <div class="thumbnailHolder">
-  <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[1])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a></li>
-  <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[2])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a></li>
-  <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[3])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a></li>
-  <li><a data-toggle="modal" data-target="#zoomModal"  ng-click="main.setZoom(main.id.imageUrl[4])"><img class = "thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a></li>
-</div>
-
-</ul>
-
-
-</div>
+    <!-- End print stuff modal -->
 
 
     <!--  Zoom in on picture modal -->
     <div class="modal fade" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-admin" role="document">
             <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
-                        <!-- &times; -->
-                        <h4 class="modal-title" id="myModalLabel">{{ main.id.name }}</h4>
-                    </div>
-                    <div class="modal-body">
-
-                        <h5>{{ main.id.price }}</h5>
-
-                        <ul class="invList">
-                            <li><img style = "text-align: center"ng-src="{{ main.zoomPhoto }}" alt="Huh?" style="width: 600px; height: 600px">
-                            </li>
-                        </ul>
-
-
-                    </div>
-                    <div class="modal-footer">
+                <div class="modal-header">
+                    <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+                    <!-- &times; -->
+                    <h4 class="modal-title" id="myModalLabel">{{ main.id.name }}</h4>
                 </div>
+                <div class="modal-body">
 
+                    <h5>{{ main.id.price }}</h5>
+
+                    <ul class="invList">
+                        <li><img style="text-align: center" ng-src="{{ main.zoomPhoto }}" alt="Huh?" style="width: 600px; height: 600px">
+                        </li>
+                    </ul>
+
+
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- <a href="#inventoryZoom">Test Yo</a>
+    <!-- End Print Stuff Modal -->
 
-    <ng-view>
+    <!--Controls wrapper  -->
 
-    </ng-view> -->
+    <div class="invControlsWrapper">
 
-    <dir-pagination-controls class="invControls" max-size="5" direction-links="true" boundary-links="true" auto-hide="false"></dir-pagination-controls>
+        <dir-pagination-controls class="invControls" max-size="5" direction-links="true" boundary-links="true" auto-hide="false"></dir-pagination-controls>
+    </div>
 
+    <!-- End Control Wrapper -->
+
+    <!-- Script tags -->
     <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
     <script type="text/javascript" src="../javascript/dirPagination.js"></script>
     <script type="text/javascript" src="../javascript/module.js"></script>

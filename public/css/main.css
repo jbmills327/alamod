@@ -390,10 +390,18 @@ footer img {
 
 /*styling pagination controls*/
 
-.invControls {
+.invControlsWrapper {
     position: relative;
-    /*top: 200%;*/
-    left: 40%;
+    width: 100vw;
+    height: auto;
+    /*top: 98vh;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%);*/
+}
+
+.invControls {
+    position: absolute;
+    left: 50%;
     transform: translate(-50%);
 }
 
@@ -502,10 +510,20 @@ body .modal-admin {
 
 .submissionsForm {
     position: absolute;
-    width: 40%;
-    top: 70%;
+    width: 50%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding-bottom: 10%;
+}
+
+.editFormStuff {
+    position: absolute;
+    width: 50%;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 10%;
 }
 
 #printStuff {
@@ -516,6 +534,13 @@ body .modal-admin {
 .newListingsForm {
     width: 50%;
     padding-top: 20px;
+}
+
+.addFormWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media print {

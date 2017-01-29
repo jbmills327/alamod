@@ -65,5 +65,21 @@ module.exports = {
             console.log("This is the doc", doc);
             res.send(doc);
         });
+    },
+
+    delete: (req, res) => {
+        INV.findByIdAndRemove({
+            "_id": req.params.id
+        }, (err, item) => {
+            var response = {
+                message: "Item was deleted",
+                id: req.body.id
+            };
+            if (err) {
+                console.log("This is the error", err);
+            } else {
+                res.send(response);
+            };
+        });
     }
 }

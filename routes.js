@@ -38,8 +38,5 @@ module.exports = (app) => {
     app.get("/api/inventory/:id", Inv.get);
     app.post("/api/inventory", Inv.create);
     app.put("/api/inventory/", Inv.edit);
-
-
-
-
+    app.delete("/api/inventory/:id", Inv.delete);
 }
