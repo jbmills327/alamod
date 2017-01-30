@@ -23,12 +23,6 @@ function mainController($http, alamodfactory) {
     main.id = "";
     // main.editedItem = {};
     main.zoomPhoto = "";
-    // This is to hold new images for carousel
-    // main.newCarouselStuffOne = "";
-    // main.newCarouselStuffTwo = "";
-    // main.newCarouselStuffThree = "";
-    // main.newCarouselStuffFour = "";
-    // main.newCarouselStuffFive = "";
     main.removeThatShit = "";
     main.newCarouselImages = [];
     main.showInventoryForm = false;
@@ -54,8 +48,6 @@ function mainController($http, alamodfactory) {
         "category": "",
     };
     main.inventoryList = [];
-    // main.greeting = "This is only a test";
-    // main.search = "";
     main.creators = [
         "Yaakov Agam",
         "Alessandro Albrizzi",

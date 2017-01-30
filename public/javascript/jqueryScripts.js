@@ -41,73 +41,74 @@ function openNav() {
 }
 
 function openNestedSeating() {
-    document.getElementById("myNestedSeating").style.height = "100vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedSeating").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function openNestedLighting() {
-    document.getElementById("myNestedLighting").style.height = "50vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedLighting").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
 function openNestedStorage() {
-    document.getElementById("myNestedStorage").style.height = "50vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedStorage").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
 function openNestedTables() {
-    document.getElementById("myNestedTables").style.height = "100vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedTables").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
 function openNestedMirrors() {
-    document.getElementById("myNestedMirrors").style.height = "30vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedMirrors").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
 function openNestedFolk() {
-    document.getElementById("myNestedFolk").style.height = "30vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedFolk").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
+
 function openNestedRugs() {
-    document.getElementById("myNestedRugs").style.height = "30vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedRugs").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
 function openNestedServeware() {
-    document.getElementById("myNestedServeware").style.height = "70vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedServeware").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
 function openNestedWallDec() {
-    document.getElementById("myNestedWallDec").style.height = "50vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedWallDec").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
 function openNestedGarden() {
-    document.getElementById("myNestedGarden").style.height = "50vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedGarden").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
 function openNestedDecObj() {
-    document.getElementById("myNestedDecObj").style.height = "50vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedDecObj").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
 function openNestedMoreFurn() {
-    document.getElementById("myNestedMoreFurn").style.height = "50vh";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myNestedMoreFurn").style.width = "400px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 
 }
 
@@ -151,63 +152,63 @@ function closeNav() {
 }
 
 function closeNestedSeating() {
-    document.getElementById("myNestedSeating").style.height = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("myNestedSeating").style.width = "0";
+    // document.body.style.backgroundColor = "white";
 }
 
 function closeNestedLighting() {
-    document.getElementById("myNestedLighting").style.height = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("myNestedLighting").style.width = "0";
+    // document.body.style.backgroundColor = "white";
 }
 
 function closeNestedStorage() {
-    document.getElementById("myNestedStorage").style.height = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("myNestedStorage").style.width = "0";
+    // document.body.style.backgroundColor = "white";
 }
 
 function closeNestedTables() {
-    document.getElementById("myNestedTables").style.height = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("myNestedTables").style.width = "0";
+    // document.body.style.backgroundColor = "white";
 }
 
 function closeNestedMirrors() {
-    document.getElementById("myNestedMirrors").style.height = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("myNestedMirrors").style.width = "0";
+    // document.body.style.backgroundColor = "white";
 }
 
 function closeNestedFolk() {
-    document.getElementById("myNestedFolk").style.height = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("myNestedFolk").style.width = "0";
+    // document.body.style.backgroundColor = "white";
 }
 
 function closeNestedRugs() {
-    document.getElementById("myNestedRugs").style.height = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("myNestedRugs").style.width = "0";
+    // document.body.style.backgroundColor = "white";
 }
 
 function closeNestedServeware() {
-    document.getElementById("myNestedServeware").style.height = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("myNestedServeware").style.width = "0";
+    // document.body.style.backgroundColor = "white";
 }
 
 function closeNestedWallDec() {
-    document.getElementById("myNestedWallDec").style.height = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("myNestedWallDec").style.width = "0";
+    // document.body.style.backgroundColor = "white";
 }
 
 function closeNestedGarden() {
-    document.getElementById("myNestedGarden").style.height = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("myNestedGarden").style.width = "0";
+    // document.body.style.backgroundColor = "white";
 }
 
 function closeNestedDecObj() {
-    document.getElementById("myNestedDecObj").style.height = "0";
+    document.getElementById("myNestedDecObj").style.width = "0";
     document.body.style.backgroundColor = "white";
 }
 
 function closeNestedMoreFurn() {
-    document.getElementById("myNestedMoreFurn").style.height = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("myNestedMoreFurn").style.width = "0";
+    // document.body.style.backgroundColor = "white";
 }
 
 // This is for working with the Modal

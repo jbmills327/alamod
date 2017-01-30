@@ -1,26 +1,6 @@
 var mongoose = require("mongoose");
 
 InventorySchema = new mongoose.Schema({
-    // images: Array,
-    // name: String,
-    // period: String,
-    // description: String,
-    // reference: String,
-    // condition: String,
-    // quantity: Number,
-    // height: String,
-    // width: String,
-    // depth: String,
-    // diameter: String,
-    // price: Number,
-    // location: {
-    //     type: String,
-    //     default: "886 N Palm Canyon Dr. Palm Springs, CA 92262 US"
-    // },
-    // available: {
-    //     type: Boolean,
-    //     default: true
-    // }
 
     "name": String,
     "period": String,
