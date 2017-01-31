@@ -20,6 +20,16 @@
 
 <body ng-controller="MainCtrl as main">
 
+    <div class="navBar">
+        <!-- <a href="/" style="text-decoration: none;"> -->
+        <a href="/" style="text-decoration: none;">
+            <h1>a La MOD</h1></a>
+        <a href="/inventory" style="text-decoration: none; color: black"><h5><strong>INVENTORY</strong></h5></a>
+        <a href="/location" style="text-decoration: none; color: black"><h5><strong>LOCATION</strong></h5></a>
+        <a href="/contact" style="text-decoration: none; color: black"><h5><strong>CONTACT US</strong></h5></a>
+    </div>
+    <div class="line"></div>
+
 
 
     <!-- This is the form to add data to the database -->
@@ -66,7 +76,7 @@
             <!-- This is the form to edit items -->
             <h1>Use this to edit items</h1>
             <form class="referenceNumber" ng-submit="main.getInvent(main.id)">
-                <input type="text" placeholder="Reference Number" ng-model="main.id">
+                <input style="width: 50%" type="text" placeholder="Reference Number" ng-model="main.id">
                 <button ng-click="main.showEditForm()" type="submit">Edit</button>
             </form>
             <!-- This is the end to show the edit form -->
@@ -74,13 +84,13 @@
             <!-- This is the form to remove an item -->
             <h1>Use this to remove items</h1>
             <form class="removeForm" ng-submit="main.removeItems(main.removeThatShit)">
-                <input type="text" ng-model="main.removeThatShit" placeholder="Reference Number">
+                <input style="width: 50%" type="text" ng-model="main.removeThatShit" placeholder="Reference Number">
                 <button type="submit">Remove</button>
             </form>
             <!-- End Remove Item -->
 
             <h1>Use this to add photos to carousel</h1>
-            <form class="referenceNumber" ng-submit="main.getNewListing('588ee017c05b770786dc487b')">
+            <form class="referenceNumber" ng-submit="main.getNewListing('58905e756e4196704c541d35')">
                 <!-- <input type="text" placeholder="Reference Number" ng-model="main.id"> -->
                 <button ng-click="main.showEditNewListingForm();" type="submit">Edit</button>
             </form>
