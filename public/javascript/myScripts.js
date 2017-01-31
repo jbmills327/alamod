@@ -21,15 +21,18 @@ mainController.$inject = ["$http", "alamodfactory"];
 function mainController($http, alamodfactory) {
     var main = this;
     main.id = "";
+    main.newListingImages = [];
     // main.editedItem = {};
     main.zoomPhoto = "";
     main.removeThatShit = "";
     main.newCarouselImages = [];
     main.showInventoryForm = false;
     main.showMyEdit = true;
+    main.showMyEditNewListing = true;
     main.newImages = [];
     main.editedImages = "";
     main.editItem = {};
+    main.editNewListingItem = {};
     main.search = "";
     main.newInvent = {
         "name": "",
@@ -159,8 +162,23 @@ function mainController($http, alamodfactory) {
                 console.log("This is the error: ", err);
             });
     }
+
+    // Calling get inventory
     main.getInvent();
-    // main.getInvent();
+
+    main.getNewListing = function() {
+        alamodfactory.getNewListing()
+            .then(function(returnData) {
+                console.log("This is the return data", returnData.data);
+                main.newListingImages = returnData.data;
+                console.log("This is the main object", main.newListingImages);
+            }).catch(function(err) {
+                console.log("This is the error", err);
+            })
+    }
+
+    main.getNewListing();
+
 
     main.setId = function(objId) {
         main.id = objId;
@@ -228,6 +246,19 @@ function mainController($http, alamodfactory) {
         main.editItem = {};
     }
 
+    main.editNewListing = function() {
+        console.log(main.newListingImages[0]);
+        alamodfactory.editNewListing(main.newListingImages[0])
+            .then(function(err, returnData) {
+                if (err) {
+                    console.log("This is the error", err);
+                } else {
+                    console.log("This is the edited data", returnData);
+                }
+            })
+        main.newListingImages = {};
+    }
+
     main.removeItems = function(id) {
         alamodfactory.deleteItem(id)
             .then(function(err, retrunData) {
@@ -250,6 +281,10 @@ function mainController($http, alamodfactory) {
 
     main.showEditForm = function() {
         main.showMyEdit = !main.showMyEdit;
+    }
+
+    main.showEditNewListingForm = function() {
+        main.showMyEditNewListing = !main.showMyEditNewListing;
     }
 
     main.carouselNewListings = function(one, two, three, four) {

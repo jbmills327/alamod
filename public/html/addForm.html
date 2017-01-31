@@ -58,7 +58,7 @@
     <div ng-hide="main.showInventoryForm">
 
 
-        <div class="addFormWrapper" ng-show="main.showMyEdit">
+        <div class="addFormWrapper" ng-show="main.showMyEdit; main.showMyEditNewListing">
 
             <h1 ng-hide="main.showInventoryForm">Click here to add inventory</h1>
             <button class="btn btn-default" ng-hide="main.showInventoryForm" ng-click="main.showAddInventory()" name="button">Add Inventory</button>
@@ -78,6 +78,12 @@
                 <button type="submit">Remove</button>
             </form>
             <!-- End Remove Item -->
+
+            <h1>Use this to add photos to carousel</h1>
+            <form class="referenceNumber" ng-submit="main.getNewListing('588ee017c05b770786dc487b')">
+                <!-- <input type="text" placeholder="Reference Number" ng-model="main.id"> -->
+                <button ng-click="main.showEditNewListingForm();" type="submit">Edit</button>
+            </form>
 
         </div>
 
@@ -105,6 +111,38 @@
             <button type="button" ng-click="main.showEditForm()">Close</button>
 
         </form>
+    </div>
+
+    <!-- This is the edit new listing form -->
+    <form class="editNewListingFormStuff" ng-hide="main.showMyEditNewListing" ng-submit="main.editNewListing()">
+        <h1>Edit Yo Carousel!</h1>
+        <h5>Reference: </h5><input type="text" class="form-control" ng-model="main.newListingImages[0]._id">
+        <h5>Name:</h5><input class="form-control" type="text" name="" ng-model="main.newListingImages[0].name">
+
+        <h5>Image One Description:</h5><textarea ng-model="main.newListingImages[0].imageOneDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+        <h5>Image One:</h5><input ng-model="main.newListingImages[0].imageOne" class="form-control" type="text">
+
+        <h5>Image Two Description:</h5><textarea ng-model="main.newListingImages[0].imageTwoDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+        <h5>Image Two:</h5><input ng-model="main.newListingImages[0].imageTwo" class="form-control" type="text">
+
+        <h5>Image Three Description:</h5><textarea ng-model="main.newListingImages[0].imageThreeDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+        <h5>Image Three:</h5><input ng-model="main.newListingImages[0].imageThree" class="form-control" type="text">
+
+        <h5>Image Four Description:</h5><textarea ng-model="main.newListingImages[0].imageFourDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+        <h5>Image Four:</h5><input ng-model="main.newListingImages[0].imageFour" class="form-control" type="text">
+
+        <h5>Image Five Description:</h5><textarea ng-model="main.newListingImages[0].imageFiveDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+        <h5>Image Five:</h5><input ng-model="main.newListingImages[0].imageFive" class="form-control" type="text">
+
+        <button ng-click="main.showEditNewListingForm()" type="submit" name="button">Submit</button>
+        <button type="button" ng-click="main.showEditNewListingForm()">Close</button>
+
+    </form>
     </div>
 
 

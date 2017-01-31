@@ -526,6 +526,15 @@ body .modal-admin {
     padding-bottom: 10%;
 }
 
+.editNewListingFormStuff {
+    position: absolute;
+    width: 50%;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 10%;
+}
+
 #printStuff {
     visibility: hidden;
     text-align: center;

@@ -26,6 +26,18 @@ function alamodfactory($http) {
         deleteItem: function(id) {
             id = id ? "/" + id : " ";
             return $http.delete("/api/inventory" + id);
+        },
+        // These are the calls for the new listing data
+        createNewListing: function(newListData) {
+            return $http.post("/api/newListing", newListData);
+        },
+        getNewListing: function(id) {
+            id = id ? "/" + id : " ";
+            return $http.get("/api/newListing" + id);
+
+        },
+        editNewListing: function(editNewListingData) {
+            return $http.put("/api/newListing", editNewListingData)
         }
 
     }
