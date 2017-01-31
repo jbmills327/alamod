@@ -4,7 +4,7 @@ var express = require("express"),
     mongoose = require("mongoose"),
     routes = require("./routes");
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 80;
 var app = express();
 
 mongoose.connect("mongodb://localhost/alamod");
