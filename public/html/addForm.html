@@ -118,7 +118,13 @@
 
             <h5>Diameter: </h5><input ng-model="main.editItem.measurements.diameter" class="form-control" type="text">
 
-            <h5>Images: </h5><textarea ng-model="main.editItem.imageUrl" class="form-control" rows="8" cols="80"></textarea>
+            <!-- <h5>Images: </h5><textarea ng-model="main.editItem.imageUrl" class="form-control" rows="8" cols="80"></textarea> -->
+
+            <h5>Image One: </h5><input ng-model="main.editItem.imageUrl[0]" class="form-control" type="text">
+            <h5>Image Two: </h5><input ng-model="main.editItem.imageUrl[1]" class="form-control" type="text">
+            <h5>Image Three: </h5><input ng-model="main.editItem.imageUrl[2]" class="form-control" type="text">
+            <h5>Image Four: </h5><input ng-model="main.editItem.imageUrl[3]" class="form-control" type="text">
+            <h5>Image Five: </h5><input ng-model="main.editItem.imageUrl[4]" class="form-control" type="text">
             <button ng-click="main.showEditForm()" type="submit" name="button">Submit</button>
             <button type="button" ng-click="main.showEditForm()">Close</button>
 

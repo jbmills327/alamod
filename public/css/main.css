@@ -380,6 +380,12 @@ footer img {
     height: 98vh;
 }
 
+
+/*.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}*/
+
 .invList {
     /*position: relative;
     left: 50%;
@@ -522,6 +528,11 @@ body .modal-admin {
     /*padding: 10px;*/
     /*border: 5px solid #5b5b5b;*/
     margin: 10px;
+}
+
+.descriptionContainer {
+    position: relative;
+    width: 400px;
 }
 
 .thumbnailHolder {
