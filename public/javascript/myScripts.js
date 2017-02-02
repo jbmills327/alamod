@@ -22,6 +22,7 @@ function mainController($http, alamodfactory) {
     var main = this;
     main.id = "";
     main.newListingImages = [];
+    main.priceColor = "";
     // main.editedItem = {};
     main.zoomPhoto = "";
     main.removeThatShit = "";
@@ -300,6 +301,18 @@ function mainController($http, alamodfactory) {
     }
 
     main.logThis();
+
+    main.redSold = function(color) {
+        console.log("This is the color", color);
+        if (color.toUpperCase() === "SOLD") {
+            main.mySold = {
+                "color": "red"
+            }
+        }
+    }
+
+    main.redSold(main.priceColor);
+
 
 
 }

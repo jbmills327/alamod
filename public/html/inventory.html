@@ -254,7 +254,7 @@
     <!-- This is the nested slide menu for More Furniture-->
     <div id="myNestedMoreFurn" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedMoreFurn(); openNestedCategory()">&times;</a>
-        <a href="javascript: void(0)" ng-click="main.creatorFinder('Decorative)" onclick="closeNestedMoreFurn()">Decorative Objects</a>
+        <a href="javascript: void(0)" ng-click="main.creatorFinder('Objects')" onclick="closeNestedMoreFurn()">Decorative Objects</a>
         <a href="javascript: void(0)" ng-click="main.creatorFinder('Magazine')" onclick="closeNestedMoreFurn()">Magazine Racks and Stands</a>
         <a href="javascript: void(0)" ng-click="main.creatorFinder('Box')" onclick="closeNestedMoreFurn()">Boxes</a>
         <a href="javascript: void(0)" ng-click="main.creatorFinder('Screen')" onclick="closeNestedMoreFurn()">Screens</a>
@@ -307,7 +307,7 @@
             <strong>Depth:</strong> {{ inventory.measurements.depth }}</li>
         <li>
             <strong>Diameter:</strong> {{ inventory.measurements.diameter }}</li>
-        <li> <b>Price: {{ inventory.price }}</b></li>
+        <li> <b>Price:</b><span ng-style="main.mySold"> {{ inventory.price }}</span></li>
     </ul>
 
 
@@ -329,13 +329,13 @@
                         <li>
                             <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: 300px"></a>
                         </li>
-                        <li> Reference: {{ main.id._id }}</li>
-                        <li> Description: {{ main.id.description }}</li>
-                        <li> Height: {{ main.id.measurements.height }}</li>
-                        <li> Width: {{ main.id.measurements.width }}</li>
-                        <li> Depth: {{ main.id.measurements.depth }}</li>
-                        <li> Diameter: {{ main.id.measurements.diameter }}</li>
-                        <li>Location: {{ main.id.location}}</li>
+                        <li> <strong>Reference: </strong> {{ main.id._id }}</li>
+                        <li> <strong>Description: </strong> {{ main.id.description }}</li>
+                        <li> <strong>Height: </strong> {{ main.id.measurements.height }}</li>
+                        <li> <strong>Width: </strong> {{ main.id.measurements.width }}</li>
+                        <li> <strong>Depth: </strong> {{ main.id.measurements.depth }}</li>
+                        <li> <strong>Diameter: </strong> {{ main.id.measurements.diameter }}</li>
+                        <li><strong>Location: </strong> {{ main.id.location}}</li>
                         <div class="thumbnailHolder">
                             <li>
                                 <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[1])"><img class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
@@ -358,7 +358,10 @@
 
                     <button class=" btn modalButtons" type="button" onclick="printContent('printStuff')">PRINT THIS ITEM</button>
 
-                    <a target="_blank" href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}"><button class = "btn questionsButton" type="button">QUESTIONS ABOUT ITEM</button></a>
+                    <!-- <a target="_blank" href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}"><button class = "btn questionsButton" type="button">QUESTIONS ABOUT ITEM</button></a> -->
+
+                    <a target="_blank" href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body= {{ main.bodyOfQuest }}"><button class = " btn questionsButton " type="button ">QUESTIONS ABOUT ITEM</button></a>
+                    <textarea class="questionText" ng-model="main.bodyOfQuest" placeholder="Questions here" rows="8" cols="40"></textarea>
 
 
 
@@ -370,21 +373,21 @@
     <!-- End Choose Inventory Modal -->
 
     <!-- Choose PrintStuff Modal -->
-    <div class="modal fade" id=" " tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-admin" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+    <div class="modal fade " id=" " tabindex="-1 " role="dialog " aria-labelledby="myModalLabel ">
+        <div class="modal-dialog modal-admin " role="document ">
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <button type="button " class="close poiret " data-dismiss="modal " aria-label="Close "><span aria-hidden="true ">BACK</span></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body ">
 
-                    <div id="printStuff">
+                    <div id="printStuff ">
 
-                        <h1 style="text-align: center;font-family: 'Helvetica', 'Arial', sans-serif; color: #5b5b5b">a La MOD</h1>
+                        <h1 style="text-align: center;font-family: 'Helvetica', 'Arial', sans-serif; color: #5b5b5b ">a La MOD</h1>
 
-                        <ul class="invList">
+                        <ul class="invList ">
                             <li>
-                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: 300px"></a>
+                                <a data-toggle="modal " data-target="#zoomModal " ng-click="main.setZoom(main.id.imageUrl[0]) "><img ng-src="{{ main.id.imageUrl[0] }} " alt="Huh? " style="width: 300px; height: 300px "></a>
                             </li>
 
                             <li> <b>{{ main.id.name }} </b></li>
@@ -398,18 +401,18 @@
                             <li> <b>Price: {{ main.id.price }}</b></li>
                             <li>Location: {{ main.id.location}}</li>
 
-                            <div class="thumbnailHolder">
+                            <div class="thumbnailHolder ">
                                 <li>
-                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[1])"><img class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
+                                    <a data-toggle="modal " data-target="#zoomModal " ng-click="main.setZoom(main.id.imageUrl[1]) "><img class="thumbnails " ng-src="{{main.id.imageUrl[1]}} " alt="{{ main.id.name }} "></a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[2])"><img class="thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
+                                    <a data-toggle="modal " data-target="#zoomModal " ng-click="main.setZoom(main.id.imageUrl[2]) "><img class="thumbnails " ng-src="{{main.id.imageUrl[2]}} " alt="{{ main.id.name }} "></a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[3])"><img class="thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
+                                    <a data-toggle="modal " data-target="#zoomModal " ng-click="main.setZoom(main.id.imageUrl[3]) "><img class="thumbnails " ng-src="{{main.id.imageUrl[3]}} " alt="{{ main.id.name }} "></a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])"><img class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
+                                    <a data-toggle="modal " data-target="#zoomModal " ng-click="main.setZoom(main.id.imageUrl[4]) "><img class="thumbnails " ng-src="{{main.id.imageUrl[4]}} " alt="{{ main.id.name }} "></a>
                                 </li>
                             </div>
 
@@ -424,20 +427,20 @@
 
 
     <!--  Zoom in on picture modal -->
-    <div class="modal fade" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-admin" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+    <div class="modal fade " id="zoomModal " tabindex="-1 " role="dialog " aria-labelledby="myModalLabel ">
+        <div class="modal-dialog modal-admin " role="document ">
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <button type="button " class="close poiret " data-dismiss="modal " aria-label="Close "><span aria-hidden="true ">BACK</span></button>
                     <!-- &times; -->
-                    <h4 class="modal-title" id="myModalLabel">{{ main.id.name }}</h4>
+                    <h4 class="modal-title " id="myModalLabel ">{{ main.id.name }}</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body ">
 
                     <h5>{{ main.id.price }}</h5>
 
-                    <ul class="invList">
-                        <li><img style="text-align: center" ng-src="{{ main.zoomPhoto }}" alt="Huh?" style="width: 600px; height: 600px">
+                    <ul class="invList ">
+                        <li><img style="text-align: center " ng-src="{{ main.zoomPhoto }} " alt="Huh? " style="width: 600px; height: 600px ">
                         </li>
                     </ul>
 
@@ -451,19 +454,19 @@
 
     <!--Controls wrapper  -->
 
-    <div class="invControlsWrapper">
+    <div class="invControlsWrapper ">
 
-        <dir-pagination-controls class="invControls" max-size="5" direction-links="true" boundary-links="true" auto-hide="false"></dir-pagination-controls>
+        <dir-pagination-controls class="invControls " max-size="5 " direction-links="true " boundary-links="true " auto-hide="false "></dir-pagination-controls>
     </div>
 
     <!-- End Control Wrapper -->
 
     <!-- Script tags -->
-    <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
-    <script type="text/javascript" src="../javascript/dirPagination.js"></script>
-    <script type="text/javascript" src="../javascript/module.js"></script>
-    <script type="text/javascript" src="../javascript/myScripts.js"></script>
-    <script type="text/javascript" src="../javascript/factory.js"></script>
+    <script type="text/javascript " src="../javascript/jqueryScripts.js "></script>
+    <script type="text/javascript " src="../javascript/dirPagination.js "></script>
+    <script type="text/javascript " src="../javascript/module.js "></script>
+    <script type="text/javascript " src="../javascript/myScripts.js "></script>
+    <script type="text/javascript " src="../javascript/factory.js "></script>
 
 </body>
 

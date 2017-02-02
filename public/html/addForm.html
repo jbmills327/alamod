@@ -68,7 +68,9 @@
     <div ng-hide="main.showInventoryForm">
 
 
-        <div class="addFormWrapper" ng-show="main.showMyEdit; main.showMyEditNewListing">
+        <div class="addFormWrapper" ng-show="main.showMyEdit">
+
+            <!-- ng-show="main.showInventoryForm; main.showMyEdit; main.showMyEditNewListing" -->
 
             <h1 ng-hide="main.showInventoryForm">Click here to add inventory</h1>
             <button class="btn btn-default" ng-hide="main.showInventoryForm" ng-click="main.showAddInventory()" name="button">Add Inventory</button>

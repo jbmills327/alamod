@@ -364,20 +364,37 @@ footer img {
     text-shadow: 2px 2px 2px white, -1px -1px 2px white;
 }
 
-.backDrop img {
+.backDrop {
     position: relative;
-    left: 5.5%;
-    width: 1139px;
+    background-color: pink;
+    left: 5.8%;
+    width: 88.5vw;
     height: 98vh;
     box-shadow: 3px 3px 2px #5b5b5b, -3px -3px 2px #5b5b5b;
     border-radius: 7px;
 }
 
+.backDrop img {
+    position: relative;
+    width: 88.5vw;
+    height: 98vh;
+}
+
 .invList {
+    /*position: relative;
+    left: 50%;
+    transform: translate(-50%);*/
     display: inline-block;
     list-style: none;
     margin-top: 10px;
-    margin-left: 2%;
+    padding-top: 30px;
+    margin: auto;
+    /*margin-left: 2%;*/
+}
+
+.soldStuff {
+    color: red;
+    font-weight: bolder;
 }
 
 .searchForm {
@@ -425,7 +442,7 @@ body .modal-admin {
     color: white;
     font-size: 20px;
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 65%;
 }
 
@@ -451,6 +468,12 @@ body .modal-admin {
     color: white;
     font-size: 20px;
     position: absolute;
+    top: 30%;
+    left: 65%;
+}
+
+.questionText {
+    position: absolute;
     top: 40%;
     left: 65%;
 }
@@ -460,7 +483,7 @@ body .modal-admin {
 
 .emailStuff {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 65%;
     font-size: 20px;
 }
@@ -733,7 +756,10 @@ body .modal-admin {
     }
 }
 
-@media only screen and (max-width: 667px) {
+
+/*@media only screen and (max-width: 667px) */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     .navBar {
         width: 100vw;
         display: flex;
@@ -764,7 +790,9 @@ body .modal-admin {
     }
     .line {
         position: relative;
-        width: 550px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 110vw;
         height: 3px;
         background-color: #5b5b5b;
         /*background-color: grey;*/
@@ -774,7 +802,7 @@ body .modal-admin {
     }
     .lineBottom {
         position: relative;
-        width: 550px;
+        width: 110vw;
         height: 3px;
         background-color: #5b5b5b;
         /*background-color: grey;*/
@@ -784,29 +812,37 @@ body .modal-admin {
         z-index: 1;
         margin-top: 10px;
     }
+    .backDrop {
+        position: relative;
+        /*margin-left: -5.7%;*/
+        /*background-color: pink;*/
+        left: 50%;
+        transform: translate(-50%);
+        width: 110vw;
+        height: 98vh;
+        box-shadow: none;
+        border-radius: none;
+    }
     .backDrop img {
         position: relative;
-        left: 9.5%;
-        width: 550px;
-        height: 70vh;
-        box-shadow: 3px 3px 2px #5b5b5b, -3px -3px 2px #5b5b5b;
-        border-radius: 7px;
+        width: 110vw;
+        height: 98vh;
     }
     /*Styling for map included on location page*/
     .map {
         position: absolute;
-        height: 105px;
-        width: 225px;
-        top: 70%;
-        left: 72%;
+        height: 200px;
+        width: 400px;
+        top: 72%;
+        left: 75%;
         transform: translate(-50%, -50%);
         box-shadow: 2px 2px 2px black;
         border-radius: 7px;
     }
     .address {
-        left: 13%;
-        top: 25%;
-        font-size: 12px;
+        left: 6%;
+        top: 27%;
+        font-size: 20px;
         font-family: "Helvetica", "Arial", sans-serif;
         position: absolute;
         text-align: center;
@@ -1025,7 +1061,10 @@ body .modal-admin {
     }
 }
 
-@media only screen and (max-width: 1024) {
+
+/*@media only screen and (max-width: 1024) */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) (-webkit-min-device-pixel-ratio: 2) {
     .line {
         position: relative;
         width: 100vw;
@@ -1044,30 +1083,37 @@ body .modal-admin {
         z-index: 1;
         margin-top: 10px;
     }
+    .backDrop {
+        position: relative;
+        margin-left: -5.7%;
+        /*background-color: pink;*/
+        /*left: 5.8%;*/
+        width: 100vw;
+        height: 98vh;
+        box-shadow: none;
+        border-radius: none;
+    }
     .backDrop img {
         position: relative;
-        left: -20%;
-        text-align: center;
         width: 100vw;
-        height: auto;
-        /*box-shadow: 3px 3px 2px #5b5b5b, -3px -3px 2px #5b5b5b;*/
-        border-radius: 7px;
+        height: 98vh;
     }
     /*Styling for map included on location page*/
     .map {
         position: absolute;
-        height: 105px;
-        width: 225px;
-        top: 50%;
-        left: 49%;
+        height: 250px;
+        width: 500px;
+        top: 65%;
+        left: 51%;
         transform: translate(-50%, -50%);
         box-shadow: 2px 2px 2px black;
         border-radius: 7px;
     }
     .address {
-        left: 30%;
-        top: 25%;
-        font-size: 12px;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
         font-family: "Helvetica", "Arial", sans-serif;
         position: absolute;
         text-align: center;
