@@ -27,15 +27,15 @@
             $('.modal:visible').length && $(document.body).addClass('modal-open');
         })
 
-        function printContent(el) {
-            var restorePage = document.body.innerHTML;
-            var printcontent = document.getElementById(el).innerHTML;
-            document.body.innerHTML = printcontent;
-            window.print();
-            location.reload();
-            // resotrePage = document.body.innerHTML;
-
-        }
+        // function printContent(el) {
+        //     var restorePage = document.body.innerHTML;
+        //     var printcontent = document.getElementById(el).innerHTML;
+        //     document.body.innerHTML = printcontent;
+        //     window.print();
+        //     location.reload();
+        //     resotrePage = document.body.innerHTML;
+        //
+        // }
     </script>
 
 </head>
@@ -90,6 +90,7 @@
     <!-- This is the nested slide menu for Seating-->
     <div id="myNestedSeating" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedSeating(); openNestedCategory()">&times;</a>
+        <a href="javascript:void(0)" ng-click="main.creatorFinder('seating')" onclick="closeNestedSeating()">All Seating</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Dining Room')" onclick="closeNestedSeating()">Dining Room Chairs</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Living Room')" onclick="closeNestedSeating()">Living Room Chairs</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Club Chair')" onclick="closeNestedSeating()">Club Chairs</a>
@@ -114,6 +115,7 @@
     <!-- This is the nested slide menu for Lighting-->
     <div id="myNestedLighting" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="openNestedCategory();closeNestedLighting()">&times;</a>
+        <a href="javascript:void(0)" ng-click="main.creatorFinder('lighting')" onclick="closeNestedLighting()">All  Lighting</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Chandeliers')" onclick="closeNestedLighting()">Chandeliers</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Pendants')" onclick="closeNestedLighting()">Pendants</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Candleholder')" onclick="closeNestedLighting()">Candleholders</a>
@@ -129,6 +131,7 @@
     <!-- This is the nested slide menu for Storage-->
     <div id="myNestedStorage" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="openNestedCategory();closeNestedStorage()">&times;</a>
+        <a href="javascript:void(0)" ng-click="main.creatorFinder('storage')" onclick="closeNestedStorage()">All Case Pieces and Storage</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Buffet')" onclick="closeNestedStorage()">Buffets</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Sideboard')" onclick="closeNestedStorage()">Sideboards</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Shelve')" onclick="closeNestedStorage()">Shelves</a>
@@ -142,7 +145,7 @@
     <!-- This is the nested slide menu for Tables-->
     <div id="myNestedTables" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="openNestedCategory();closeNestedTables()">&times;</a>
-        <a href="javascript:void(0)" ng-click="main.creatorFinder('Table')" onclick="closeNestedTables()">Tables</a>
+        <a href="javascript:void(0)" ng-click="main.creatorFinder('tables')" onclick="closeNestedTables()">All Tables</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Dining Room Set')" onclick="closeNestedTables()">Dining Room Sets</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Center Table')" onclick="closeNestedTables()">Center Tables</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Night')" onclick="closeNestedTables()">Night Stands</a>
@@ -173,6 +176,7 @@
     <!-- This is the nested slide menu for Mirrors-->
     <div id="myNestedMirrors" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="openNestedCategory();closeNestedMirrors()">&times;</a>
+        <a href="javascript:void(0)" ng-click="main.creatorFinder('mirrors')" onclick="closeNestedMirrors()">All Mirrors</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Table Mirror')" onclick="closeNestedMirrors()">Table Mirrors</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Wall Mirror')" onclick="closeNestedMirrors()">Wall Mirrors</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Mirror')" onclick="closeNestedMirrors()">More Mirrors</a>
@@ -184,6 +188,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="openNestedCategory();closeNestedFolk()">&times;</a>
         <a href="#"></a>
         <a href="#"></a>
+        <a href="javascript:void(0)" ng-click="main.creatorFinder('folk')" onclick="closeNestedFolk()">All Folk Art</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Ceramic')" onclick="closeNestedFolk()">Ceramics</a>
         <a href="javascript:void(0)" onclick="closeNestedFolk(); openNestedCategory()">Back</a>
     </div>
@@ -193,6 +198,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedRugs(); openNestedCategory()">&times;</a>
         <a href="#"></a>
         <a href="#"></a>
+        <a href="javascript:void(0)" ng-click="main.creatorFinder('rugs')" onclick="closeNestedRugs()">All Rugs</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Rug')" onclick="closeNestedRugs()">North and South American Rugs</a>
         <a href="javascript:void(0)" onclick="closeNestedRugs(); openNestedCategory()">Back</a>
     </div>
@@ -200,6 +206,7 @@
     <!-- This is the nested slide menu for Serveware-->
     <div id="myNestedServeware" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedServeware(); openNestedCategory()">&times;</a>
+        <a href="javascript:void(0)" ng-click="main.creatorFinder('serveware')" onclick="closeNestedServeware()">All Serveware, Ceramics, Silver and Glass</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Serving')" onclick="closeNestedServeware()">Serving Pieces</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Tea Set')" onclick="closeNestedServeware()">Tea Sets</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Vase')" onclick="closeNestedServeware()">Vases</a>
@@ -215,6 +222,7 @@
     <!-- This is the nested slide menu for Wall Art-->
     <div id="myNestedWallDec" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedWallDec(); openNestedCategory()">&times;</a>
+        <a href="javascript:void(0)" ng-click="main.creatorFinder('wall')" onclick="closeNestedWallDec()">All Wall Art</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Contemporary')" onclick="closeNestedWallDec()">Contemporary Art</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Wall-Mounted')" onclick="closeNestedWallDec()">Wall-Mounted Sculptures</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Painting')" onclick="closeNestedWallDec()">Paintings</a>
@@ -228,6 +236,7 @@
     <!-- This is the nested slide menu for Garden Stuff-->
     <div id="myNestedGarden" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedGarden(); openNestedCategory()">&times;</a>
+        <a href="javascript:void(0)" ng-click="main.creatorFinder('garden')" onclick="closeNestedGarden()">All Building and Garden Elements</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Fireplace')" onclick="closeNestedGarden()">Fireplaces</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Mantel')" onclick="closeNestedGarden()">Mantels</a>
         <a href="javascript:void(0)" ng-click="main.creatorFinder('Andiron')" onclick="closeNestedGarden()">Andirons</a>
@@ -241,6 +250,7 @@
     <!-- This is the nested slide menu for Decorative Objects-->
     <div id="myNestedDecObj" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedDecObj(); openNestedCategory()">&times;</a>
+        <a href="javascript: void(0)" ng-click="main.creatorFinder('decObj')" onclick="closeNestedDecObj()">All Decorative Objects</a>
         <a href="javascript: void(0)" ng-click="main.creatorFinder('Candle')" onclick="closeNestedDecObj()">Candle Holders</a>
         <a href="javascript: void(0)" ng-click="main.creatorFinder('Desk Acces')" onclick="closeNestedDecObj()">Desk Accessories</a>
         <a href="javascript: void(0)" ng-click="main.creatorFinder('Box')" onclick="closeNestedDecObj()">Boxes</a>
@@ -255,6 +265,7 @@
     <!-- This is the nested slide menu for More Furniture-->
     <div id="myNestedMoreFurn" class="inventorySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNestedMoreFurn(); openNestedCategory()">&times;</a>
+        <a href="javascript: void(0)" ng-click="main.creatorFinder('moreFurn')" onclick="closeNestedMoreFurn()">All Other Furniture</a>
         <a href="javascript: void(0)" ng-click="main.creatorFinder('Objects')" onclick="closeNestedMoreFurn()">Decorative Objects</a>
         <a href="javascript: void(0)" ng-click="main.creatorFinder('Magazine')" onclick="closeNestedMoreFurn()">Magazine Racks and Stands</a>
         <a href="javascript: void(0)" ng-click="main.creatorFinder('Box')" onclick="closeNestedMoreFurn()">Boxes</a>
@@ -357,7 +368,7 @@
                         <button class="btn emailButton" type="button">EMAIL THIS ITEM</button>
                     </a>
 
-                    <button class="btn modalButtons" type="button" onclick="printContent('printStuff')">PRINT THIS ITEM</button>
+                    <button class="btn modalButtons" type="button" ng-click="main.printContent('printStuff')">PRINT THIS ITEM</button>
 
                     <!-- <a target="_blank" href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}"><button class = "btn questionsButton" type="button">QUESTIONS ABOUT ITEM</button></a> -->
 

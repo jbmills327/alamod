@@ -21,6 +21,7 @@ mainController.$inject = ["$http", "alamodfactory"];
 function mainController($http, alamodfactory) {
     var main = this;
     main.id = "";
+    main.newEditImages = "";
     main.newListingImages = [];
     main.priceColor = "";
     // main.editedItem = {};
@@ -158,6 +159,7 @@ function mainController($http, alamodfactory) {
                     console.log("This is main.inventoryList", main.inventoryList);
                 } else {
                     main.editItem = returnData.data;
+                    // main.newEditImages = returnData.data.imageUrl.join();
                 }
             }).catch(function(err) {
                 console.log("This is the error: ", err);
@@ -231,11 +233,7 @@ function mainController($http, alamodfactory) {
     }
 
     main.editItems = function() {
-        if (!main.editItem.imageUrl.length) {
-            main.newImages = main.editItem.imageUrl.split(",");
-            main.editItem.imageUrl = main.newImages;
-        }
-        console.log(main.editItem);
+        // main.editItem.imageUrl = main.newEditImages.split(",")
         alamodfactory.editInvent(main.editItem)
             .then(function(err, returnData) {
                 if (err) {
@@ -243,8 +241,10 @@ function mainController($http, alamodfactory) {
                 } else {
                     console.log("This is the edited data", returnData);
                 }
-            })
-        main.editItem = {};
+            });
+        // main.editItem = {};
+        $('#editModal').modal('hide');
+
     }
 
     main.editNewListing = function() {
@@ -302,16 +302,23 @@ function mainController($http, alamodfactory) {
 
     main.logThis();
 
-    main.redSold = function(color) {
-        console.log("This is the color", color);
-        if (color.toUpperCase() === "SOLD") {
-            main.mySold = {
-                "color": "red"
-            }
-        }
-    }
+    // main.redSold = function(color) {
+    //     console.log("This is the color", color);
+    //     if (color.toUpperCase() === "SOLD") {
+    //         main.mySold = {
+    //             "color": "red"
+    //         }
+    //     }
+    // }
+    //
+    // main.redSold(main.priceColor);
 
-    main.redSold(main.priceColor);
+    main.printContent = function(el) {
+        var printcontent = document.getElementById(el).innerHTML;
+        document.body.innerHTML = printcontent;
+        window.print();
+        location.reload();
+    }
 
 
 
