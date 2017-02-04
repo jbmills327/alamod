@@ -368,7 +368,9 @@
                         <button class="btn emailButton" type="button">EMAIL THIS ITEM</button>
                     </a>
 
-                    <button class="btn modalButtons" type="button" data-toggle="modal" data-target="#printModal">PRINT PREVIEW</button>
+                    <!-- <button class="btn modalButtons" type="button" data-toggle="modal" data-target="#printModal">PRINT PREVIEW</button> -->
+
+                    <button class="btn modalButtons" type="button" ng-click="main.printDiv('printStuff')">PRINT THIS ITEM</button>
 
                     <!-- ng-click="main.printContent('printStuff')" -->
 
@@ -443,7 +445,7 @@
 
                             </div>
                         </ul>
-                        <button class="btn printTheModalButton" type="button" ng-click="main.printContent('printStuff')">PRINT THIS ITEM</button>
+                        <!-- <button class="btn printTheModalButton" type="button" ng-click="main.printDiv('printStuff')">PRINT THIS ITEM</button> -->
                     </div>
                 </div>
             </div>

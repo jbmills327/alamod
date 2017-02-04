@@ -315,12 +315,23 @@ function mainController($http, alamodfactory) {
 
     main.printContent = function(el) {
         var printcontent = document.getElementById(el).innerHTML;
-        document.body.innerHTML = printcontent;
-        window.print();
+        // document.body.innerHTML = printcontent;
+        printcontent.print();
         location.reload();
-        myButtonHide = {
-            "visibility": hidden
-        }
+
+    }
+
+    main.printDiv = function(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var popupWin = window.open('', '_blank', 'width=300,height=300');
+        popupWin.document.open();
+        popupWin.document.write('<html><head><link rel="stylesheet" type="text/css" href="../css/main.css" /></head><body onload="window.print()">' + printContents + '</body></html>');
+        popupWin.document.close();
+
+        setTimeout(function() {
+            popupWin.close();
+        }, 1000);
+
     }
 
 
