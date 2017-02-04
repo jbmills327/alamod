@@ -458,8 +458,8 @@ body .modal-admin {
     color: white;
     font-size: 20px;
     position: absolute;
-    top: -250%;
-    left: 85%;
+    top: 20%;
+    left: 80%;
     transform: translate(-50%, -50%);
 }
 
@@ -552,6 +552,8 @@ body .modal-admin {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: auto;
+    margin: auto;
     /*padding: 10px;*/
 }
 

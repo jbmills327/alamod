@@ -419,7 +419,7 @@
                             <li> <b>{{ main.id.name }} </b></li>
                             <h5>{{ main.id.price }}</h5>
                             <li> Reference: {{ main.id._id }}</li>
-                            <li> Description: {{ main.id.description }}</li>
+                            <li class="descriptionContainer"> Description: {{ main.id.description }}</li>
                             <li> Height: {{ main.id.measurements.height }}</li>
                             <li> Width: {{ main.id.measurements.width }}</li>
                             <li> Depth: {{ main.id.measurements.depth }}</li>
@@ -441,10 +441,9 @@
                                     <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])"><img class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
                                 </li>
 
-                                <button class="btn printTheModalButton" type="button" ng-click="main.printContent('printStuff')">PRINT</button>
                             </div>
-
                         </ul>
+                        <button class="btn printTheModalButton" type="button" ng-click="main.printContent('printStuff')">PRINT THIS ITEM</button>
                     </div>
                 </div>
             </div>
