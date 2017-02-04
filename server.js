@@ -6,9 +6,15 @@ var express = require("express"),
 
 
 // test
+<<<<<<< HEAD
 //var PORT = process.env.PORT || 3000;
 // production
  var PORT = process.env.PORT || 80;
+=======
+// var PORT = process.env.PORT || 3000;
+// production
+var PORT = process.env.PORT || 80;
+>>>>>>> c1554c3f4a2b526fe7eb8f2c98d4152470ce8591
 
 var app = express();
 
