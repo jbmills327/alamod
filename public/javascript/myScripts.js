@@ -328,9 +328,9 @@ function mainController($http, alamodfactory) {
         popupWin.document.write('<html><head><link rel="stylesheet" type="text/css" href="../css/main.css" /></head><body onload="window.print()">' + printContents + '</body></html>');
         popupWin.document.close();
 
-        setTimeout(function() {
-            popupWin.close();
-        }, 1000);
+        // setTimeout(function() {
+        //     popupWin.close();
+        // }, 1000);
 
     }
 
