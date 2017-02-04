@@ -385,13 +385,55 @@
     </div>
 
     <!-- End Choose Inventory Modal -->
-    <ng-view>
 
-    </ng-view>
+
+
+    <!-- Print stuff -->
+
+    <div id="printStuff">
+
+        <h1 style="text-align: center;font-family: 'Helvetica', 'Arial', sans-serif; color: #5b5b5b">a La MOD</h1>
+
+        <ul class="invList">
+            <li>
+                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: 300px"></a>
+            </li>
+
+            <li> <b>{{ main.id.name }} </b></li>
+            <h5>{{ main.id.price }}</h5>
+            <li> Reference: {{ main.id._id }}</li>
+            <li> Description: {{ main.id.description }}</li>
+            <li> Height: {{ main.id.measurements.height }}</li>
+            <li> Width: {{ main.id.measurements.width }}</li>
+            <li> Depth: {{ main.id.measurements.depth }}</li>
+            <li> Diameter: {{ main.id.measurements.diameter }}</li>
+            <li> <b>Price: {{ main.id.price }}</b></li>
+            <li>Location: {{ main.id.location}}</li>
+
+            <div class="thumbnailHolder">
+                <li>
+                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[1])"><img class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
+                </li>
+                <li>
+                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[2])"><img class="thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
+                </li>
+                <li>
+                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[3])"><img class="thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
+                </li>
+                <li>
+                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])"><img class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
+                </li>
+            </div>
+
+        </ul>
+    </div>
+
+    <!-- End Print soldStuff -->
+
 
 
     <!-- Choose PrintStuff Modal -->
-    <div class="modal fade" id=" " tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <!-- <div class="modal fade" id=" " tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-admin" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -439,7 +481,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End print stuff modal -->
 
 
