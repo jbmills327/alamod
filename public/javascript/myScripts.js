@@ -4,15 +4,15 @@ angular.module("MyApp")
 // angular.module("MyApp")
 //     .config(myRouter);
 
-// myRouter.$inject = ["$routeProvider"];
+myRouter.$inject = ["$routeProvider"];
 mainController.$inject = ["$http", "alamodfactory"];
 
 
 // This is the function that controls where we hop during the routing process
 // function myRouter($routeProvider) {
 //     $routeProvider
-//         .when("/inventoryZoom", {
-//             templateUrl: "./html/inventoryZoom.html"
+//         .when("/print", {
+//             templateUrl: "./print.html"
 //         })
 //
 // }

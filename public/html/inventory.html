@@ -370,6 +370,8 @@
 
                     <button class="btn modalButtons" type="button" ng-click="main.printContent('printStuff')">PRINT THIS ITEM</button>
 
+                    <!-- <a href="/print">Print</a> -->
+
                     <!-- <a target="_blank" href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}"><button class = "btn questionsButton" type="button">QUESTIONS ABOUT ITEM</button></a> -->
 
                     <a target="_blank" href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body="><button class = "btn questionsButton" type="button">QUESTIONS ABOUT ITEM</button></a>
@@ -383,6 +385,10 @@
     </div>
 
     <!-- End Choose Inventory Modal -->
+    <ng-view>
+
+    </ng-view>
+
 
     <!-- Choose PrintStuff Modal -->
     <div class="modal fade" id=" " tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
