@@ -452,6 +452,17 @@ body .modal-admin {
     left: 65%;
 }
 
+.printTheModalButton {
+    font-family: "Poiret One", "Arial", sans-serif;
+    background-color: #5b5b5b;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: -250%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
 .searchWords {
     display: flex;
     flex-direction: row;
@@ -571,14 +582,16 @@ body .modal-admin {
     padding-bottom: 10%;
 }
 
+
+/*
 #printStuff {
     visibility: hidden;
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-}
+}*/
 
 .newListingsForm {
     width: 50%;
@@ -608,6 +621,9 @@ body .modal-admin {
         /*border: solid 1px blue;*/
         margin: 10mm 15mm 10mm 15mm;
         /*margin you want for the content*/
+    }
+    .printTheModalButton {
+        visibility: hidden;
     }
 }
 

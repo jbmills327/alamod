@@ -4,7 +4,7 @@ angular.module("MyApp")
 // angular.module("MyApp")
 //     .config(myRouter);
 
-myRouter.$inject = ["$routeProvider"];
+// myRouter.$inject = ["$routeProvider"];
 mainController.$inject = ["$http", "alamodfactory"];
 
 
@@ -12,7 +12,7 @@ mainController.$inject = ["$http", "alamodfactory"];
 // function myRouter($routeProvider) {
 //     $routeProvider
 //         .when("/print", {
-//             templateUrl: "./print.html"
+//             templateUrl: "./html/print.html"
 //         })
 //
 // }
@@ -318,6 +318,9 @@ function mainController($http, alamodfactory) {
         document.body.innerHTML = printcontent;
         window.print();
         location.reload();
+        myButtonHide = {
+            "visibility": hidden
+        }
     }
 
 
