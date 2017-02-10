@@ -334,6 +334,10 @@ function mainController($http, alamodfactory) {
 
     }
 
+    main.backToTop = function() {
+        window.scrollTo(0, 0)
+    }
+
 
 
 }
