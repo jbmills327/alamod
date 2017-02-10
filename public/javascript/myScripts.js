@@ -325,7 +325,7 @@ function mainController($http, alamodfactory) {
         var printContents = document.getElementById(divName).innerHTML;
         var popupWin = window.open('', '_blank', 'width=300,height=300');
         popupWin.document.open();
-        popupWin.document.write('<html><head><link rel="stylesheet" type="text/css" href="../css/main.css" /></head><body onload="window.print()">' + printContents + '</body></html>');
+        popupWin.document.write('<html><head><link rel="stylesheet" type="text/css" href="../css/main.css" /><title>Printing Item</title><link rel="icon" type="image/png" href="../css/resources/palm_tree_two.png"/></head><body onload="window.print()">' + printContents + '</body></html>');
         popupWin.document.close();
 
         // setTimeout(function() {
