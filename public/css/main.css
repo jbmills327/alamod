@@ -536,7 +536,7 @@ body .modal-admin {
 .thumbnails {
     position: relative;
     height: 200px;
-    width: auto;
+    width: 250px;
     /*padding: 10px;*/
     /*border: 5px solid #5b5b5b;*/
     margin: auto;
@@ -551,8 +551,9 @@ body .modal-admin {
     position: relative;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: auto;
+    width: 720px;
     margin: auto;
     /*padding: 10px;*/
 }
