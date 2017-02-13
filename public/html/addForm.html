@@ -134,7 +134,8 @@
                             <h4>Description:</h4>
                             <textarea class="form-control" placeholder="Description" ng-model="main.newInvent.description" rows="8" cols="80"></textarea>
                             <h4>Condition</h4>
-                            <input class="form-control" placeholder="Condition" ng-model="main.newInvent.condition" type="text">
+                            <select class="form-control" ng-model="main.newInvent.condition" ng-options="x for x in main.conditions"></select>
+                            <!-- <input class="form-control" placeholder="Condition" ng-model="main.newInvent.condition" type="text"> -->
                             <h4>Width</h4>
                             <input class="form-control" placeholder="Width" ng-model="main.newInvent.measurements.width" type="text">
                             <h4>Height:</h4>
@@ -181,7 +182,13 @@
 
                             <h5>Name:</h5><input class="form-control" type="text" name="" ng-model="main.editItem.name">
 
+                            <h4>Period:</h4>
+                            <select class="form-control" ng-model="main.editItem.period" ng-options="x for x in main.periods"></select>
+
                             <h5>Description:</h5><textarea ng-model="main.editItem.description" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+                            <h4>Condition</h4>
+                            <select class="form-control" ng-model="main.editItem.condition" ng-options="x for x in main.conditions"></select>
 
                             <h5>Price:</h5><input ng-model="main.editItem.price" class="form-control" type="text">
 
@@ -192,6 +199,12 @@
                             <h5>Depth:</h5><input ng-model="main.editItem.measurements.depth" class="form-control" type="text">
 
                             <h5>Diameter: </h5><input ng-model="main.editItem.measurements.diameter" class="form-control" type="text">
+
+                            <h4>Number of Items:</h4>
+                            <input class="form-control" placeholder="Number of Items" ng-model="main.editItem.numOfItems" type="text">
+
+                            <h4>Category:</h4>
+                            <select class="form-control" ng-model="main.editItem.category" ng-options="x for x in main.categories"></select>
 
                             <!-- <h5>Images: </h5><textarea ng-model="main.editItem.imageUrl" class="form-control" rows="8" cols="80"></textarea> -->
 

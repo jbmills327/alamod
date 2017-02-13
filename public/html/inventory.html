@@ -305,21 +305,27 @@
 
     </form>
 
-    <ul class="invList" dir-paginate="inventory in main.inventoryList  | filter: main.search | itemsPerPage: 30">
+    <ul class="invList" dir-paginate="inventory in main.inventoryList |orderBy: 'dateCreated': true| filter: main.search | itemsPerPage: 30">
         <li>
             <a data-toggle="modal" data-target="#inventModal" ng-click="main.setId(inventory)"><img ng-src="{{ inventory.imageUrl[0] }}" alt="{{ inventory.name }}" style="width: 200px; height: 200px; cursor: pointer"></a>
         </li>
         <li> <b>{{ inventory.name }} </b></li>
         <li>
-            <strong>Reference:</strong> {{ inventory._id }}</li>
-        <li> <strong>Height:</strong> {{ inventory.measurements.height }}</li>
+            <strong>Reference: </strong> {{ inventory._id }}</li>
+
+        <li><b>Condition: </b>{{ inventory.condition }}</li>
+
+        <li> <strong>Height: </strong> {{ inventory.measurements.height }}</li>
         <li>
-            <strong>Width:</strong> {{ inventory.measurements.width }}</li>
+            <strong>Width: </strong> {{ inventory.measurements.width }}</li>
         <li>
-            <strong>Depth:</strong> {{ inventory.measurements.depth }}</li>
+            <strong>Depth: </strong> {{ inventory.measurements.depth }}</li>
         <li>
-            <strong>Diameter:</strong> {{ inventory.measurements.diameter }}</li>
-        <li> <b>Price:</b><span ng-style="main.mySold"> {{ inventory.price }}</span></li>
+            <strong>Diameter: </strong> {{ inventory.measurements.diameter }}</li>
+
+        <li><strong>Number of Items: </strong>{{ inventory.numOfItems }}</li>
+
+        <li> <b>Price: </b><span ng-style="main.mySold"> {{ inventory.price }}</span></li>
     </ul>
 
 
@@ -343,10 +349,12 @@
                         </li>
                         <li> <strong>Reference: </strong> {{ main.id._id }}</li>
                         <li class="descriptionContainer"> <strong>Description: </strong> {{ main.id.description }}</li>
+                        <li><b>Condition: </b>{{ main.id.condition }}</li>
                         <li> <strong>Height: </strong> {{ main.id.measurements.height }}</li>
                         <li> <strong>Width: </strong> {{ main.id.measurements.width }}</li>
                         <li> <strong>Depth: </strong> {{ main.id.measurements.depth }}</li>
                         <li> <strong>Diameter: </strong> {{ main.id.measurements.diameter }}</li>
+                        <li><strong>Number of Items: </strong>{{ main.id.numOfItems }}</li>
                         <!-- <li><strong>Location: </strong> {{ main.id.location}}</li> -->
                         <li><b>Location:</b> 886 N Palm Canyon Dr. Palm Springs, CA 92262</li>
                         <!-- <li><b>Phones:</b> 760-327-0707</li> -->
@@ -427,10 +435,12 @@
                             <li> <b>Reference:</b> {{ main.id._id }}</li>
                             <!-- class="descriptionContainer" -->
                             <li> <b>Description:</b> {{ main.id.description }}</li>
+                            <li><b>Condition:</b>{{ main.id.condition }}</li>
                             <li> <b>Height:</b> {{ main.id.measurements.height }}</li>
                             <li> <b>Width:</b> {{ main.id.measurements.width }}</li>
                             <li> <b>Depth:</b> {{ main.id.measurements.depth }}</li>
                             <li> <b>Diameter:</b> {{ main.id.measurements.diameter }}</li>
+                            <li><b>Number of Items: </b>{{ main.id.numOfItems }} </li>
                             <li> <b>Price:</b> {{ main.id.price }}</li>
                             <li><b>Location:</b> 886 N Palm Canyon Dr. Palm Springs, CA 92262</li>
                             <li><b>Phone:</b> 760-327-0707</li>

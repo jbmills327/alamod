@@ -53,6 +53,12 @@ function mainController($http, alamodfactory) {
         "category": "",
     };
     main.inventoryList = [];
+    main.conditions = [
+        "Excellent",
+        "Very Good",
+        "Good",
+        "Wear Consistent with Age"
+    ]
     main.creators = [
         "Yaakov Agam",
         "Alessandro Albrizzi",
