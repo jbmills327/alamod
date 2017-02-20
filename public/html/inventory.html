@@ -374,7 +374,9 @@
                         </div>
                     </ul>
 
-                    <a class="emailStuff" target="_blank" href="mailto:?subject= Found this item at a la MOD&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}">
+                    <a class="emailStuff" target="_blank" href="mailto:?subject= Found this item at a la MOD&body=Name: {{ main.id.name}}%0D%0A Description: {{ main.id.description}}%0D%0A Price: {{ main.id.price}}%0D%0A Heighth: {{ main.id.measurements.height}}%0D%0A Width:{{ main.id.measurements.width}}%0D%0A Depth: {{ main.id.measurements.depth }}%0D%0A Diameter: {{ main.id.measurements.diameter }}%0D%0A Images: %0D%0A {{ main.id.imageUrl[0]}} %0D%0A {{ main.id.imageUrl[1]}} %0D%0A {{ main.id.imageUrl[2]}} %0D%0A {{ main.id.imageUrl[3]}} %0D%0A {{ main.id.imageUrl[4]}}">
+
+
                         <button class="btn emailButton" type="button">EMAIL THIS ITEM</button>
                     </a>
 
@@ -517,6 +519,11 @@
     <script type="text/javascript" src="../javascript/module.js"></script>
     <script type="text/javascript" src="../javascript/myScripts.js"></script>
     <script type="text/javascript" src="../javascript/factory.js"></script>
+
+</body>
+
+</html>
+js"></script>
 
 </body>
 
