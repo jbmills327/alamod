@@ -347,34 +347,34 @@ function mainController($http, alamodfactory) {
         window.scrollTo(0, 0)
     }
 
-    main.sendMail = function(divName) {
-
-        var printContents = document.getElementById(divName).innerHTML;
-        // var printContents = document.getElementById(divName).innerHTML;
-        // var popupWin = window.open('', '_blank', 'width=300,height=300');
-        // popupWin.document.open();
-        // popupWin.document.write('<html><head><link rel="stylesheet" type="text/css" href="../css/main.css" /><title>Printing Item</title><link rel="icon" type="image/png" href="../css/resources/palm_tree_two.png"/></head><body onload="window.print()">' + printContents + '</body></html>');
-        // var comeOn = '<html><head><link rel="stylesheet" type="text/css" href="/public/css/main.css" /><title>Printing Item</title></head><body>' + printContents + '</body></html>'
-        // popupWin.document.close();
-
-        var data = {
-            userNames: main.userName,
-            originEmail: main.originEmail,
-            destEmail: main.destEmail,
-            message: printContents
-            // image: main.id.imageUrl[0]
-        };
-        alamodfactory.sendMails(data)
-            .then(function(err, returnData) {
-                if (err) {
-                    console.log("This is the sendMail error", err);
-                } else {
-                    console.log("This is the sendMail returnData", returnData);
-                }
-            })
-
-        main.destEmail = "";
-    }
+    // main.sendMail = function(divName) {
+    //
+    //     var printContents = document.getElementById(divName).innerHTML;
+    //     // var printContents = document.getElementById(divName).innerHTML;
+    //     // var popupWin = window.open('', '_blank', 'width=300,height=300');
+    //     // popupWin.document.open();
+    //     // popupWin.document.write('<html><head><link rel="stylesheet" type="text/css" href="../css/main.css" /><title>Printing Item</title><link rel="icon" type="image/png" href="../css/resources/palm_tree_two.png"/></head><body onload="window.print()">' + printContents + '</body></html>');
+    //     // var comeOn = '<html><head><link rel="stylesheet" type="text/css" href="/public/css/main.css" /><title>Printing Item</title></head><body>' + printContents + '</body></html>'
+    //     // popupWin.document.close();
+    //
+    //     var data = {
+    //         userNames: main.userName,
+    //         originEmail: main.originEmail,
+    //         destEmail: main.destEmail,
+    //         message: printContents
+    //         // image: main.id.imageUrl[0]
+    //     };
+    //     alamodfactory.sendMails(data)
+    //         .then(function(err, returnData) {
+    //             if (err) {
+    //                 console.log("This is the sendMail error", err);
+    //             } else {
+    //                 console.log("This is the sendMail returnData", returnData);
+    //             }
+    //         })
+    //
+    //     main.destEmail = "";
+    // }
 
 
 }
