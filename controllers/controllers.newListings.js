@@ -1,12 +1,12 @@
-var LIST = require("../models/model.newListings.js"),
-    nodemailer = require("nodemailer"),
-    transporter = nodemailer.createTransport({
-        service: "icloud",
-        auth: {
-            user: "alamodinc@icloud.com",
-            pass: "Mrkoby1977$"
-        }
-    });
+var LIST = require("../models/model.newListings.js");
+// nodemailer = require("nodemailer"),
+// transporter = nodemailer.createTransport({
+//     service: "icloud",
+//     auth: {
+//         user: "alamodinc@icloud.com",
+//         pass: "Mrkoby1977$"
+//     }
+// });
 
 module.exports = {
 
