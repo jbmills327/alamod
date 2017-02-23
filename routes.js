@@ -47,7 +47,7 @@ module.exports = (app) => {
     app.get("/api/newListing/", List.get);
     app.put("/api/Newlisting", List.edit);
 
-    // app.post("/sendEmail", List.sendEmail);
+    app.post("/sendEmail", List.sendEmail);
 
 
 
