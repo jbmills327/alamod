@@ -5,10 +5,10 @@ var express = require("express"),
     routes = require("./routes");
 
 
-// test
-//var PORT = process.env.PORT || 3000;
+// var PORT = process.env.PORT || 3000;
 // production
- var PORT = process.env.PORT || 80;
+var PORT = process.env.PORT || 80;
+
 
 var app = express();
 
