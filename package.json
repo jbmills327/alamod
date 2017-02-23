@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jbmills327/alamod/issues"
   },
-  "homepage": "https://github.com/jbmills327/alamod#readme"
+  "homepage": "https://github.com/jbmills327/alamod#readme",
+  "dependencies": {
+    "nodemailer": "^3.1.3"
+  }
 }

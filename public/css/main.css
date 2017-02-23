@@ -448,7 +448,7 @@ body .modal-admin {
     color: white;
     font-size: 20px;
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 65%;
 }
 
@@ -477,6 +477,23 @@ body .modal-admin {
     position: absolute;
     top: 20%;
     left: 65%;
+}
+
+.userEmail {
+    border-radius: 7px;
+    position: absolute;
+    width: 30%;
+    height: auto;
+    top: 16%;
+    left: 65%;
+    box-shadow: 1px 1px 1px grey;
+}
+
+.emailForm h3 {
+    position: absolute;
+    top: 10%;
+    left: 65%;
+    font-family: "Poiret One", "Arial", sans-serif;
 }
 
 .questionsButton {

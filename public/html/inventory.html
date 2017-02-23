@@ -374,11 +374,18 @@
                         </div>
                     </ul>
 
-                    <a class="emailStuff" target="_blank" href="mailto:?subject= Found this item at a la MOD&body=Name: {{ main.id.name}}%0D%0A Description: {{ main.id.description}}%0D%0A Price: {{ main.id.price}}%0D%0A Heighth: {{ main.id.measurements.height}}%0D%0A Width:{{ main.id.measurements.width}}%0D%0A Depth: {{ main.id.measurements.depth }}%0D%0A Diameter: {{ main.id.measurements.diameter }}%0D%0A Images: %0D%0A {{ main.id.imageUrl[0]}} %0D%0A {{ main.id.imageUrl[1]}} %0D%0A {{ main.id.imageUrl[2]}} %0D%0A {{ main.id.imageUrl[3]}} %0D%0A {{ main.id.imageUrl[4]}}">
+                    <!-- <a class="emailStuff" target="_blank" href="mailto:?subject= Found this item at a la MOD&body=Name: {{ main.id.name}}%0D%0A Description: {{ main.id.description}}%0D%0A Price: {{ main.id.price}}%0D%0A Heighth: {{ main.id.measurements.height}}%0D%0A Width:{{ main.id.measurements.width}}%0D%0A Depth: {{ main.id.measurements.depth }}%0D%0A Diameter: {{ main.id.measurements.diameter }}%0D%0A Images: %0D%0A {{ main.id.imageUrl[0]}} %0D%0A {{ main.id.imageUrl[1]}} %0D%0A {{ main.id.imageUrl[2]}} %0D%0A {{ main.id.imageUrl[3]}} %0D%0A {{ main.id.imageUrl[4]}}">
 
 
                         <button class="btn emailButton" type="button">EMAIL THIS ITEM</button>
-                    </a>
+                    </a> -->
+                    <form class="emailForm" ng-submit="main.sendMail('printStuff')">
+                        <!-- <input type="text" placeholder="Name" ng-model="main.userName"> -->
+                        <h3>Send To:</h3>
+                        <input class="userEmail" type="text" placeholder="email" ng-model="main.destEmail">
+                        <button class="btn emailButton" type="submit">EMAIL THIS ITEM</button>
+                    </form>
+
 
                     <!-- <button class="btn modalButtons" type="button" data-toggle="modal" data-target="#printModal">PRINT PREVIEW</button> -->
 
@@ -421,13 +428,25 @@
                 </div>
                 <div class="modal-body">
 
-                    <div id="printStuff">
+                    <div id="printStuff" style="width: 100vw; height: auto; position: absolute; text-align: center;">
 
                         <h1 style="text-align: center;font-family: 'Helvetica', 'Arial', sans-serif; color: #5b5b5b; font-size: 45px; margin-bottom: 0">a La MOD</h1>
 
-                        <ul class="printList">
+                        <ul class="printList" style="position: relative;
+                            left: 45%;
+                            width: 100vw;
+                            height: auto;
+                            text-align: center;
+                            transform: translate(-50%);
+                            display: inline-block;
+                            list-style: none;
+                            /*margin-top: 10px;*/
+                            /*padding-top: 30px;*/
+                            margin: auto;
+                            margin-left: 2%;
+                            font-size: 20px;">
                             <li>
-                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img class="printImageMain" ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?"></a>
+                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img class="printImageMain" style="width: 600px; height: 600px;" ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?"></a>
 
                                 <!-- style="width: 300px; height: 300px" -->
                             </li>
@@ -449,27 +468,37 @@
                             <!-- <li><b>Location:</b> {{ main.id.location}}</li> -->
 
 
-                            <div class="thumbnailHolder">
+                            <div class="thumbnailHolder" style="position: relative;
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                                width: 720px;
+                                margin: auto;">
                                 <li>
-                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[1])"><img class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
+                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[1])">
+                                        <img style="position: relative; height: 200px; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[2])"><img class="thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
+                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[2])">
+                                        <img style="position: relative; height: 200px; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[3])"><img class="thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
+                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[3])">
+                                        <img style="position: relative; height: 200px; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])"><img class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
+                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])">
+                                        <img style="position: relative; height: 200px; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
                                 </li>
 
-                            </div>
-                        </ul>
-                        <!-- <button class="btn printTheModalButton" type="button" ng-click="main.printDiv('printStuff')">PRINT THIS ITEM</button> -->
                     </div>
+                    </ul>
+                    <!-- <button class="btn printTheModalButton" type="button" ng-click="main.printDiv('printStuff')">PRINT THIS ITEM</button> -->
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- End print stuff modal -->
 
@@ -498,11 +527,35 @@
         </div>
     </div>
 
-    <!-- End Print Stuff Modal -->
+    <!-- End Zoom Image Modal -->
 
-    <!-- <ng-view>
+    <!--  Send Mail modal -->
+    <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-admin" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+                    <!-- &times; -->
+                    <h4 class="modal-title" id="myModalLabel">{{ main.id.name }}</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="" ng-submit="main.sendMail('printStuff')">
+                        <input type="text" ng-model="main.originEmail" placeholder="Your Email">
+                        <input type="text" ng-model="main.destEmail" placeholder="Destination Email">
+                        <input type="text" ng-model="main.userName" placeholder="Your Name">
+                        <button type="submit" name="button">Submit</button>
 
-    </ng-view> -->
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Zoom Image Modal -->
+
+
 
     <!--Controls wrapper  -->
 
@@ -523,7 +576,6 @@
 </body>
 
 </html>
-js"></script>
 
 </body>
 

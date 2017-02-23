@@ -38,6 +38,9 @@ function alamodfactory($http) {
         },
         editNewListing: function(editNewListingData) {
             return $http.put("/api/newListing", editNewListingData)
+        },
+        sendMails: function(mailData) {
+            return $http.post("/sendEmail", mailData)
         }
 
     }
