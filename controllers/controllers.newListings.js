@@ -1,13 +1,13 @@
-var LIST = require("../models/model.newListings.js"),
-    nodemailer = require("nodemailer"),
-    transporter = nodemailer.createTransport({
-        service: "icloud",
-        port: 465,
-        auth: {
-            user: "alamodinc@icloud.com",
-            pass: "Mrkoby1977$"
-        }
-    });
+var LIST = require("../models/model.newListings.js");
+// nodemailer = require("nodemailer"),
+// transporter = nodemailer.createTransport({
+//     service: "icloud",
+//     port: 465,
+//     auth: {
+//         user: "alamodinc@icloud.com",
+//         pass: "Mrkoby1977$"
+//     }
+// });
 
 module.exports = {
 
@@ -76,26 +76,26 @@ module.exports = {
         });
     },
 
-    sendEmail: (req, res) => {
-
-        var data = req.body;
-
-        transporter.sendMail({
-            from: "alamodinc@icloud.com",
-            to: data.destEmail,
-            subject: "I found this at a La MOD in Palm Springs, Ca",
-            html: data.message
-        }, (err) => {
-            if (err) {
-                console.log("This is the sendMail error", err);
-            } else {
-                res.json(data);
-            }
-        })
-
-        // res.json(data);
-
-    }
+    // sendEmail: (req, res) => {
+    //
+    //     var data = req.body;
+    //
+    //     transporter.sendMail({
+    //         from: "alamodinc@icloud.com",
+    //         to: data.destEmail,
+    //         subject: "I found this at a La MOD in Palm Springs, Ca",
+    //         html: data.message
+    //     }, (err) => {
+    //         if (err) {
+    //             console.log("This is the sendMail error", err);
+    //         } else {
+    //             res.json(data);
+    //         }
+    //     })
+    //
+    //     // res.json(data);
+    //
+    // }
 
 
 }
