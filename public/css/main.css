@@ -552,7 +552,8 @@ body .modal-admin {
 
 .thumbnails {
     position: relative;
-    height: 200px;
+    /*height: 200px;*/
+    height: auto;
     width: 250px;
     /*padding: 10px;*/
     /*border: 5px solid #5b5b5b;*/
