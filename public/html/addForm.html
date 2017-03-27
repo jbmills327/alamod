@@ -135,8 +135,8 @@
                             <h4>Description:</h4>
                             <textarea class="form-control" placeholder="Description" ng-model="main.newInvent.description" rows="8" cols="80"></textarea>
                             <h4>Condition</h4>
-                            <select class="form-control" ng-model="main.newInvent.condition" ng-options="x for x in main.conditions"></select>
-                            <!-- <input class="form-control" placeholder="Condition" ng-model="main.newInvent.condition" type="text"> -->
+                            <!-- <select class="form-control" ng-model="main.newInvent.condition" ng-options="x for x in main.conditions"></select> -->
+                            <input class="form-control" placeholder="Condition" ng-model="main.newInvent.condition" type="text">
                             <h4>Height:</h4>
                             <input class="form-control" placeholder="Heighth" ng-model="main.newInvent.measurements.height" type="text">
                             <h4>Width</h4>
@@ -189,7 +189,8 @@
                             <h5>Description:</h5><textarea ng-model="main.editItem.description" class="form-control" name="name" rows="8" cols="80"></textarea>
 
                             <h4>Condition</h4>
-                            <select class="form-control" ng-model="main.editItem.condition" ng-options="x for x in main.conditions"></select>
+                            <!-- <select class="form-control" ng-model="main.editItem.condition" ng-options="x for x in main.conditions"></select> -->
+                            <input class="form-control" placeholder="Condition" ng-model="main.newInvent.condition" type="text">
 
                             <h5>Price:</h5><input ng-model="main.editItem.price" class="form-control" type="text">
 
