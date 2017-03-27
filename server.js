@@ -21,16 +21,20 @@ app.use(express.static("public"));
 app.use(logger);
 
 // use body-parser to parse the body of our POST requests
-app.use(bodyParser.urlencoded({
+// app.use(bodyParser.urlencoded({
+//     extended: true
+// }));
+// this does the same thing and is slightly more efficient
+app.post('*', bodyParser.urlencoded({
     extended: true
 }));
-// this does the same thing and is slightly more efficient
-// app.post('*', bodyParser.urlencoded({extended:true}));
 
 // also parse the json data in the request
 app.use(bodyParser.json());
 
 routes(app);
+
+
 
 // create the app listener
 app.listen(PORT, (err) => {
