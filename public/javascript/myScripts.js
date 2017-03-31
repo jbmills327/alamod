@@ -129,6 +129,8 @@ function mainController($http, alamodfactory) {
     ];
     main.categories = [
         "Seating",
+        "Sculptures",
+        "Ceramics",
         "Lighting",
         "Case Pieces and Storage",
         "Tables",
