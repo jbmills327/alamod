@@ -128,7 +128,7 @@
                             <h4>Name:</h4>
                             <input class="form-control" placeholder="Name" ng-model="main.newInvent.name" type="text">
                             <h4>Period:</h4>
-                            <input type="text" placeholder="Period" ng-model="main.newInvent.period">
+                            <input class="form-control" type="text" placeholder="Period" ng-model="main.newInvent.period">
                             <!-- <select class="form-control" ng-model="main.newInvent.period" ng-options="x for x in main.periods"></select> -->
                             <h4>Price:</h4>
                             <input class="form-control" placeholder="Price" ng-model="main.newInvent.price" type="text">
@@ -184,7 +184,8 @@
                             <h5>Name:</h5><input class="form-control" type="text" name="" ng-model="main.editItem.name">
 
                             <h4>Period:</h4>
-                            <select class="form-control" ng-model="main.editItem.period" ng-options="x for x in main.periods"></select>
+                            <!-- <select class="form-control" ng-model="main.editItem.period" ng-options="x for x in main.periods"></select> -->
+                            <input class="form-control" type="text" placeholder="Period" ng-model="main.editItem.period">
 
                             <h5>Description:</h5><textarea ng-model="main.editItem.description" class="form-control" name="name" rows="8" cols="80"></textarea>
 
