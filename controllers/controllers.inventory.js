@@ -51,7 +51,7 @@ module.exports = {
                 "diameter": req.body.measurements.diameter,
             },
             "numOfItems": req.body.numOfItems,
-            "imageUrl": [req.body.imageUrl[0], req.body.imageUrl[1], req.body.imageUrl[2], req.body.imageUrl[3], req.body.imageUrl[4]],
+            "imageUrl": [req.body.imageUrl[0], req.body.imageUrl[1], req.body.imageUrl[2], req.body.imageUrl[3], req.body.imageUrl[4], req.body.imageUrl[5], req.body.imageUrl[6]],
             "category": req.body.category,
         };
         INV.findOneAndUpdate({

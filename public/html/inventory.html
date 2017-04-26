@@ -2,6 +2,11 @@
 <html ng-app="MyApp">
 
 <head>
+    <meta name="TITLE" content="a La MOD INC / Home Page">
+    <meta name="DESCRIPTION" content="a La MOD INC / Home Page">
+    <meta name="KEYWORDS" content="antiquaire, antique, antiquite, antique furniture, armchair, bed room, case pieces, chair, chimney, collection, dealer, decoration, decorative arts, design, designer, flea market, france,french, french antiques, furniture, garden, home, home furnishings, home and garden, interior design, lamp, lighting, meuble, mirrors, modern, paris, sculpture, seating, style, table, dining room chairs, sofas, settees, armchairs, chairs, stools, poof, benches, chaises longues, day beds, living-room suites, dining-room tables, game tables, coffee tables, end tables, console tables , serving table, gueridon, stacking tables, nesting tables, dining room suites, dressers, center tables, wall decorations, frames, decorative painting, prints, tapestries, wall paper, drawings , photography, wall decorations, shadow boxes, case pieces, chest of drawers, commode, corner cupboards, cupboards, bookcases, cabinets, desks, secretaires, dry bar, armoires, buffet, sideboard, shelves, apothecary chests, chandeliers, candlesticks, candelabres, wall lights, floor lamps, lanterns, ceiling lights, chimney, doors and gates, floors, stairs, balustrades, metal elements, statues, garden furniture, pedestals, fountains, panneling , windows, jardinieres, bathroom elements, andirons, garden ornaments, for the fireplace, urns, stone sinks, beds, clocks, for the table, screens, rugs, textiles, pedestals, sculptures, decorative objects, bed room suites, coat stands, umbrella stands, ashtrays, magazine stands, bird cages">
+    <meta name="CLASSIFICATION" content="appraisal, antiquaire, antique dealer, antique, antiquite, antique furniture, armchair, bed room, chair, case pieces, chimney, collection, dealer, decoration, decorative arts, design, designer, dining, france, french, french antiques, furniture, garden, home, home furnishings, home and garden, interior design, lamp, lighting, modern, meuble, mirrors, paris, sculpture, seating, style, table">
+    <meta name="ABSTRACT" content="appraisal, antiquaire, antique dealer, antique, antiquite, antique furniture, armchair, bed room, chair, case pieces, chimney, collection, dealer, decoration, decorative arts, design, designer, dining, france, french, french antiques, furniture, garden, home, home furnishings, home and garden, interior design, lamp, lighting, modern, meuble, mirrors, paris, sculpture, seating, style, table">
     <meta charset="utf-8">
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
@@ -41,6 +46,8 @@
 </head>
 
 <body ng-controller="MainCtrl as main">
+
+    <!-- <div class="loader"></div> -->
     <div class="navBar">
         <a href="/newListings" style="text-decoration: none;">
             <h1>a La MOD</h1></a>
@@ -307,7 +314,7 @@
 
     <ul class="invList" dir-paginate="inventory in main.inventoryList |orderBy: 'dateCreated': true| filter: main.search | itemsPerPage: 30">
         <li>
-            <a data-toggle="modal" data-target="#inventModal" ng-click="main.setId(inventory)"><img ng-src="{{ inventory.imageUrl[0] }}" alt="{{ inventory.name }}" style="width: 200px; height: 200px; cursor: pointer"></a>
+            <a data-toggle="modal" data-target="#inventModal" ng-click="main.setId(inventory)"><img ng-src="{{ inventory.imageUrl[0] }}" alt="{{ inventory.name }}" style="width: 200px; height: auto; cursor: pointer"></a>
         </li>
         <li> <b>{{ inventory.name }} </b></li>
         <li>
@@ -345,7 +352,7 @@
                     <ul class="invList">
 
                         <li>
-                            <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: 300px; cursor: pointer"></a>
+                            <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: auto; cursor: pointer"></a>
                         </li>
                         <li> <strong>Reference: </strong> {{ main.id._id }}</li>
                         <li class="descriptionContainer"> <strong>Description: </strong> <br/>{{ main.id.description }}</li>
@@ -371,6 +378,14 @@
                             </li>
                             <li>
                                 <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])"><img class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
+                            </li>
+
+                            <!-- This is where we are added the extra photos -->
+                            <li>
+                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[5])"><img class="thumbnails" ng-src="{{main.id.imageUrl[5]}}" alt="{{ main.id.name }}"></a>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[6])"><img class="thumbnails" ng-src="{{main.id.imageUrl[6]}}" alt="{{ main.id.name }}"></a>
                             </li>
                         </div>
                     </ul>
@@ -445,14 +460,14 @@
                             /*padding-top: 30px;*/
                             margin: auto;
                             margin-left: 2%;
-                            font-size: 20px;">
+                            font-size: 1.5em;">
                             <li>
-                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img class="printImageMain" style="width: 600px; height: 600px;" ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?"></a>
+                                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img class="printImageMain" style="width: 450px; height: auto" ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?"></a>
 
                                 <!-- style="width: 300px; height: 300px" -->
                             </li>
 
-                            <li style="padding-bottom: 20px"> <b>{{ main.id.name }} </b></li>
+                            <li style="padding-bottom: 5%; font-size: 2em"> <b>{{ main.id.name }} </b></li>
                             <!-- <h5>{{ main.id.price }}</h5> -->
                             <li> <b>Reference:</b> {{ main.id._id }}</li>
                             <!-- class="descriptionContainer" -->
@@ -468,6 +483,7 @@
                             <li><b>Phone:</b> 760-327-0707</li>
                             <!-- <li><b>Location:</b> {{ main.id.location}}</li> -->
 
+                            <h3 style="padding-top: 15%"> Secondary Images</h3>
 
                             <div class="thumbnailHolder" style="position: relative;
                                 display: flex;
@@ -475,22 +491,33 @@
                                 flex-wrap: wrap;
                                 justify-content: space-between;
                                 width: 720px;
-                                margin: auto;">
+                                margin: auto;
+                                padding-top: 1%;
+                                text-align: center">
                                 <li>
                                     <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[1])">
-                                        <img style="position: relative; height: 200px; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
+                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
                                 </li>
                                 <li>
                                     <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[2])">
-                                        <img style="position: relative; height: 200px; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
+                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
                                 </li>
                                 <li>
                                     <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[3])">
-                                        <img style="position: relative; height: 200px; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
+                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
                                 </li>
                                 <li>
                                     <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])">
-                                        <img style="position: relative; height: 200px; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
+                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
+                                </li>
+                                <!-- Adding extra photos here as well -->
+                                <li>
+                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])">
+                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[5]}}" alt="{{ main.id.name }}"></a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])">
+                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[6]}}" alt="{{ main.id.name }}"></a>
                                 </li>
 
                     </div>
