@@ -5,7 +5,7 @@ var LIST = require("../models/model.newListings.js"),
         // port: 465,
         auth: {
             user: "alamodinc@icloud.com",
-            pass: "Mrkoby1977$"
+            pass: "Mrjack1965$"
         }
     });
 
