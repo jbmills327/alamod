@@ -1,9 +1,13 @@
 var LIST = require("../models/model.newListings.js"),
     nodemailer = require("nodemailer"),
     transporter = nodemailer.createTransport({
-        service: "icloud",
-        // port: 465,
+        service: "iCloud",
+        // service: "gmail",
+        port: 465,
         auth: {
+            type: "login",
+            // user: "jbmills@gmail.com",
+            // pass: "tinyhulk327"
             user: "alamodinc@icloud.com",
             pass: "Mrjack1965$"
         }
