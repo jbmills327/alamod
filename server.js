@@ -1,8 +1,8 @@
 var express = require("express"),
-    logger = require("morgan")("dev"),
-    bodyParser = require("body-parser"),
-    mongoose = require("mongoose"),
-    routes = require("./routes");
+  logger = require("morgan")("dev"),
+  bodyParser = require("body-parser"),
+  mongoose = require("mongoose"),
+  routes = require("./routes");
 
 
 // test
@@ -28,7 +28,7 @@ app.use(logger);
 // }));
 // this does the same thing and is slightly more efficient
 app.post('*', bodyParser.urlencoded({
-    extended: true
+  extended: true
 }));
 
 // also parse the json data in the request
@@ -40,9 +40,9 @@ routes(app);
 
 // create the app listener
 app.listen(PORT, (err) => {
-    if (err) {
-        console.log("Server error: ", err);
-        process.exit(1);
-    }
-    console.log("Server is up on port", PORT);
+  if (err) {
+    console.log("Server error: ", err);
+    process.exit(1);
+  }
+  console.log("Server is up on port", PORT);
 });
