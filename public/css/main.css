@@ -1,294 +1,294 @@
 body html {
-    position: relative;
-    height: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    border: 0;
-    overflow: hidden;
-    background-image: url(./resources/desertTwo.jpg);
-    background-size: cover;
-    background-position: bottom center;
-    background-attachment: fixed;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  border: 0;
+  overflow: hidden;
+  background-image: url(./resources/desertTwo.jpg);
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: fixed;
 }
 
 .storeName {
-    position: fixed;
-    font-family: "Helvetica", "Arial", sans-serif;
-    top: 15%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    /*font-size: 35px;*/
-    font-size: 4em;
-    /*color: #b8b8b8;*/
-    color: black;
-    text-shadow: -1px -1px 2px white, 2px 2px 2px white;
-    font-family: sans-serif;
-    font-weight: bold;
-    /*height: 44px;
+  position: fixed;
+  font-family: "Helvetica", "Arial", sans-serif;
+  top: 15%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  /*font-size: 35px;*/
+  font-size: 4em;
+  /*color: #b8b8b8;*/
+  color: black;
+  text-shadow: -1px -1px 2px white, 2px 2px 2px white;
+  font-family: sans-serif;
+  font-weight: bold;
+  /*height: 44px;
   width: 147px;*/
 }
 
 .openMenu {
-    position: fixed;
-    color: white;
-    top: 2%;
-    left: 93%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /*background-color: transparent;*/
-    border: 3px solid rgba(0, 0, 0, 0.5);
-    z-index: 1;
+  position: fixed;
+  color: white;
+  top: 2%;
+  left: 93%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /*background-color: transparent;*/
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 
 /*Turns hamburger white and background black when hover*/
 
 .openMenu:hover {
-    color: white;
-    background-color: black;
+  color: white;
+  background-color: black;
 }
 
 .line {
-    position: relative;
-    width: 1139px;
-    height: 3px;
-    background-color: #5b5b5b;
-    /*background-color: grey;*/
-    left: 50%;
-    top: -10px;
-    transform: translate(-50%);
+  position: relative;
+  width: 1139px;
+  height: 3px;
+  background-color: #5b5b5b;
+  /*background-color: grey;*/
+  left: 50%;
+  top: -10px;
+  transform: translate(-50%);
 }
 
 .lineBottom {
-    position: relative;
-    width: 1139px;
-    height: 3px;
-    background-color: #5b5b5b;
-    /*background-color: grey;*/
-    left: 50%;
-    top: 90%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    margin-top: 10px;
+  position: relative;
+  width: 1139px;
+  height: 3px;
+  background-color: #5b5b5b;
+  /*background-color: grey;*/
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  margin-top: 10px;
 }
 
 .mainImage {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate( -50%);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate( -50%);
 }
 
 .navBar {
-    display: flex;
-    flex-direction: row;
-    /*text-align: center;*/
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  /*text-align: center;*/
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .navBar h1 {
-    padding-right: 30px;
-    font-size: 35px;
-    color: #5b5b5b;
-    font-family: "Helvetica", "Arial", sans-serif;
-    font-weight: bold;
-    /*height: 44px;
+  padding-right: 30px;
+  font-size: 35px;
+  color: #5b5b5b;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  /*height: 44px;
     width: 147px;*/
 }
 
 .navBar h5 {
-    padding: 0 60px 0 40px;
-    font-weight: bolder;
-    color: black;
-    /*height: 38px;
+  padding: 0 60px 0 40px;
+  font-weight: bolder;
+  color: black;
+  /*height: 38px;
     width: 160px;*/
-    font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', cursive;
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    height: auto;
-    width: 100vw;
-    text-align: center;
-    font-weight: bold;
-    color: #5b5b5b;
-    /*color: white;*/
-    top: 90%;
-    /*left: 50%;*/
-    /*transform: translate( -50%);*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  height: auto;
+  width: 100vw;
+  text-align: center;
+  font-weight: bold;
+  color: #5b5b5b;
+  /*color: white;*/
+  top: 90%;
+  /*left: 50%;*/
+  /*transform: translate( -50%);*/
 }
 
 footer img {
-    vertical-align: middle;
-    margin-top: 7px;
-    margin-left: 10px;
-    height: 20px;
-    width: 20px;
-    /*padding-right: 10px;*/
+  vertical-align: middle;
+  margin-top: 7px;
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
+  /*padding-right: 10px;*/
 }
 
 .locationFooter {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    height: auto;
-    width: 100vw;
-    text-align: center;
-    font-weight: bold;
-    color: #5b5b5b;
-    /*color: white;*/
-    top: 85%;
-    /*left: 50%;*/
-    /*transform: translate( -50%);*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  height: auto;
+  width: 100vw;
+  text-align: center;
+  font-weight: bold;
+  color: #5b5b5b;
+  /*color: white;*/
+  top: 85%;
+  /*left: 50%;*/
+  /*transform: translate( -50%);*/
 }
 
 .locationFooter img {
-    vertical-align: middle;
-    margin-top: 18px;
-    margin-left: 10px;
-    height: 20px;
-    width: 20px;
+  vertical-align: middle;
+  margin-top: 18px;
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
 }
 
 
 /* The side navigation menu */
 
 .sidenav {
-    text-align: center;
-    height: 0;
-    /* 100% Full-height */
-    width: 100%;
-    /* 0 width - change this with JavaScript */
-    position: fixed;
-    /* Stay in place */
-    z-index: 3;
-    /* Stay on top */
-    top: 0;
-    left: 0;
-    /*background-color: #111;*/
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Black*/
-    overflow-x: hidden;
-    /* Disable horizontal scroll */
-    /*padding-top: 60px;*/
-    /* Place content 60px from the top */
-    transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
+  text-align: center;
+  height: 0;
+  /* 100% Full-height */
+  width: 100%;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 3;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  /*background-color: #111;*/
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  /*padding-top: 60px;*/
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
 }
 
 .inventorySidenav {
-    height: 100%;
-    /* 100% Full-height */
-    width: 0;
-    /* 0 width - change this with JavaScript */
-    position: fixed;
-    /* Stay in place */
-    z-index: 2;
-    /* Stay on top */
-    top: 0;
-    left: 0;
-    /*background-color: #111;*/
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Black*/
-    overflow-x: hidden;
-    /* Disable horizontal scroll */
-    padding-top: 60px;
-    /* Place content 60px from the top */
-    transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 2;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  /*background-color: #111;*/
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
 }
 
 
 /* The navigation menu links */
 
 .sidenav a {
-    font-family: 'Poiret One', cursive;
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    /*color: #818181;*/
-    color: white;
-    /*color: black;*/
-    display: block;
-    transition: 0.3s
+  font-family: 'Poiret One', cursive;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  /*color: #818181;*/
+  color: white;
+  /*color: black;*/
+  display: block;
+  transition: 0.3s
 }
 
 
 /* The navigation menu links */
 
 .inventorySidenav a {
-    font-family: 'Poiret One', cursive;
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    /*color: #818181;*/
-    color: white;
-    /*color: black;*/
-    display: block;
-    transition: 0.3s
+  font-family: 'Poiret One', cursive;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  /*color: #818181;*/
+  color: white;
+  /*color: black;*/
+  display: block;
+  transition: 0.3s
 }
 
 
 /* When you mouse over the navigation links, change their color */
 
 .sidenav a:hover, .offcanvas a:focus {
-    /*color: #f1f1f1;*/
-    color: #818181;
+  /*color: #f1f1f1;*/
+  color: #818181;
 }
 
 
 /* When you mouse over the navigation links, change their color */
 
 .inventorySidenav a:hover, .offcanvas a:focus {
-    /*color: #f1f1f1;*/
-    color: #818181;
+  /*color: #f1f1f1;*/
+  color: #818181;
 }
 
 
 /* Position and style the close button (top right corner) */
 
 .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 
 /* Position and style the close button (top right corner) */
 
 .inventorySidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 .carouselPhotos {
-    object-fit: contain;
-    position: relative;
-    width: 700px;
-    height: 438px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*width: 75%;*/
-    /*height: auto;*/
-    /*margin: auto;*/
+  object-fit: contain;
+  position: relative;
+  width: 700px;
+  height: 438px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*width: 75%;*/
+  /*height: auto;*/
+  /*margin: auto;*/
 }
 
 
@@ -316,48 +316,48 @@ footer img {
 }*/
 
 .otherCarouselPhotos {
-    object-fit: contain;
-    width: 500px;
-    height: 438px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  object-fit: contain;
+  width: 500px;
+  height: 438px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .carousel-indicators li {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .carousel {
-    /*position: absolute;*/
-    top: 16%;
-    width: 100vw;
-    /*height: 100vh;*/
+  /*position: absolute;*/
+  top: 16%;
+  width: 100vw;
+  /*height: 100vh;*/
 }
 
 .carousel, .item, .active {
-    height: 100%;
+  height: 100%;
 }
 
 .carousel-inner {
-    height: 77vh;
+  height: 77vh;
 }
 
 
 /*Styling for map included on location page*/
 
 .map {
-    position: absolute;
-    height: 250px;
-    width: 500px;
-    /*top: 40%;
+  position: absolute;
+  height: 250px;
+  width: 500px;
+  /*top: 40%;
     left: 30%;*/
-    top: 90%;
-    left: 73%;
-    transform: translate(-50%, -50%);
-    box-shadow: 2px 2px 2px black;
-    border-radius: 7px;
+  top: 90%;
+  left: 73%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 2px black;
+  border-radius: 7px;
 }
 
 
@@ -377,31 +377,31 @@ footer img {
 }*/
 
 .address {
-    left: 10%;
-    top: 25%;
-    font-size: 20px;
-    font-family: "Helvetica", "Arial", sans-serif;
-    position: absolute;
-    text-align: center;
-    color: black;
-    /*color: #5b5b5b;*/
-    text-shadow: 2px 2px 2px white, -1px -1px 2px white;
+  left: 10%;
+  top: 25%;
+  font-size: 20px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  position: absolute;
+  text-align: center;
+  color: black;
+  /*color: #5b5b5b;*/
+  text-shadow: 2px 2px 2px white, -1px -1px 2px white;
 }
 
 .backDrop {
-    position: relative;
-    background-color: pink;
-    left: 5.8%;
-    width: 88.5vw;
-    height: 98vh;
-    box-shadow: 3px 3px 2px #5b5b5b, -3px -3px 2px #5b5b5b;
-    border-radius: 7px;
+  position: relative;
+  background-color: pink;
+  left: 5.8%;
+  width: 88.5vw;
+  height: 98vh;
+  box-shadow: 3px 3px 2px #5b5b5b, -3px -3px 2px #5b5b5b;
+  border-radius: 7px;
 }
 
 .backDrop img {
-    position: relative;
-    width: 88.5vw;
-    height: 98vh;
+  position: relative;
+  width: 88.5vw;
+  height: 98vh;
 }
 
 
@@ -411,815 +411,815 @@ footer img {
 }*/
 
 .invList {
-    /*position: relative;
+  /*position: relative;
     left: 50%;
     transform: translate(-50%);*/
-    display: inline-block;
-    list-style: none;
-    margin-top: 10px;
-    padding-top: 30px;
-    margin: auto;
-    /*margin-left: 2%;*/
+  display: inline-block;
+  list-style: none;
+  margin-top: 10px;
+  padding-top: 30px;
+  /*margin: auto;*/
+  margin-left: 2%;
 }
 
 .soldStuff {
-    color: red;
-    font-weight: bolder;
+  color: red;
+  font-weight: bolder;
 }
 
 .searchForm {
-    position: relative;
-    left: 5%;
-    width: 20%;
-    padding-bottom: 15px;
+  position: relative;
+  left: 5%;
+  width: 20%;
+  padding-bottom: 15px;
 }
 
 
 /*styling pagination controls*/
 
 .invControlsWrapper {
-    position: relative;
-    width: 100vw;
-    height: auto;
-    /*top: 98vh;*/
-    /*left: 50%;*/
-    /*transform: translate(-50%);*/
+  position: relative;
+  width: 100vw;
+  height: auto;
+  /*top: 98vh;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%);*/
 }
 
 .invControls {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .poiret {
-    font-family: 'Poiret One', cursive;
-    font-weight: bolder;
-    font-size: 2em;
+  font-family: 'Poiret One', cursive;
+  font-weight: bolder;
+  font-size: 2em;
 }
 
 
 /*Adjusting the size of the modal*/
 
 body .modal-admin {
-    width: 900px;
-    /*margin-left: -375px;*/
+  width: 900px;
+  /*margin-left: -375px;*/
 }
 
 .modalButtons {
-    font-family: "Poiret One", "Arial", sans-serif;
-    background-color: #5b5b5b;
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 25%;
-    left: 65%;
+  font-family: "Poiret One", "Arial", sans-serif;
+  background-color: #5b5b5b;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 25%;
+  left: 65%;
 }
 
 .printTheModalButton {
-    font-family: "Poiret One", "Arial", sans-serif;
-    background-color: #5b5b5b;
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 20%;
-    left: 80%;
-    transform: translate(-50%, -50%);
+  font-family: "Poiret One", "Arial", sans-serif;
+  background-color: #5b5b5b;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  transform: translate(-50%, -50%);
 }
 
 .searchWords {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .emailButton {
-    font-family: "Poiret One", "Arial", sans-serif;
-    background-color: #5b5b5b;
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 20%;
-    left: 65%;
+  font-family: "Poiret One", "Arial", sans-serif;
+  background-color: #5b5b5b;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 20%;
+  left: 65%;
 }
 
 .userEmail {
-    border-radius: 7px;
-    position: absolute;
-    width: 30%;
-    height: auto;
-    top: 16%;
-    left: 65%;
-    box-shadow: 1px 1px 1px grey;
+  border-radius: 7px;
+  position: absolute;
+  width: 30%;
+  height: auto;
+  top: 16%;
+  left: 65%;
+  box-shadow: 1px 1px 1px grey;
 }
 
 .emailForm h3 {
-    position: absolute;
-    top: 10%;
-    left: 65%;
-    font-family: "Poiret One", "Arial", sans-serif;
+  position: absolute;
+  top: 10%;
+  left: 65%;
+  font-family: "Poiret One", "Arial", sans-serif;
 }
 
 .questionsButton {
-    font-family: "Poiret One", "Arial", sans-serif;
-    background-color: #5b5b5b;
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 30%;
-    left: 65%;
+  font-family: "Poiret One", "Arial", sans-serif;
+  background-color: #5b5b5b;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 30%;
+  left: 65%;
 }
 
 .questionText {
-    position: absolute;
-    top: 40%;
-    left: 65%;
+  position: absolute;
+  top: 40%;
+  left: 65%;
 }
 
 
 /*Styling  for send email button*/
 
 .emailStuff {
-    position: absolute;
-    top: 10%;
-    left: 65%;
-    font-size: 20px;
+  position: absolute;
+  top: 10%;
+  left: 65%;
+  font-size: 20px;
 }
 
 .emailThePerson {
-    width: 30%;
-    position: absolute;
-    top: 5%;
-    left: 65%;
-    padding-bottom: 10px;
-    /*font-size: 20px;*/
+  width: 30%;
+  position: absolute;
+  top: 5%;
+  left: 65%;
+  padding-bottom: 10px;
+  /*font-size: 20px;*/
 }
 
 .emailTheBody {
-    width: 30%;
-    position: absolute;
-    top: 10%;
-    left: 65%;
-    /*font-size: 20px;*/
+  width: 30%;
+  position: absolute;
+  top: 10%;
+  left: 65%;
+  /*font-size: 20px;*/
 }
 
 .clearField {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .clearField h5 {
-    padding-left: 10px;
-    vertical-align: middle;
+  padding-left: 10px;
+  vertical-align: middle;
 }
 
 .thumbnails {
-    position: relative;
-    cursor: pointer;
-    /*height: 200px;*/
-    height: auto;
-    width: 250px;
-    /*padding: 10px;*/
-    /*border: 5px solid #5b5b5b;*/
-    margin: auto;
+  position: relative;
+  cursor: pointer;
+  /*height: 200px;*/
+  height: auto;
+  width: 250px;
+  /*padding: 10px;*/
+  /*border: 5px solid #5b5b5b;*/
+  margin: auto;
 }
 
 .descriptionContainer {
-    position: relative;
-    /*position: absolute;*/
-    width: 500px;
+  position: relative;
+  /*position: absolute;*/
+  width: 500px;
 }
 
 .thumbnailHolder {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 720px;
-    margin: auto;
-    /*padding: 10px;*/
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 720px;
+  margin: auto;
+  /*padding: 10px;*/
 }
 
 .submissionsForm {
-    position: absolute;
-    width: 50%;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-bottom: 10%;
+  position: absolute;
+  width: 50%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 10%;
 }
 
 .editFormStuff {
-    position: absolute;
-    width: 50%;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-bottom: 10%;
+  position: absolute;
+  width: 50%;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 10%;
 }
 
 .editNewListingFormStuff {
-    position: absolute;
-    width: 50%;
-    top: 150%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-bottom: 10%;
+  position: absolute;
+  width: 50%;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 10%;
 }
 
 #printStuff {
-    width: 100vw;
-    height: auto;
-    /*visibility: hidden;*/
-    position: absolute;
-    /*top: 70%;*/
-    /*left: 50%;*/
-    /*transform: translate(-50%, -50%);*/
-    text-align: center;
+  width: 100vw;
+  height: auto;
+  /*visibility: hidden;*/
+  position: absolute;
+  /*top: 70%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  text-align: center;
 }
 
 .newListingsForm {
-    width: 50%;
-    padding-top: 20px;
+  width: 50%;
+  padding-top: 20px;
 }
 
 .addFormWrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .printList {
-    position: relative;
-    left: 45%;
-    width: 100vw;
-    height: auto;
-    text-align: center;
-    transform: translate(-50%);
-    display: inline-block;
-    list-style: none;
-    /*margin-top: 10px;*/
-    /*padding-top: 30px;*/
-    margin: auto;
-    margin-left: 2%;
-    font-size: 20px;
+  position: relative;
+  left: 45%;
+  width: 100vw;
+  height: auto;
+  text-align: center;
+  transform: translate(-50%);
+  display: inline-block;
+  list-style: none;
+  /*margin-top: 10px;*/
+  /*padding-top: 30px;*/
+  margin: auto;
+  margin-left: 2%;
+  font-size: 20px;
 }
 
 .printImageMain {
-    width: 600px;
-    height: 600px;
+  width: 600px;
+  height: 600px;
 }
 
 @media print {
-    @page {
-        size: auto;
-        /*auto is the initial value*/
-        margin: 0mm;
-        /*this affects the margin in the printer settings*/
-    }
-    html {
-        background-color: #FFFFFF;
-        margin: 0px;
-        /*this affects the margin on the html before sending to printer*/
-    }
-    body {
-        /*border: solid 1px blue;*/
-        margin: 10mm 15mm 10mm 15mm;
-        /*margin you want for the content*/
-    }
-    .printTheModalButton {
-        visibility: hidden;
-    }
+  @page {
+    size: auto;
+    /*auto is the initial value*/
+    margin: 0mm;
+    /*this affects the margin in the printer settings*/
+  }
+  html {
+    background-color: #FFFFFF;
+    margin: 0px;
+    /*this affects the margin on the html before sending to printer*/
+  }
+  body {
+    /*border: solid 1px blue;*/
+    margin: 10mm 15mm 10mm 15mm;
+    /*margin you want for the content*/
+  }
+  .printTheModalButton {
+    visibility: hidden;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .navBar {
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        /*text-align: center;*/
-        justify-content: center;
-        align-items: center;
-        margin-top: 15px;
-        margin-bottom: 5px;
-    }
-    .navBar h1 {
-        /*padding-right: 30px;*/
-        font-size: 35px;
-        color: #5b5b5b;
-        font-family: "Helvetica", "Arial", sans-serif;
-        font-weight: bold;
-        height: 44px;
-        margin-bottom: -10px
-    }
-    .navBar h5 {
-        /*padding: 0 60px 0 40px;*/
-        font-weight: bolder;
-        color: black;
-        /*height: 38px;*/
-        /*width: 160px;*/
-        font-family: 'Poiret One', cursive;
-    }
-    .line {
-        position: relative;
-        width: 700px;
-        height: 3px;
-        background-color: #5b5b5b;
-        /*background-color: grey;*/
-        /*left: 50%;
+  .navBar {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /*text-align: center;*/
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  .navBar h1 {
+    /*padding-right: 30px;*/
+    font-size: 35px;
+    color: #5b5b5b;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+    height: 44px;
+    margin-bottom: -10px
+  }
+  .navBar h5 {
+    /*padding: 0 60px 0 40px;*/
+    font-weight: bolder;
+    color: black;
+    /*height: 38px;*/
+    /*width: 160px;*/
+    font-family: 'Poiret One', cursive;
+  }
+  .line {
+    position: relative;
+    width: 700px;
+    height: 3px;
+    background-color: #5b5b5b;
+    /*background-color: grey;*/
+    /*left: 50%;
         top: -10px;
         transform: translate(-50%);*/
-    }
-    .lineBottom {
-        position: relative;
-        width: 700px;
-        height: 3px;
-        background-color: #5b5b5b;
-        /*background-color: grey;*/
-        left: 50%;
-        top: 90%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        margin-top: 10px;
-    }
-    .backDrop img {
-        position: relative;
-        left: 4.5%;
-        width: 700px;
-        height: 40vh;
-        box-shadow: 3px 3px 2px #5b5b5b, -3px -3px 2px #5b5b5b;
-        border-radius: 7px;
-    }
-    /*Styling for map included on location page*/
-    .map {
-        position: absolute;
-        height: 150px;
-        width: 300px;
-        top: 50%;
-        left: 75%;
-        transform: translate(-50%, -50%);
-        box-shadow: 2px 2px 2px black;
-        border-radius: 7px;
-    }
-    .address {
-        left: 10%;
-        top: 25%;
-        font-size: 15px;
-        font-family: "Helvetica", "Arial", sans-serif;
-        position: absolute;
-        text-align: center;
-        color: black;
-        /*color: #5b5b5b;*/
-        text-shadow: 2px 2px 2px white, -1px -1px 2px white;
-    }
-    .carouselPhotos {
-        object-fit: contain;
-        position: relative;
-        width: 550px;
-        height: 550px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /*width: 75%;*/
-        /*height: auto;*/
-        /*margin: auto;*/
-    }
-    .otherCarouselPhotos {
-        object-fit: contain;
-        width: 300px;
-        height: 300px;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .carousel-indicators li {
-        visibility: hidden;
-    }
-    .carousel {
-        /*position: absolute;*/
-        top: 16%;
-        width: 100vw;
-        /*height: 100vh;*/
-    }
-    .carousel, .item, .active {
-        height: 40vh;
-        width: 100vw;
-    }
-    .carousel-inner {
-        height: 77vh;
-    }
-    footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        position: relative;
-        height: auto;
-        width: 100vw;
-        text-align: center;
-        font-weight: bold;
-        color: #5b5b5b;
-        /*color: white;*/
-        top: 90%;
-        /*left: 50%;*/
-        /*transform: translate( -50%);*/
-    }
-    .facebookImage {
-        position: absolute;
-        top: 100%;
-        left: 60%;
-        transform: translate(-50%, -50%);
-        /*top: 20vh;
+  }
+  .lineBottom {
+    position: relative;
+    width: 700px;
+    height: 3px;
+    background-color: #5b5b5b;
+    /*background-color: grey;*/
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin-top: 10px;
+  }
+  .backDrop img {
+    position: relative;
+    left: 4.5%;
+    width: 700px;
+    height: 40vh;
+    box-shadow: 3px 3px 2px #5b5b5b, -3px -3px 2px #5b5b5b;
+    border-radius: 7px;
+  }
+  /*Styling for map included on location page*/
+  .map {
+    position: absolute;
+    height: 150px;
+    width: 300px;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 2px black;
+    border-radius: 7px;
+  }
+  .address {
+    left: 10%;
+    top: 25%;
+    font-size: 15px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    position: absolute;
+    text-align: center;
+    color: black;
+    /*color: #5b5b5b;*/
+    text-shadow: 2px 2px 2px white, -1px -1px 2px white;
+  }
+  .carouselPhotos {
+    object-fit: contain;
+    position: relative;
+    width: 550px;
+    height: 550px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*width: 75%;*/
+    /*height: auto;*/
+    /*margin: auto;*/
+  }
+  .otherCarouselPhotos {
+    object-fit: contain;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .carousel-indicators li {
+    visibility: hidden;
+  }
+  .carousel {
+    /*position: absolute;*/
+    top: 16%;
+    width: 100vw;
+    /*height: 100vh;*/
+  }
+  .carousel, .item, .active {
+    height: 40vh;
+    width: 100vw;
+  }
+  .carousel-inner {
+    height: 77vh;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    height: auto;
+    width: 100vw;
+    text-align: center;
+    font-weight: bold;
+    color: #5b5b5b;
+    /*color: white;*/
+    top: 90%;
+    /*left: 50%;*/
+    /*transform: translate( -50%);*/
+  }
+  .facebookImage {
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    /*top: 20vh;
         left: 60vw;*/
-        /*vertical-align: middle;*/
-        margin-top: 7px;
-        margin-left: 10px;
-        height: 20px;
-        width: 20px;
-        /*padding-right: 10px;*/
-    }
-    .instagramImage {
-        position: absolute;
-        top: 100%;
-        left: 40%;
-        transform: translate(-50%, -50%);
-        /*top: 20vh;
+    /*vertical-align: middle;*/
+    margin-top: 7px;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    /*padding-right: 10px;*/
+  }
+  .instagramImage {
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    /*top: 20vh;
         left: 60vw;*/
-        /*vertical-align: middle;*/
-        margin-top: 7px;
-        margin-left: 10px;
-        height: 20px;
-        width: 20px;
-        /*padding-right: 10px;*/
-    }
+    /*vertical-align: middle;*/
+    margin-top: 7px;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    /*padding-right: 10px;*/
+  }
 }
 
 
 /*@media only screen and (max-width: 667px) */
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-    .navBar {
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        justify-content: center;
-        /*align-items: center;*/
-        margin-top: 15px;
-        margin-bottom: 5px;
-        margin-left: 15px;
-    }
-    .navBar h1 {
-        padding-right: 30px;
-        font-size: 17px;
-        color: #5b5b5b;
-        font-family: "Helvetica", "Arial", sans-serif;
-        font-weight: bold;
-        height: 44px;
-        margin-bottom: -10px
-    }
-    .navBar h5 {
-        /*padding: 0 60px 0 40px;*/
-        font-weight: bolder;
-        color: black;
-        /*height: 38px;*/
-        /*width: 160px;*/
-        font-family: 'Poiret One', cursive;
-    }
-    .line {
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        width: 110vw;
-        height: 3px;
-        background-color: #5b5b5b;
-        /*background-color: grey;*/
-        /*left: 50%;
+  .navBar {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    /*align-items: center;*/
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+  }
+  .navBar h1 {
+    padding-right: 30px;
+    font-size: 17px;
+    color: #5b5b5b;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+    height: 44px;
+    margin-bottom: -10px
+  }
+  .navBar h5 {
+    /*padding: 0 60px 0 40px;*/
+    font-weight: bolder;
+    color: black;
+    /*height: 38px;*/
+    /*width: 160px;*/
+    font-family: 'Poiret One', cursive;
+  }
+  .line {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 110vw;
+    height: 3px;
+    background-color: #5b5b5b;
+    /*background-color: grey;*/
+    /*left: 50%;
       top: -10px;
       transform: translate(-50%);*/
-    }
-    .lineBottom {
-        position: relative;
-        width: 110vw;
-        height: 3px;
-        background-color: #5b5b5b;
-        /*background-color: grey;*/
-        left: 50%;
-        top: 90%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        margin-top: 10px;
-    }
-    .backDrop {
-        position: relative;
-        /*margin-left: -5.7%;*/
-        /*background-color: pink;*/
-        left: 50%;
-        transform: translate(-50%);
-        width: 110vw;
-        height: 98vh;
-        box-shadow: none;
-        border-radius: none;
-    }
-    .backDrop img {
-        position: relative;
-        width: 110vw;
-        height: 98vh;
-    }
-    /*Styling for map included on location page*/
-    .map {
-        position: absolute;
-        height: 200px;
-        width: 400px;
-        top: 72%;
-        left: 75%;
-        transform: translate(-50%, -50%);
-        box-shadow: 2px 2px 2px black;
-        border-radius: 7px;
-    }
-    .address {
-        left: 6%;
-        top: 27%;
-        font-size: 20px;
-        font-family: "Helvetica", "Arial", sans-serif;
-        position: absolute;
-        text-align: center;
-        color: black;
-        /*color: #5b5b5b;*/
-        text-shadow: 2px 2px 2px white, -1px -1px 2px white;
-    }
-    .carouselPhotos {
-        object-fit: contain;
-        position: relative;
-        width: 325px;
-        height: 325px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /*width: 75%;*/
-        /*height: auto;*/
-        /*margin: auto;*/
-    }
-    .otherCarouselPhotos {
-        object-fit: contain;
-        width: 200px;
-        height: 200px;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .carousel-indicators li {
-        visibility: hidden;
-    }
-    .carousel {
-        /*position: absolute;*/
-        top: 16%;
-        width: 100vw;
-        /*height: 100vh;*/
-    }
-    .carousel, .item, .active {
-        height: 55vh;
-        width: 100vw;
-    }
-    .carousel-inner {
-        height: auto;
-        width: 100vw;
-    }
-    footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        position: relative;
-        height: auto;
-        width: 100vw;
-        text-align: center;
-        font-weight: bold;
-        color: #5b5b5b;
-        /*color: white;*/
-        top: 90%;
-        /*left: 50%;*/
-        /*transform: translate( -50%);*/
-    }
-    footer img {
-        vertical-align: middle;
-        margin-top: 7px;
-        margin-left: 10px;
-        height: 20px;
-        width: 20px;
-        margin-bottom: 10px;
-        /*padding-right: 10px;*/
-    }
+  }
+  .lineBottom {
+    position: relative;
+    width: 110vw;
+    height: 3px;
+    background-color: #5b5b5b;
+    /*background-color: grey;*/
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin-top: 10px;
+  }
+  .backDrop {
+    position: relative;
+    /*margin-left: -5.7%;*/
+    /*background-color: pink;*/
+    left: 50%;
+    transform: translate(-50%);
+    width: 110vw;
+    height: 98vh;
+    box-shadow: none;
+    border-radius: none;
+  }
+  .backDrop img {
+    position: relative;
+    width: 110vw;
+    height: 98vh;
+  }
+  /*Styling for map included on location page*/
+  .map {
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    top: 72%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 2px black;
+    border-radius: 7px;
+  }
+  .address {
+    left: 6%;
+    top: 27%;
+    font-size: 20px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    position: absolute;
+    text-align: center;
+    color: black;
+    /*color: #5b5b5b;*/
+    text-shadow: 2px 2px 2px white, -1px -1px 2px white;
+  }
+  .carouselPhotos {
+    object-fit: contain;
+    position: relative;
+    width: 325px;
+    height: 325px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*width: 75%;*/
+    /*height: auto;*/
+    /*margin: auto;*/
+  }
+  .otherCarouselPhotos {
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .carousel-indicators li {
+    visibility: hidden;
+  }
+  .carousel {
+    /*position: absolute;*/
+    top: 16%;
+    width: 100vw;
+    /*height: 100vh;*/
+  }
+  .carousel, .item, .active {
+    height: 55vh;
+    width: 100vw;
+  }
+  .carousel-inner {
+    height: auto;
+    width: 100vw;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    height: auto;
+    width: 100vw;
+    text-align: center;
+    font-weight: bold;
+    color: #5b5b5b;
+    /*color: white;*/
+    top: 90%;
+    /*left: 50%;*/
+    /*transform: translate( -50%);*/
+  }
+  footer img {
+    vertical-align: middle;
+    margin-top: 7px;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 10px;
+    /*padding-right: 10px;*/
+  }
 }
 
 @media only screen and (max-width: 375px) {
-    .navBar {
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        /*align-items: center;*/
-        margin-top: 15px;
-        margin-bottom: 5px;
-        margin-left: 15px;
-    }
-    .navBar h1 {
-        /*padding-right: 30px;*/
-        margin-top: -7px;
-        font-size: 20px;
-        color: #5b5b5b;
-        font-family: "Helvetica", "Arial", sans-serif;
-        font-weight: bold;
-        height: 44px;
-        margin-bottom: -20px
-    }
-    .navBar h5 {
-        /*padding: 0 60px 0 40px;*/
-        font-weight: bolder;
-        color: black;
-        /*height: 38px;*/
-        /*width: 160px;*/
-        font-family: 'Poiret One', cursive;
-    }
-    .line {
-        position: relative;
-        width: 375px;
-        height: 3px;
-        background-color: #5b5b5b;
-        /*background-color: grey;*/
-        /*left: 50%;
+  .navBar {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    /*align-items: center;*/
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+  }
+  .navBar h1 {
+    /*padding-right: 30px;*/
+    margin-top: -7px;
+    font-size: 20px;
+    color: #5b5b5b;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+    height: 44px;
+    margin-bottom: -20px
+  }
+  .navBar h5 {
+    /*padding: 0 60px 0 40px;*/
+    font-weight: bolder;
+    color: black;
+    /*height: 38px;*/
+    /*width: 160px;*/
+    font-family: 'Poiret One', cursive;
+  }
+  .line {
+    position: relative;
+    width: 375px;
+    height: 3px;
+    background-color: #5b5b5b;
+    /*background-color: grey;*/
+    /*left: 50%;
       top: -10px;
       transform: translate(-50%);*/
-    }
-    .lineBottom {
-        position: relative;
-        width: 375px;
-        height: 3px;
-        background-color: #5b5b5b;
-        /*background-color: grey;*/
-        left: 50%;
-        top: 90%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        margin-top: 10px;
-    }
-    .backDrop img {
-        position: relative;
-        left: 0%;
-        text-align: center;
-        width: 375px;
-        height: auto;
-        /*box-shadow: 3px 3px 2px #5b5b5b, -3px -3px 2px #5b5b5b;*/
-        border-radius: 7px;
-    }
-    /*Styling for map included on location page*/
-    .map {
-        position: absolute;
-        height: 105px;
-        width: 225px;
-        top: 50%;
-        left: 49%;
-        transform: translate(-50%, -50%);
-        box-shadow: 2px 2px 2px black;
-        border-radius: 7px;
-    }
-    .address {
-        left: 30%;
-        top: 25%;
-        font-size: 12px;
-        font-family: "Helvetica", "Arial", sans-serif;
-        position: absolute;
-        text-align: center;
-        color: white;
-        /*color: #5b5b5b;*/
-        text-shadow: 1px 1px 1px black, 2px 2px 1px black, -1px -1px 1px black, -2px -2px 1px black;
-    }
-    .carouselPhotos {
-        object-fit: contain;
-        position: relative;
-        width: 300px;
-        height: 300px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /*width: 75%;*/
-        /*height: auto;*/
-        /*margin: auto;*/
-    }
-    .otherCarouselPhotos {
-        object-fit: contain;
-        width: 200px;
-        height: 200px;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .carousel-indicators li {
-        visibility: hidden;
-    }
-    .carousel {
-        /*position: absolute;*/
-        top: 16%;
-        width: 100vw;
-        height: 45vh;
-    }
-    .carousel, .item, .active {
-        height: 45vh;
-        width: 100vw;
-    }
-    .carousel-inner {
-        height: 45vh;
-        width: 100vw;
-    }
-    footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        position: relative;
-        height: auto;
-        width: 100vw;
-        text-align: center;
-        font-weight: bold;
-        color: #5b5b5b;
-        /*color: white;*/
-        top: 90%;
-        /*left: 50%;*/
-        /*transform: translate( -50%);*/
-    }
-    footer img {
-        vertical-align: middle;
-        margin-top: 7px;
-        margin-left: 10px;
-        height: 20px;
-        width: 20px;
-        margin-bottom: 10px;
-        /*padding-right: 10px;*/
-    }
+  }
+  .lineBottom {
+    position: relative;
+    width: 375px;
+    height: 3px;
+    background-color: #5b5b5b;
+    /*background-color: grey;*/
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin-top: 10px;
+  }
+  .backDrop img {
+    position: relative;
+    left: 0%;
+    text-align: center;
+    width: 375px;
+    height: auto;
+    /*box-shadow: 3px 3px 2px #5b5b5b, -3px -3px 2px #5b5b5b;*/
+    border-radius: 7px;
+  }
+  /*Styling for map included on location page*/
+  .map {
+    position: absolute;
+    height: 105px;
+    width: 225px;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 2px black;
+    border-radius: 7px;
+  }
+  .address {
+    left: 30%;
+    top: 25%;
+    font-size: 12px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    position: absolute;
+    text-align: center;
+    color: white;
+    /*color: #5b5b5b;*/
+    text-shadow: 1px 1px 1px black, 2px 2px 1px black, -1px -1px 1px black, -2px -2px 1px black;
+  }
+  .carouselPhotos {
+    object-fit: contain;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*width: 75%;*/
+    /*height: auto;*/
+    /*margin: auto;*/
+  }
+  .otherCarouselPhotos {
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .carousel-indicators li {
+    visibility: hidden;
+  }
+  .carousel {
+    /*position: absolute;*/
+    top: 16%;
+    width: 100vw;
+    height: 45vh;
+  }
+  .carousel, .item, .active {
+    height: 45vh;
+    width: 100vw;
+  }
+  .carousel-inner {
+    height: 45vh;
+    width: 100vw;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    height: auto;
+    width: 100vw;
+    text-align: center;
+    font-weight: bold;
+    color: #5b5b5b;
+    /*color: white;*/
+    top: 90%;
+    /*left: 50%;*/
+    /*transform: translate( -50%);*/
+  }
+  footer img {
+    vertical-align: middle;
+    margin-top: 7px;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 10px;
+    /*padding-right: 10px;*/
+  }
 }
 
 
 /*@media only screen and (max-width: 1024) */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) (-webkit-min-device-pixel-ratio: 2) {
-    .line {
-        position: relative;
-        width: 100vw;
-        height: 3px;
-        background-color: #5b5b5b;
-    }
-    .lineBottom {
-        position: relative;
-        width: 100vw;
-        height: 3px;
-        background-color: #5b5b5b;
-        /*background-color: grey;*/
-        left: 50%;
-        top: 90%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        margin-top: 10px;
-    }
-    .backDrop {
-        position: relative;
-        margin-left: -5.7%;
-        /*background-color: pink;*/
-        /*left: 5.8%;*/
-        width: 100vw;
-        height: 98vh;
-        box-shadow: none;
-        border-radius: none;
-    }
-    .backDrop img {
-        position: relative;
-        width: 100vw;
-        height: 98vh;
-    }
-    /*Styling for map included on location page*/
-    .map {
-        position: absolute;
-        height: 250px;
-        width: 500px;
-        top: 65%;
-        left: 51%;
-        transform: translate(-50%, -50%);
-        box-shadow: 2px 2px 2px black;
-        border-radius: 7px;
-    }
-    .address {
-        left: 50%;
-        top: 30%;
-        transform: translate(-50%, -50%);
-        font-size: 20px;
-        font-family: "Helvetica", "Arial", sans-serif;
-        position: absolute;
-        text-align: center;
-        color: white;
-        /*color: #5b5b5b;*/
-        text-shadow: 1px 1px 1px black, 2px 2px 1px black, -1px -1px 1px black, -2px -2px 1px black;
-    }
+  .line {
+    position: relative;
+    width: 100vw;
+    height: 3px;
+    background-color: #5b5b5b;
+  }
+  .lineBottom {
+    position: relative;
+    width: 100vw;
+    height: 3px;
+    background-color: #5b5b5b;
+    /*background-color: grey;*/
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin-top: 10px;
+  }
+  .backDrop {
+    position: relative;
+    margin-left: -5.7%;
+    /*background-color: pink;*/
+    /*left: 5.8%;*/
+    width: 100vw;
+    height: 98vh;
+    box-shadow: none;
+    border-radius: none;
+  }
+  .backDrop img {
+    position: relative;
+    width: 100vw;
+    height: 98vh;
+  }
+  /*Styling for map included on location page*/
+  .map {
+    position: absolute;
+    height: 250px;
+    width: 500px;
+    top: 65%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 2px black;
+    border-radius: 7px;
+  }
+  .address {
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    position: absolute;
+    text-align: center;
+    color: white;
+    /*color: #5b5b5b;*/
+    text-shadow: 1px 1px 1px black, 2px 2px 1px black, -1px -1px 1px black, -2px -2px 1px black;
+  }
 }
