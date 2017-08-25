@@ -2,246 +2,246 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>A La Mod</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
-    <!-- My CSS -->
-    <link rel="stylesheet" href="../css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
-    <!-- Google Font Poiret -->
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>A La Mod</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../css/main.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+  <!-- Google Font Poiret -->
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 
 
 </head>
 
 <body>
-    <!-- <div class="navBar">
+  <!-- <div class="navBar">
         <h1>a La MOD</h1>
         <a href="javascript:void(0)" style="text-decoration: none; color: black" onclick="openNav()"><h6><strong>INVENTORY</strong></h6></a>
         <a href="/location" style="text-decoration: none; color: black">
             <h6><strong>LOCATION</strong></h6></a>
     </div> -->
 
-    <header>
-        <!-- This is the hamburger menu button that opens the slide menu -->
-        <button type="button" class="btn btn-default btn-lg openMenu" onclick="openMainNav()">
+  <header>
+    <!-- This is the hamburger menu button that opens the slide menu -->
+    <button type="button" class="btn btn-default btn-lg openMenu" onclick="openMainNav()">
         <span class = "glyphicon glyphicon-menu-hamburger" aria-hidden = "true"></span>
       </button>
 
-        <h1 class="storeName">a La MOD</h1>
+    <h1 class="storeName">a La MOD</h1>
 
-    </header>
+  </header>
 
-    <!-- <div class="line"></div> -->
-    <!-- <img class="mainImage" src="./resources/alamodain.png" alt="" /> -->
-
-
+  <!-- <div class="line"></div> -->
+  <!-- <img class="mainImage" src="./resources/alamodain.png" alt="" /> -->
 
 
-    <!-- This is the hamburger menu button that opens the slide menu -->
-    <!-- <button type="button" class="btn btn-default btn-lg openMenu" onclick="openNav()">
+
+
+  <!-- This is the hamburger menu button that opens the slide menu -->
+  <!-- <button type="button" class="btn btn-default btn-lg openMenu" onclick="openNav()">
       <span class = "glyphicon glyphicon-menu-hamburger" aria-hidden = "true"></span>MENU
     </button> -->
 
-    <!-- This is the nested slide menu for More Furniture-->
-    <div id="myMainNav" class="sidenav">
-        <a href="#"></a>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeMainNav()">&times;</a>
-        <!-- <a href="javascript:void(0)" onclick="openNav(); closeMainNav()">Inventory</a> -->
-        <a href=/inventory>Inventory</a>
-        <a href="/location">Location</a>
-        <a href="/newListings">New Listings</a>
+  <!-- This is the nested slide menu for More Furniture-->
+  <div id="myMainNav" class="sidenav">
+    <a href="#"></a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeMainNav()">&times;</a>
+    <!-- <a href="javascript:void(0)" onclick="openNav(); closeMainNav()">Inventory</a> -->
+    <a href=/inventory>Inventory</a>
+    <a href="/location">Location</a>
+    <a href="/newListings">New Listings</a>
 
-    </div>
+  </div>
 
-    <!-- This is the slide menu -->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="javascript:void(0)" onclick="openNestedSeating(); closeNav()">Seating</a>
-        <a href="javascript:void(0)" onclick="openNestedLighting(); closeNav()">Lighting</a>
-        <a href="javascript:void(0)" onclick="openNestedStorage(); closeNav()">Case Pieces and Storage</a>
-        <a href="javascript:void(0)" onclick="openNestedTables(); closeNav()">Tables</a>
-        <a href="javascript:void(0)" onclick="openNestedMirrors(); closeNav()">Mirrors</a>
-        <a href="javascript:void(0)" onclick="openNestedFolk(); closeNav()">Folk Art</a>
-        <a href="javascript:void(0)" onclick="openNestedRugs(); closeNav()">Rugs and Carpet</a>
-        <a href="javascript:void(0)" onclick="openNestedServeware(); closeNav()">Serveware, Ceramics, Silver and Glass</a>
-        <a href="javascript:void(0)" onclick="openNestedWallDec(); closeNav()">Wall Decorations</a>
-        <a href="javascript:void(0)" onclick="openNestedGarden(); closeNav()">Building and Garden Elements</a>
-        <a href="javascript:void(0)" onclick="openNestedDecObj(); closeNav()">Decorative Objects</a>
-        <a href="javascript:void(0)" onclick="openNestedMoreFurn(); closeNav()">More Furniture and Collectibles</a>
-    </div>
+  <!-- This is the slide menu -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" onclick="openNestedSeating(); closeNav()">Seating</a>
+    <a href="javascript:void(0)" onclick="openNestedLighting(); closeNav()">Lighting</a>
+    <a href="javascript:void(0)" onclick="openNestedStorage(); closeNav()">Case Pieces and Storage</a>
+    <a href="javascript:void(0)" onclick="openNestedTables(); closeNav()">Tables</a>
+    <a href="javascript:void(0)" onclick="openNestedMirrors(); closeNav()">Mirrors</a>
+    <a href="javascript:void(0)" onclick="openNestedFolk(); closeNav()">Folk Art</a>
+    <a href="javascript:void(0)" onclick="openNestedRugs(); closeNav()">Rugs and Carpet</a>
+    <a href="javascript:void(0)" onclick="openNestedServeware(); closeNav()">Serveware, Ceramics, Silver and Glass</a>
+    <a href="javascript:void(0)" onclick="openNestedWallDec(); closeNav()">Wall Decorations</a>
+    <a href="javascript:void(0)" onclick="openNestedGarden(); closeNav()">Building and Garden Elements</a>
+    <a href="javascript:void(0)" onclick="openNestedDecObj(); closeNav()">Decorative Objects</a>
+    <a href="javascript:void(0)" onclick="openNestedMoreFurn(); closeNav()">More Furniture and Collectibles</a>
+  </div>
 
-    <!-- This is the nested slide menu for Seeating-->
-    <div id="myNestedSeating" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedSeating()">&times;</a>
-        <a href="#">Dining Room Chairs</a>
-        <a href="#">Living Room Chairs</a>
-        <a href="#">Club Chairs</a>
-        <a href="#">Rocking Chairs</a>
-        <a href="#">Swivel Chairs</a>
-        <a href="#">Slipper Chairs</a>
-        <a href="/inventory" ng-model="main.search" value="Lounge Chairs">Lounge Chairs</a>
-        <a href="#">Sectional Sofas</a>
-        <a href="#">Sofas</a>
-        <a href="#">Footstools</a>
-        <a href="#">Wingback Chairs</a>
-        <a href="#">Side Chairs</a>
-        <a href="#">Arm Chairs</a>
-        <a href="#"> Chairs</a>
-        <a href="#">Stools</a>
-        <a href="#">Ottomans and Poufs</a>
-        <a href="#">Benches</a>
-        <a href="javascript:void(0)" onclick="closeNestedSeating(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for Seeating-->
+  <div id="myNestedSeating" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedSeating()">&times;</a>
+    <a href="#">Dining Room Chairs</a>
+    <a href="#">Living Room Chairs</a>
+    <a href="#">Club Chairs</a>
+    <a href="#">Rocking Chairs</a>
+    <a href="#">Swivel Chairs</a>
+    <a href="#">Slipper Chairs</a>
+    <a href="/inventory" ng-model="main.search" value="Lounge Chairs">Lounge Chairs</a>
+    <a href="#">Sectional Sofas</a>
+    <a href="#">Sofas</a>
+    <a href="#">Footstools</a>
+    <a href="#">Wingback Chairs</a>
+    <a href="#">Side Chairs</a>
+    <a href="#">Arm Chairs</a>
+    <a href="#"> Chairs</a>
+    <a href="#">Stools</a>
+    <a href="#">Ottomans and Poufs</a>
+    <a href="#">Benches</a>
+    <a href="javascript:void(0)" onclick="closeNestedSeating(); openNav()">Back</a>
+  </div>
 
-    <!-- This is the nested slide menu for Lighting-->
-    <div id="myNestedLighting" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedLighting()">&times;</a>
-        <a href="#">Chandeliers and Pendants</a>
-        <a href="#">Candleholders and Candelabra</a>
-        <a href="#">Wall Lights and Sconces</a>
-        <a href="#">Table Lamps</a>
-        <a href="#">Floor Lamps</a>
-        <a href="#">More Lights</a>
-        <a href="javascript:void(0)" onclick="closeNestedLighting(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for Lighting-->
+  <div id="myNestedLighting" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedLighting()">&times;</a>
+    <a href="#">Chandeliers and Pendants</a>
+    <a href="#">Candleholders and Candelabra</a>
+    <a href="#">Wall Lights and Sconces</a>
+    <a href="#">Table Lamps</a>
+    <a href="#">Floor Lamps</a>
+    <a href="#">More Lights</a>
+    <a href="javascript:void(0)" onclick="closeNestedLighting(); openNav()">Back</a>
+  </div>
 
-    <!-- This is the nested slide menu for Storage-->
-    <div id="myNestedStorage" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedStorage()">&times;</a>
-        <a href="#">Buffets</a>
-        <a href="#">Sideboards</a>
-        <a href="#">Shelves</a>
-        <a href="#">Credenzas</a>
-        <a href="#">Bookcases</a>
-        <a href="#">Cabintes</a>
-        <a href="#">Dry Bars</a>
-        <a href="javascript:void(0)" onclick="closeNestedStorage(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for Storage-->
+  <div id="myNestedStorage" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedStorage()">&times;</a>
+    <a href="#">Buffets</a>
+    <a href="#">Sideboards</a>
+    <a href="#">Shelves</a>
+    <a href="#">Credenzas</a>
+    <a href="#">Bookcases</a>
+    <a href="#">Cabintes</a>
+    <a href="#">Dry Bars</a>
+    <a href="javascript:void(0)" onclick="closeNestedStorage(); openNav()">Back</a>
+  </div>
 
-    <!-- This is the nested slide menu for Tables-->
-    <div id="myNestedTables" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedTables()">&times;</a>
-        <a href="#">Tables</a>
-        <a href="#">Dining Room Sets</a>
-        <a href="#">Center Tables</a>
-        <a href="#">Night Stands</a>
-        <a href="#">Sofa Tables</a>
-        <a href="#">Desks and Writing Tables</a>
-        <a href="#">Dessert Tables and Tilt-top Tables</a>
-        <a href="#">Dining Room Tables</a>
-        <a href="#">Card Tables and Tea Tables</a>
-        <a href="#">Side Tables</a>
-        <a href="#">Tray Tables</a>
-        <a href="#">Serving Tables</a>
-        <a href="#">Pedestals</a>
-        <a href="#">Conference Tables</a>
-        <a href="#">Game Tables</a>
-        <a href="#">Coffee and Cocktail Tables</a>
-        <a href="#">End Tables</a>
-        <a href="#">Console Tables</a>
-        <a href="#">Bar Carts</a>
-        <a href="#">Nesting Table and Stacking Tables</a>
-        <a href="javascript:void(0)" onclick="closeNestedTables(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for Tables-->
+  <div id="myNestedTables" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedTables()">&times;</a>
+    <a href="#">Tables</a>
+    <a href="#">Dining Room Sets</a>
+    <a href="#">Center Tables</a>
+    <a href="#">Night Stands</a>
+    <a href="#">Sofa Tables</a>
+    <a href="#">Desks and Writing Tables</a>
+    <a href="#">Dessert Tables and Tilt-top Tables</a>
+    <a href="#">Dining Room Tables</a>
+    <a href="#">Card Tables and Tea Tables</a>
+    <a href="#">Side Tables</a>
+    <a href="#">Tray Tables</a>
+    <a href="#">Serving Tables</a>
+    <a href="#">Pedestals</a>
+    <a href="#">Conference Tables</a>
+    <a href="#">Game Tables</a>
+    <a href="#">Coffee and Cocktail Tables</a>
+    <a href="#">End Tables</a>
+    <a href="#">Console Tables</a>
+    <a href="#">Bar Carts</a>
+    <a href="#">Nesting Table and Stacking Tables</a>
+    <a href="javascript:void(0)" onclick="closeNestedTables(); openNav()">Back</a>
+  </div>
 
-    <!-- This is the nested slide menu for Mirrors-->
-    <div id="myNestedMirrors" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedMirrors()">&times;</a>
-        <a href="#">Table Mirrors</a>
-        <a href="#">Wall Mirrors</a>
-        <a href="#">More Mirrors</a>
-        <a href="javascript:void(0)" onclick="closeNestedMirrors(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for Mirrors-->
+  <div id="myNestedMirrors" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedMirrors()">&times;</a>
+    <a href="#">Table Mirrors</a>
+    <a href="#">Wall Mirrors</a>
+    <a href="#">More Mirrors</a>
+    <a href="javascript:void(0)" onclick="closeNestedMirrors(); openNav()">Back</a>
+  </div>
 
-    <!-- This is the nested slide menu for Folk Art-->
-    <div id="myNestedFolk" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedFolk()">&times;</a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#">Ceramics</a>
-        <a href="javascript:void(0)" onclick="closeNestedFolk(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for Folk Art-->
+  <div id="myNestedFolk" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedFolk()">&times;</a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#">Ceramics</a>
+    <a href="javascript:void(0)" onclick="closeNestedFolk(); openNav()">Back</a>
+  </div>
 
-    <!-- This is the nested slide menu for Rugs-->
-    <div id="myNestedRugs" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedRugs()">&times;</a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#">North and South American Rugs</a>
-        <a href="javascript:void(0)" onclick="closeNestedRugs(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for Rugs-->
+  <div id="myNestedRugs" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedRugs()">&times;</a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#">North and South American Rugs</a>
+    <a href="javascript:void(0)" onclick="closeNestedRugs(); openNav()">Back</a>
+  </div>
 
-    <!-- This is the nested slide menu for Serveware-->
-    <div id="myNestedServeware" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedServeware()">&times;</a>
-        <a href="#">Serving Pieces</a>
-        <a href="#">Tea Sets</a>
-        <a href="#">Vases</a>
-        <a href="#">More Dining and Entertaining</a>
-        <a href="#">Barware</a>
-        <a href="#">Ceramics</a>
-        <a href="#">Tableware</a>
-        <a href="#">Glass</a>
-        <a href="#">Porcelain</a>
-        <a href="javascript:void(0)" onclick="closeNestedServeware(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for Serveware-->
+  <div id="myNestedServeware" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedServeware()">&times;</a>
+    <a href="#">Serving Pieces</a>
+    <a href="#">Tea Sets</a>
+    <a href="#">Vases</a>
+    <a href="#">More Dining and Entertaining</a>
+    <a href="#">Barware</a>
+    <a href="#">Ceramics</a>
+    <a href="#">Tableware</a>
+    <a href="#">Glass</a>
+    <a href="#">Porcelain</a>
+    <a href="javascript:void(0)" onclick="closeNestedServeware(); openNav()">Back</a>
+  </div>
 
-    <!-- This is the nested slide menu for Wall Art-->
-    <div id="myNestedWallDec" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedWallDec()">&times;</a>
-        <a href="#">Contemporary Art</a>
-        <a href="#">Wall-Mounted Sculptures</a>
-        <a href="#">Paintings</a>
-        <a href="#">Prints</a>
-        <a href="#">Tapestries</a>
-        <a href="#">Photography</a>
-        <a href="#">Decorative Art</a>
-        <a href="javascript:void(0)" onclick="closeNestedWallDec(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for Wall Art-->
+  <div id="myNestedWallDec" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedWallDec()">&times;</a>
+    <a href="#">Contemporary Art</a>
+    <a href="#">Wall-Mounted Sculptures</a>
+    <a href="#">Paintings</a>
+    <a href="#">Prints</a>
+    <a href="#">Tapestries</a>
+    <a href="#">Photography</a>
+    <a href="#">Decorative Art</a>
+    <a href="javascript:void(0)" onclick="closeNestedWallDec(); openNav()">Back</a>
+  </div>
 
-    <!-- This is the nested slide menu for Garden Stuff-->
-    <div id="myNestedGarden" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedGarden()">&times;</a>
-        <a href="#">Fireplaces and Mantels</a>
-        <a href="#">Andirons</a>
-        <a href="#">Garden Ornaments</a>
-        <a href="#">Fireplace Tools and Chimney Pots</a>
-        <a href="#">Architectural Elements</a>
-        <a href="javascript:void(0)" onclick="closeNestedGarden(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for Garden Stuff-->
+  <div id="myNestedGarden" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedGarden()">&times;</a>
+    <a href="#">Fireplaces and Mantels</a>
+    <a href="#">Andirons</a>
+    <a href="#">Garden Ornaments</a>
+    <a href="#">Fireplace Tools and Chimney Pots</a>
+    <a href="#">Architectural Elements</a>
+    <a href="javascript:void(0)" onclick="closeNestedGarden(); openNav()">Back</a>
+  </div>
 
-    <!-- This is the nested slide menu for Decorative Objects-->
-    <div id="myNestedDecObj" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedDecObj()">&times;</a>
-        <a href="#">Candle Holders</a>
-        <a href="#">Desk Accessories</a>
-        <a href="#">Boxes</a>
-        <a href="#">Sculptures</a>
-        <a href="#">Bowls and Baskets</a>
-        <a href="#">Vases and Vessels</a>
-        <a href="javascript:void(0)" onclick="closeNestedDecObj(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for Decorative Objects-->
+  <div id="myNestedDecObj" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedDecObj()">&times;</a>
+    <a href="#">Candle Holders</a>
+    <a href="#">Desk Accessories</a>
+    <a href="#">Boxes</a>
+    <a href="#">Sculptures</a>
+    <a href="#">Bowls and Baskets</a>
+    <a href="#">Vases and Vessels</a>
+    <a href="javascript:void(0)" onclick="closeNestedDecObj(); openNav()">Back</a>
+  </div>
 
-    <!-- This is the nested slide menu for More Furniture-->
-    <div id="myNestedMoreFurn" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNestedMoreFurn()">&times;</a>
-        <a href="#">Decorative Objects</a>
-        <a href="#">Magazine Racks and Stands</a>
-        <a href="#">Boxes</a>
-        <a href="#">Screens</a>
-        <a href="#">Carts</a>
-        <a href="#">Sculptures</a>
-        <a href="javascript:void(0)" onclick="closeNestedMoreFurn(); openNav()">Back</a>
-    </div>
+  <!-- This is the nested slide menu for More Furniture-->
+  <div id="myNestedMoreFurn" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNestedMoreFurn()">&times;</a>
+    <a href="#">Decorative Objects</a>
+    <a href="#">Magazine Racks and Stands</a>
+    <a href="#">Boxes</a>
+    <a href="#">Screens</a>
+    <a href="#">Carts</a>
+    <a href="#">Sculptures</a>
+    <a href="javascript:void(0)" onclick="closeNestedMoreFurn(); openNav()">Back</a>
+  </div>
 
 
 
-    <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
+  <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
 </body>
 
 </html>
