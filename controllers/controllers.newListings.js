@@ -6,12 +6,8 @@ var LIST = require("../models/model.newListings.js"),
     port: 465,
     auth: {
       type: "login",
-      // user: "jbmills327@gmail.com",
-      // pass: "tinyhulk327"
       user: "alamodincps@gmail.com",
-      pass: "Mrkoby1965$"
-      // user: "alamodinc@icloud.com",
-      // pass: "Mrjack1965$"
+      pass: "Mrjack1965$"
     }
   });
 
