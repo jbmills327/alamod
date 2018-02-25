@@ -46,7 +46,6 @@ header {
   z-index: 1;
 }
 
-
 /*Turns hamburger white and background black when hover*/
 
 .openMenu:hover {
@@ -113,6 +112,16 @@ header {
   font-family: 'Poiret One', cursive;
 }
 
+.hours {
+  padding: 0 60px 0 40px;
+  margin-left: -90px;
+  font-weight: bolder;
+  color: black;
+  /*height: 38px;
+    width: 160px;*/
+  font-family: 'Poiret One', cursive;
+}
+
 footer {
   display: flex;
   flex-direction: row;
@@ -162,7 +171,6 @@ footer img {
   width: 20px;
 }
 
-
 /* The side navigation menu */
 
 .sidenav {
@@ -210,7 +218,6 @@ footer img {
   /* 0.5 second transition effect to slide in the sidenav */
 }
 
-
 /* The navigation menu links */
 
 .sidenav a {
@@ -224,7 +231,6 @@ footer img {
   display: block;
   transition: 0.3s
 }
-
 
 /* The navigation menu links */
 
@@ -240,7 +246,6 @@ footer img {
   transition: 0.3s
 }
 
-
 /* When you mouse over the navigation links, change their color */
 
 .sidenav a:hover, .offcanvas a:focus {
@@ -248,14 +253,12 @@ footer img {
   color: #818181;
 }
 
-
 /* When you mouse over the navigation links, change their color */
 
 .inventorySidenav a:hover, .offcanvas a:focus {
   /*color: #f1f1f1;*/
   color: #818181;
 }
-
 
 /* Position and style the close button (top right corner) */
 
@@ -266,7 +269,6 @@ footer img {
   font-size: 36px;
   margin-left: 50px;
 }
-
 
 /* Position and style the close button (top right corner) */
 
@@ -291,7 +293,6 @@ footer img {
   /*margin: auto;*/
 }
 
-
 /*.loader {
     position: absolute;
     left: 50%;
@@ -304,7 +305,6 @@ footer img {
     height: 120px;
     animation: spin 2s linear infinite;
 }*/
-
 
 /*@keyframes spin {
     0% {
@@ -344,7 +344,6 @@ footer img {
   height: 77vh;
 }
 
-
 /*Styling for map included on location page*/
 
 .map {
@@ -359,7 +358,6 @@ footer img {
   box-shadow: 2px 2px 2px black;
   border-radius: 7px;
 }
-
 
 /*.storeFront {
     position: absolute;
@@ -404,7 +402,6 @@ footer img {
   height: 98vh;
 }
 
-
 /*.modal-body {
     max-height: calc(100vh - 210px);
     overflow-y: auto;
@@ -434,7 +431,6 @@ footer img {
   padding-bottom: 15px;
 }
 
-
 /*styling pagination controls*/
 
 .invControlsWrapper {
@@ -457,7 +453,6 @@ footer img {
   font-weight: bolder;
   font-size: 2em;
 }
-
 
 /*Adjusting the size of the modal*/
 
@@ -535,7 +530,6 @@ body .modal-admin {
   top: 40%;
   left: 65%;
 }
-
 
 /*Styling  for send email button*/
 
@@ -857,7 +851,6 @@ body .modal-admin {
   }
 }
 
-
 /*@media only screen and (max-width: 667px) */
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -1161,7 +1154,6 @@ body .modal-admin {
     /*padding-right: 10px;*/
   }
 }
-
 
 /*@media only screen and (max-width: 1024) */
 
