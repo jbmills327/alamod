@@ -370,8 +370,10 @@ function mainController($http, alamodfactory) {
       .then(function(err, returnData) {
         if (err) {
           console.log("This is the sendMail error", err);
+          // alert("There was an error sending, please try again or notify us.");
         } else {
           console.log("This is the sendMail returnData", returnData);
+          // alert("Your email has been sent.  Thank you!");
         }
       })
 
