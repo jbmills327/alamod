@@ -312,7 +312,7 @@
 
   </form>
 
-  <ul class="invList" dir-paginate="inventory in main.inventoryList |orderBy: 'id': true| filter: main.search | itemsPerPage: 30">
+  <ul class="invList" dir-paginate="inventory in main.inventoryList |orderBy: 'id': reverse| filter: main.search | itemsPerPage: 30">
     <li>
       <a data-toggle="modal" data-target="#inventModal" ng-click="main.setId(inventory)"><img ng-src="{{ inventory.imageUrl[0] }}" alt="{{ inventory.name }}" style="width: 200px; height: auto; cursor: pointer"></a>
     </li>
