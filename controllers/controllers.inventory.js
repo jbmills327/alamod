@@ -40,6 +40,7 @@ module.exports = {
   edit: (req, res) => {
     var newVar = {
       "name": req.body.name,
+      "dateCreated": req.body.dateCreated,
       "period": req.body.period,
       "description": req.body.description,
       "price": req.body.price,
