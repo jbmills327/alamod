@@ -2,19 +2,19 @@
 <html ng-app="MyApp">
 
 <head>
-    <meta charset="utf-8">
-    <title>Add Inventory</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
-    <!-- My CSS -->
-    <link rel="stylesheet" href="../css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
-    <!-- Google Font Poiret -->
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../css/resources/palm_tree_two.png">
+  <meta charset="utf-8">
+  <title>Add Inventory</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../css/main.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+  <!-- Google Font Poiret -->
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../css/resources/palm_tree_two.png">
 
 
 
@@ -22,20 +22,20 @@
 
 <body ng-controller="MainCtrl as main">
 
-    <div class="navBar" ng-hide="main.showInventoryForm">
-        <!-- <a href="/" style="text-decoration: none;"> -->
-        <a href="/" style="text-decoration: none;">
-            <h1>a La MOD</h1></a>
-        <a href="/inventory" style="text-decoration: none; color: black"><h5><strong>INVENTORY</strong></h5></a>
-        <a href="/location" style="text-decoration: none; color: black"><h5><strong>LOCATION</strong></h5></a>
-        <a href="/contact" style="text-decoration: none; color: black"><h5><strong>CONTACT US</strong></h5></a>
-    </div>
-    <div class="line"></div>
+  <div class="navBar" ng-hide="main.showInventoryForm">
+    <!-- <a href="/" style="text-decoration: none;"> -->
+    <a href="/" style="text-decoration: none;">
+      <h1>a La MOD</h1></a>
+    <a href="/inventory" style="text-decoration: none; color: black"><h5><strong>INVENTORY</strong></h5></a>
+    <a href="/location" style="text-decoration: none; color: black"><h5><strong>LOCATION</strong></h5></a>
+    <a href="/contact" style="text-decoration: none; color: black"><h5><strong>CONTACT US</strong></h5></a>
+  </div>
+  <div class="line"></div>
 
 
 
-    <!-- This is the form to add data to the database -->
-    <!-- <form class="submissionsForm" ng-show="main.showInventoryForm" ng-submit="main.addInvent()">
+  <!-- This is the form to add data to the database -->
+  <!-- <form class="submissionsForm" ng-show="main.showInventoryForm" ng-submit="main.addInvent()">
         <h1>This is the form to add yo stuff!</h1>
         <h4>Name:</h4>
         <input class="form-control" placeholder="Name" ng-model="main.newInvent.name" type="text">
@@ -65,223 +65,225 @@
         <button type="submit" name="button">Submit</button>
     </form> -->
 
-    <!-- End of add form -->
+  <!-- End of add form -->
 
-    <div ng-hide="main.showInventoryForm">
+  <div ng-hide="main.showInventoryForm">
 
 
-        <div class="addFormWrapper">
-            <!-- ng-show="main.showMyEdit" -->
+    <div class="addFormWrapper">
+      <!-- ng-show="main.showMyEdit" -->
 
-            <!-- ng-show="main.showInventoryForm; main.showMyEdit; main.showMyEditNewListing" -->
-            <!-- ng-hide="main.showInventoryForm" ng-click="main.showAddInventory()" -->
-            <!-- ng-hide="main.showInventoryForm" -->
+      <!-- ng-show="main.showInventoryForm; main.showMyEdit; main.showMyEditNewListing" -->
+      <!-- ng-hide="main.showInventoryForm" ng-click="main.showAddInventory()" -->
+      <!-- ng-hide="main.showInventoryForm" -->
 
-            <h1>Click here to add inventory</h1>
-            <button class="btn btn-default" name="button" data-toggle="modal" data-target="#addInventoryModal">Add Inventory</button>
+      <h1>Click here to add inventory</h1>
+      <button class="btn btn-default" name="button" data-toggle="modal" data-target="#addInventoryModal">Add Inventory</button>
 
-            <!-- This is the form to edit items -->
-            <h1>Use this to edit items</h1>
-            <form class="referenceNumber" ng-submit="main.getInvent(main.id)">
-                <input style="width: 50%" type="text" placeholder="Reference Number" ng-model="main.id">
-                <button data-toggle="modal" data-target="#editModal" type="submit">Edit</button>
+      <!-- This is the form to edit items -->
+      <h1>Use this to edit items</h1>
+      <form class="referenceNumber" ng-submit="main.getInvent(main.id)">
+        <input style="width: 50%" type="text" placeholder="Reference Number" ng-model="main.id">
+        <button data-toggle="modal" data-target="#editModal" type="submit">Edit</button>
+      </form>
+
+      <!-- ng-click="main.showEditForm()" -->
+      <!-- This is the end to show the edit form -->
+
+      <!-- This is the form to remove an item -->
+      <h1>Use this to remove items</h1>
+      <form class="removeForm" ng-submit="main.removeItems(main.removeThatShit)">
+        <input style="width: 50%" type="text" ng-model="main.removeThatShit" placeholder="Reference Number">
+        <button type="submit">Remove</button>
+      </form>
+      <!-- End Remove Item -->
+
+      <h1>Use this to add photos to carousel</h1>
+      <form class="referenceNumber">
+        <!-- <input type="text" placeholder="Reference Number" ng-model="main.id"> -->
+        <button data-toggle="modal" ng-click="main.getNewListing('5895069d9e313f0354303690')" data-target="#carouselModal" type="submit">Edit</button>
+      </form>
+
+    </div>
+
+    <!-- This is the Add Modal -->
+    <div class="modal fade" id="addInventoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-admin" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+
+            <h4 class="modal-title poiret" id="myModalLabel">Add Your Stuff</h4>
+          </div>
+          <div class="modal-body">
+
+            <!-- This is the edit form -->
+            <!-- ng-hide="main.showMyEdit" -->
+            <!-- class="editFormStuff" -->
+            <!-- ng-show="main.showInventoryForm" -->
+            <!-- This is the form to add data to the database -->
+            <!-- class="submissionsForm"  -->
+            <form ng-submit="main.addInvent()">
+              <h1>This is the form to add yo stuff!</h1>
+              <h4>Name:</h4>
+              <input class="form-control" placeholder="Name" ng-model="main.newInvent.name" type="text">
+              <h4>Period:</h4>
+              <input class="form-control" type="text" placeholder="Period" ng-model="main.newInvent.period">
+              <!-- <select class="form-control" ng-model="main.newInvent.period" ng-options="x for x in main.periods"></select> -->
+              <h4>Price:</h4>
+              <input class="form-control" placeholder="Price" ng-model="main.newInvent.price" type="text">
+              <h4>Description:</h4>
+              <textarea class="form-control" placeholder="Description" ng-model="main.newInvent.description" rows="8" cols="80"></textarea>
+              <h4>Condition</h4>
+              <!-- <select class="form-control" ng-model="main.newInvent.condition" ng-options="x for x in main.conditions"></select> -->
+              <input class="form-control" placeholder="Condition" ng-model="main.newInvent.condition" type="text">
+              <h4>Height:</h4>
+              <input class="form-control" placeholder="Heighth" ng-model="main.newInvent.measurements.height" type="text">
+              <h4>Width</h4>
+              <input class="form-control" placeholder="Width" ng-model="main.newInvent.measurements.width" type="text">
+              <h4>Depth</h4>
+              <input class="form-control" placeholder="Depth" ng-model="main.newInvent.measurements.depth" type="text">
+              <h4>Diameter:</h4>
+              <input class="form-control" placeholder="Diameter" ng-model="main.newInvent.measurements.diameter" type="text">
+              <h4>Number of Items:</h4>
+              <input class="form-control" placeholder="Number of Items" ng-model="main.newInvent.numOfItems" type="text">
+              <h4>Images:</h4>
+              <textarea ng-model="main.newImages" rows="8" cols="80"></textarea>
+              <h4>Category:</h4>
+              <select class="form-control" ng-model="main.newInvent.category" ng-options="x for x in main.categories"></select>
+              <button type="button" name="button" data-dismiss="modal">Close</button>
+              <button type="submit" name="button">Submit</button>
             </form>
+            <!-- End of add form -->
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <!-- ng-click="main.showEditForm()" -->
-            <!-- This is the end to show the edit form -->
+    <!-- End Add Form Modal -->
 
-            <!-- This is the form to remove an item -->
-            <h1>Use this to remove items</h1>
-            <form class="removeForm" ng-submit="main.removeItems(main.removeThatShit)">
-                <input style="width: 50%" type="text" ng-model="main.removeThatShit" placeholder="Reference Number">
-                <button type="submit">Remove</button>
+
+    <!-- This is the Edit Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-admin" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+
+            <h4 class="modal-title poiret" id="myModalLabel">Edit Your Stuff</h4>
+          </div>
+          <div class="modal-body">
+
+            <!-- This is the edit form -->
+            <!-- ng-hide="main.showMyEdit" -->
+            <!-- class="editFormStuff" -->
+            <form ng-submit="main.editItems()">
+              <h1>Edit Yo Stuff!</h1>
+              <h5>Reference:</h5><input ng-model="main.editItem._id" class="form-control" type="text">
+
+              <h5>Name:</h5><input class="form-control" type="text" name="" ng-model="main.editItem.name">
+
+              <h5>Date Created:</h5><input class="form-control" type="text" name="" ng-model="main.editItem.dateCreated">
+
+              <h4>Period:</h4>
+              <!-- <select class="form-control" ng-model="main.editItem.period" ng-options="x for x in main.periods"></select> -->
+              <input class="form-control" type="text" placeholder="Period" ng-model="main.editItem.period">
+
+              <h5>Description:</h5><textarea ng-model="main.editItem.description" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+              <h4>Condition</h4>
+              <!-- <select class="form-control" ng-model="main.editItem.condition" ng-options="x for x in main.conditions"></select> -->
+              <input class="form-control" placeholder="Condition" ng-model="main.editItem.condition" type="text">
+
+              <h5>Price:</h5><input ng-model="main.editItem.price" class="form-control" type="text">
+
+              <h5>Width:</h5><input ng-model="main.editItem.measurements.width" class="form-control" type="text">
+
+              <h5>Height:</h5><input ng-model="main.editItem.measurements.height" class="form-control" type="text">
+
+              <h5>Depth:</h5><input ng-model="main.editItem.measurements.depth" class="form-control" type="text">
+
+              <h5>Diameter: </h5><input ng-model="main.editItem.measurements.diameter" class="form-control" type="text">
+
+              <h4>Number of Items:</h4>
+              <input class="form-control" placeholder="Number of Items" ng-model="main.editItem.numOfItems" type="text">
+
+              <h4>Category:</h4>
+              <select class="form-control" ng-model="main.editItem.category" ng-options="x for x in main.categories"></select>
+
+              <!-- <h5>Images: </h5><textarea ng-model="main.editItem.imageUrl" class="form-control" rows="8" cols="80"></textarea> -->
+
+              <h5>Image One: </h5><input ng-model="main.editItem.imageUrl[0]" class="form-control" type="text">
+              <h5>Image Two: </h5><input ng-model="main.editItem.imageUrl[1]" class="form-control" type="text">
+              <h5>Image Three: </h5><input ng-model="main.editItem.imageUrl[2]" class="form-control" type="text">
+              <h5>Image Four: </h5><input ng-model="main.editItem.imageUrl[3]" class="form-control" type="text">
+              <h5>Image Five: </h5><input ng-model="main.editItem.imageUrl[4]" class="form-control" type="text">
+
+              <!-- Adding to edit the extra photos -->
+              <h5>Image Six: </h5><input ng-model="main.editItem.imageUrl[5]" class="form-control" type="text">
+              <h5>Image Seven: </h5><input ng-model="main.editItem.imageUrl[6]" class="form-control" type="text">
+              <button type="submit" name="button">Submit</button>
+              <button type="button" data-dismiss="modal">Close</button>
+
             </form>
-            <!-- End Remove Item -->
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <h1>Use this to add photos to carousel</h1>
-            <form class="referenceNumber">
-                <!-- <input type="text" placeholder="Reference Number" ng-model="main.id"> -->
-                <button data-toggle="modal" ng-click="main.getNewListing('5895069d9e313f0354303690')" data-target="#carouselModal" type="submit">Edit</button>
+    <!-- End Edit Form Modal -->
+
+    <!-- This is the Add New Listings Modal -->
+    <div class="modal fade" id="carouselModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-admin" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+
+            <h4 class="modal-title poiret" id="myModalLabel">Add Your Stuff</h4>
+          </div>
+          <div class="modal-body">
+            <!-- This is the edit new listing form -->
+            <!-- class="editNewListingFormStuff" ng-hide="main.showMyEditNewListing" -->
+            <form ng-submit="main.editNewListing()">
+              <h1>Edit Yo Carousel!</h1>
+              <h5>Reference: </h5><input type="text" class="form-control" ng-model="main.newListingImages[0]._id">
+              <h5>Name:</h5><input class="form-control" type="text" name="" ng-model="main.newListingImages[0].name">
+
+              <h5>Image One Description:</h5><textarea ng-model="main.newListingImages[0].imageOneDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+              <h5>Image One:</h5><input ng-model="main.newListingImages[0].imageOne" class="form-control" type="text">
+
+              <h5>Image Two Description:</h5><textarea ng-model="main.newListingImages[0].imageTwoDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+              <h5>Image Two:</h5><input ng-model="main.newListingImages[0].imageTwo" class="form-control" type="text">
+
+              <h5>Image Three Description:</h5><textarea ng-model="main.newListingImages[0].imageThreeDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+              <h5>Image Three:</h5><input ng-model="main.newListingImages[0].imageThree" class="form-control" type="text">
+
+              <h5>Image Four Description:</h5><textarea ng-model="main.newListingImages[0].imageFourDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+              <h5>Image Four:</h5><input ng-model="main.newListingImages[0].imageFour" class="form-control" type="text">
+
+              <h5>Image Five Description:</h5><textarea ng-model="main.newListingImages[0].imageFiveDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
+
+              <h5>Image Five:</h5><input ng-model="main.newListingImages[0].imageFive" class="form-control" type="text">
+
+              <button type="submit" name="button">Submit</button>
+              <!-- ng-click="main.showEditNewListingForm()"  -->
+              <button type="button" data-dismiss="modal">Close</button>
+
             </form>
-
+          </div>
         </div>
+      </div>
+    </div>
 
-        <!-- This is the Add Modal -->
-        <div class="modal fade" id="addInventoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-admin" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+    <!-- End Add New Listings Modal -->
 
-                        <h4 class="modal-title poiret" id="myModalLabel">Add Your Stuff</h4>
-                    </div>
-                    <div class="modal-body">
-
-                        <!-- This is the edit form -->
-                        <!-- ng-hide="main.showMyEdit" -->
-                        <!-- class="editFormStuff" -->
-                        <!-- ng-show="main.showInventoryForm" -->
-                        <!-- This is the form to add data to the database -->
-                        <!-- class="submissionsForm"  -->
-                        <form ng-submit="main.addInvent()">
-                            <h1>This is the form to add yo stuff!</h1>
-                            <h4>Name:</h4>
-                            <input class="form-control" placeholder="Name" ng-model="main.newInvent.name" type="text">
-                            <h4>Period:</h4>
-                            <input class="form-control" type="text" placeholder="Period" ng-model="main.newInvent.period">
-                            <!-- <select class="form-control" ng-model="main.newInvent.period" ng-options="x for x in main.periods"></select> -->
-                            <h4>Price:</h4>
-                            <input class="form-control" placeholder="Price" ng-model="main.newInvent.price" type="text">
-                            <h4>Description:</h4>
-                            <textarea class="form-control" placeholder="Description" ng-model="main.newInvent.description" rows="8" cols="80"></textarea>
-                            <h4>Condition</h4>
-                            <!-- <select class="form-control" ng-model="main.newInvent.condition" ng-options="x for x in main.conditions"></select> -->
-                            <input class="form-control" placeholder="Condition" ng-model="main.newInvent.condition" type="text">
-                            <h4>Height:</h4>
-                            <input class="form-control" placeholder="Heighth" ng-model="main.newInvent.measurements.height" type="text">
-                            <h4>Width</h4>
-                            <input class="form-control" placeholder="Width" ng-model="main.newInvent.measurements.width" type="text">
-                            <h4>Depth</h4>
-                            <input class="form-control" placeholder="Depth" ng-model="main.newInvent.measurements.depth" type="text">
-                            <h4>Diameter:</h4>
-                            <input class="form-control" placeholder="Diameter" ng-model="main.newInvent.measurements.diameter" type="text">
-                            <h4>Number of Items:</h4>
-                            <input class="form-control" placeholder="Number of Items" ng-model="main.newInvent.numOfItems" type="text">
-                            <h4>Images:</h4>
-                            <textarea ng-model="main.newImages" rows="8" cols="80"></textarea>
-                            <h4>Category:</h4>
-                            <select class="form-control" ng-model="main.newInvent.category" ng-options="x for x in main.categories"></select>
-                            <button type="button" name="button" data-dismiss="modal">Close</button>
-                            <button type="submit" name="button">Submit</button>
-                        </form>
-                        <!-- End of add form -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- End Add Form Modal -->
-
-
-        <!-- This is the Edit Modal -->
-        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-admin" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
-
-                        <h4 class="modal-title poiret" id="myModalLabel">Edit Your Stuff</h4>
-                    </div>
-                    <div class="modal-body">
-
-                        <!-- This is the edit form -->
-                        <!-- ng-hide="main.showMyEdit" -->
-                        <!-- class="editFormStuff" -->
-                        <form ng-submit="main.editItems()">
-                            <h1>Edit Yo Stuff!</h1>
-                            <h5>Reference:</h5><input ng-model="main.editItem._id" class="form-control" type="text">
-
-                            <h5>Name:</h5><input class="form-control" type="text" name="" ng-model="main.editItem.name">
-
-                            <h4>Period:</h4>
-                            <!-- <select class="form-control" ng-model="main.editItem.period" ng-options="x for x in main.periods"></select> -->
-                            <input class="form-control" type="text" placeholder="Period" ng-model="main.editItem.period">
-
-                            <h5>Description:</h5><textarea ng-model="main.editItem.description" class="form-control" name="name" rows="8" cols="80"></textarea>
-
-                            <h4>Condition</h4>
-                            <!-- <select class="form-control" ng-model="main.editItem.condition" ng-options="x for x in main.conditions"></select> -->
-                            <input class="form-control" placeholder="Condition" ng-model="main.editItem.condition" type="text">
-
-                            <h5>Price:</h5><input ng-model="main.editItem.price" class="form-control" type="text">
-
-                            <h5>Width:</h5><input ng-model="main.editItem.measurements.width" class="form-control" type="text">
-
-                            <h5>Height:</h5><input ng-model="main.editItem.measurements.height" class="form-control" type="text">
-
-                            <h5>Depth:</h5><input ng-model="main.editItem.measurements.depth" class="form-control" type="text">
-
-                            <h5>Diameter: </h5><input ng-model="main.editItem.measurements.diameter" class="form-control" type="text">
-
-                            <h4>Number of Items:</h4>
-                            <input class="form-control" placeholder="Number of Items" ng-model="main.editItem.numOfItems" type="text">
-
-                            <h4>Category:</h4>
-                            <select class="form-control" ng-model="main.editItem.category" ng-options="x for x in main.categories"></select>
-
-                            <!-- <h5>Images: </h5><textarea ng-model="main.editItem.imageUrl" class="form-control" rows="8" cols="80"></textarea> -->
-
-                            <h5>Image One: </h5><input ng-model="main.editItem.imageUrl[0]" class="form-control" type="text">
-                            <h5>Image Two: </h5><input ng-model="main.editItem.imageUrl[1]" class="form-control" type="text">
-                            <h5>Image Three: </h5><input ng-model="main.editItem.imageUrl[2]" class="form-control" type="text">
-                            <h5>Image Four: </h5><input ng-model="main.editItem.imageUrl[3]" class="form-control" type="text">
-                            <h5>Image Five: </h5><input ng-model="main.editItem.imageUrl[4]" class="form-control" type="text">
-
-                            <!-- Adding to edit the extra photos -->
-                            <h5>Image Six: </h5><input ng-model="main.editItem.imageUrl[5]" class="form-control" type="text">
-                            <h5>Image Seven: </h5><input ng-model="main.editItem.imageUrl[6]" class="form-control" type="text">
-                            <button type="submit" name="button">Submit</button>
-                            <button type="button" data-dismiss="modal">Close</button>
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- End Edit Form Modal -->
-
-        <!-- This is the Add New Listings Modal -->
-        <div class="modal fade" id="carouselModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-admin" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
-
-                        <h4 class="modal-title poiret" id="myModalLabel">Add Your Stuff</h4>
-                    </div>
-                    <div class="modal-body">
-                        <!-- This is the edit new listing form -->
-                        <!-- class="editNewListingFormStuff" ng-hide="main.showMyEditNewListing" -->
-                        <form ng-submit="main.editNewListing()">
-                            <h1>Edit Yo Carousel!</h1>
-                            <h5>Reference: </h5><input type="text" class="form-control" ng-model="main.newListingImages[0]._id">
-                            <h5>Name:</h5><input class="form-control" type="text" name="" ng-model="main.newListingImages[0].name">
-
-                            <h5>Image One Description:</h5><textarea ng-model="main.newListingImages[0].imageOneDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
-
-                            <h5>Image One:</h5><input ng-model="main.newListingImages[0].imageOne" class="form-control" type="text">
-
-                            <h5>Image Two Description:</h5><textarea ng-model="main.newListingImages[0].imageTwoDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
-
-                            <h5>Image Two:</h5><input ng-model="main.newListingImages[0].imageTwo" class="form-control" type="text">
-
-                            <h5>Image Three Description:</h5><textarea ng-model="main.newListingImages[0].imageThreeDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
-
-                            <h5>Image Three:</h5><input ng-model="main.newListingImages[0].imageThree" class="form-control" type="text">
-
-                            <h5>Image Four Description:</h5><textarea ng-model="main.newListingImages[0].imageFourDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
-
-                            <h5>Image Four:</h5><input ng-model="main.newListingImages[0].imageFour" class="form-control" type="text">
-
-                            <h5>Image Five Description:</h5><textarea ng-model="main.newListingImages[0].imageFiveDescription" class="form-control" name="name" rows="8" cols="80"></textarea>
-
-                            <h5>Image Five:</h5><input ng-model="main.newListingImages[0].imageFive" class="form-control" type="text">
-
-                            <button type="submit" name="button">Submit</button>
-                            <!-- ng-click="main.showEditNewListingForm()"  -->
-                            <button type="button" data-dismiss="modal">Close</button>
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- End Add New Listings Modal -->
-
-        <!-- This is the edit form -->
-        <!-- <form class="editFormStuff" ng-hide="main.showMyEdit" ng-submit="main.editItems()">
+    <!-- This is the edit form -->
+    <!-- <form class="editFormStuff" ng-hide="main.showMyEdit" ng-submit="main.editItems()">
             <h1>Edit Yo Stuff!</h1>
             <h5>Reference:</h5><input ng-model="main.editItem._id" class="form-control" type="text">
 
@@ -299,9 +301,9 @@
 
             <h5>Diameter: </h5><input ng-model="main.editItem.measurements.diameter" class="form-control" type="text"> -->
 
-        <!-- <h5>Images: </h5><textarea ng-model="main.editItem.imageUrl" class="form-control" rows="8" cols="80"></textarea> -->
+    <!-- <h5>Images: </h5><textarea ng-model="main.editItem.imageUrl" class="form-control" rows="8" cols="80"></textarea> -->
 
-        <!-- <h5>Image One: </h5><input ng-model="main.editItem.imageUrl[0]" class="form-control" type="text">
+    <!-- <h5>Image One: </h5><input ng-model="main.editItem.imageUrl[0]" class="form-control" type="text">
             <h5>Image Two: </h5><input ng-model="main.editItem.imageUrl[1]" class="form-control" type="text">
             <h5>Image Three: </h5><input ng-model="main.editItem.imageUrl[2]" class="form-control" type="text">
             <h5>Image Four: </h5><input ng-model="main.editItem.imageUrl[3]" class="form-control" type="text">
@@ -312,8 +314,8 @@
         </form>
     </div> -->
 
-        <!-- This is the edit new listing form -->
-        <!-- <form class="editNewListingFormStuff" ng-hide="main.showMyEditNewListing" ng-submit="main.editNewListing()">
+    <!-- This is the edit new listing form -->
+    <!-- <form class="editNewListingFormStuff" ng-hide="main.showMyEditNewListing" ng-submit="main.editNewListing()">
             <h1>Edit Yo Carousel!</h1>
             <h5>Reference: </h5><input type="text" class="form-control" ng-model="main.newListingImages[0]._id">
             <h5>Name:</h5><input class="form-control" type="text" name="" ng-model="main.newListingImages[0].name">
@@ -346,10 +348,10 @@
 
 
 
-        <!-- End edit items form -->
+    <!-- End edit items form -->
 
-        <!-- This is the form to add photos to newlisting carousel -->
-        <!-- <form class="newListingsForm" ng-submit="main.carouselNewListings(main.newListingStuffOne,main.newListingStuffTwo,main.newListingStuffThree,main.newListingStuffFour,main.newListingStuffFive)">
+    <!-- This is the form to add photos to newlisting carousel -->
+    <!-- <form class="newListingsForm" ng-submit="main.carouselNewListings(main.newListingStuffOne,main.newListingStuffTwo,main.newListingStuffThree,main.newListingStuffFour,main.newListingStuffFive)">
         <input class="form-control " type="text" ng-model="main.newListingStuffOne" placeholder="Image 1">
         <input class="form-control " type="text" ng-model="main.newListingStuffTwo" placeholder="Image 2">
         <input class="form-control " type="text" ng-model="main.newListingStuffThree" placeholder="Image 3">
@@ -363,11 +365,11 @@
 
 
 
-        <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
-        <script type="text/javascript" src="../javascript/dirPagination.js"></script>
-        <script type="text/javascript" src="../javascript/module.js"></script>
-        <script type="text/javascript" src="../javascript/myScripts.js"></script>
-        <script type="text/javascript" src="../javascript/factory.js"></script>
+    <script type="text/javascript" src="../javascript/jqueryScripts.js"></script>
+    <script type="text/javascript" src="../javascript/dirPagination.js"></script>
+    <script type="text/javascript" src="../javascript/module.js"></script>
+    <script type="text/javascript" src="../javascript/myScripts.js"></script>
+    <script type="text/javascript" src="../javascript/factory.js"></script>
 
 </body>
 
