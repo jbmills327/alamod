@@ -4,9 +4,12 @@
 <head>
   <meta name="title" content="a La MOD / Home Page">
   <meta name="description" content="a La MOD / mid-century modern furniture">
-  <meta name="keywords" content="antiquaire, antique, antiquite, antique furniture, armchair, bed room, case pieces, chair, chimney, century, collection, dealer, decoration, decorative arts, design, designer, flea market, france,french, french antiques, furniture, garden, home, home furnishings, home and garden, interior design, lamp, lighting, meuble, mirrors, mid, mid-century, modern, paris, sculpture, seating, style, table, dining room chairs, sofas, settees, armchairs, chairs, stools, poof, benches, chaises longues, day beds, living-room suites, dining-room tables, game tables, coffee tables, end tables, console tables , serving table, gueridon, stacking tables, nesting tables, dining room suites, dressers, center tables, wall decorations, frames, decorative painting, prints, tapestries, wall paper, drawings , photography, wall decorations, shadow boxes, case pieces, chest of drawers, commode, corner cupboards, cupboards, bookcases, cabinets, desks, secretaires, dry bar, armoires, buffet, sideboard, shelves, apothecary chests, chandeliers, candlesticks, candelabres, wall lights, floor lamps, lanterns, ceiling lights, chimney, doors and gates, floors, stairs, balustrades, metal elements, statues, garden furniture, pedestals, fountains, palm, panneling , springs, windows, jardinieres, bathroom elements, andirons, garden ornaments, for the fireplace, urns, stone sinks, beds, clocks, for the table, screens, rugs, textiles, pedestals, sculptures, decorative objects, bed room suites, coat stands, umbrella stands, ashtrays, magazine stands, bird cages">
-  <meta name="classification" content="appraisal, antiquaire, antique dealer, antique, antiquite, antique furniture, armchair, bed room, chair, century, case pieces, chimney, collection, dealer, decoration, decorative arts, design, designer, dining, france, french, french antiques, furniture, garden, home, home furnishings, home and garden, interior design, lamp, lighting, mid-century, modern, meuble, mirrors, paris, palm, springs, sculpture, seating, style, table">
-  <meta name="abstract" content="appraisal, antiquaire, antique dealer, antique, antiquite, antique furniture, armchair, bed room, chair, century, case pieces, chimney, collection, dealer, decoration, decorative arts, design, designer, dining, france, french, french antiques, furniture, garden, home, home furnishings, home and garden, interior design, lamp, lighting, mid-century, modern, meuble, mirrors, paris, palm, springs, sculpture, seating, style, table">
+  <meta name="keywords"
+    content="antiquaire, antique, antiquite, antique furniture, armchair, bed room, case pieces, chair, chimney, century, collection, dealer, decoration, decorative arts, design, designer, flea market, france,french, french antiques, furniture, garden, home, home furnishings, home and garden, interior design, lamp, lighting, meuble, mirrors, mid, mid-century, modern, paris, sculpture, seating, style, table, dining room chairs, sofas, settees, armchairs, chairs, stools, poof, benches, chaises longues, day beds, living-room suites, dining-room tables, game tables, coffee tables, end tables, console tables , serving table, gueridon, stacking tables, nesting tables, dining room suites, dressers, center tables, wall decorations, frames, decorative painting, prints, tapestries, wall paper, drawings , photography, wall decorations, shadow boxes, case pieces, chest of drawers, commode, corner cupboards, cupboards, bookcases, cabinets, desks, secretaires, dry bar, armoires, buffet, sideboard, shelves, apothecary chests, chandeliers, candlesticks, candelabres, wall lights, floor lamps, lanterns, ceiling lights, chimney, doors and gates, floors, stairs, balustrades, metal elements, statues, garden furniture, pedestals, fountains, palm, panneling , springs, windows, jardinieres, bathroom elements, andirons, garden ornaments, for the fireplace, urns, stone sinks, beds, clocks, for the table, screens, rugs, textiles, pedestals, sculptures, decorative objects, bed room suites, coat stands, umbrella stands, ashtrays, magazine stands, bird cages">
+  <meta name="classification"
+    content="appraisal, antiquaire, antique dealer, antique, antiquite, antique furniture, armchair, bed room, chair, century, case pieces, chimney, collection, dealer, decoration, decorative arts, design, designer, dining, france, french, french antiques, furniture, garden, home, home furnishings, home and garden, interior design, lamp, lighting, mid-century, modern, meuble, mirrors, paris, palm, springs, sculpture, seating, style, table">
+  <meta name="abstract"
+    content="appraisal, antiquaire, antique dealer, antique, antiquite, antique furniture, armchair, bed room, chair, century, case pieces, chimney, collection, dealer, decoration, decorative arts, design, designer, dining, france, french, french antiques, furniture, garden, home, home furnishings, home and garden, interior design, lamp, lighting, mid-century, modern, meuble, mirrors, paris, palm, springs, sculpture, seating, style, table">
   <meta charset="utf-8">
   <!-- jquery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
@@ -28,7 +31,7 @@
   <!-- <title>Inventory</title> -->
 
   <script type="text/javascript">
-    $(document).on('hidden.bs.modal', '.modal', function() {
+    $(document).on('hidden.bs.modal', '.modal', function () {
       $('.modal:visible').length && $(document.body).addClass('modal-open');
     })
 
@@ -50,10 +53,17 @@
   <!-- <div class="loader"></div> -->
   <div class="navBar">
     <a href="/newListings" style="text-decoration: none;">
-      <h1>a La MOD INC</h1></a>
-    <a href="javascript:void(0)" onclick="openInventNav()" style="text-decoration: none; color: black"><h5><strong>REFINE SEARCH</strong></h5></a>
-    <a href="/location" style="text-decoration: none; color: black"><h5><strong>LOCATION</strong></h5></a>
-    <a href="/contact" style="text-decoration: none; color: black"><h5><strong>CONTACT US</strong></h5></a>
+      <h1>a La MOD INC</h1>
+    </a>
+    <a href="javascript:void(0)" onclick="openInventNav()" style="text-decoration: none; color: black">
+      <h5><strong>KEYWORD SEARCH</strong></h5>
+    </a>
+    <a href="/location" style="text-decoration: none; color: black">
+      <h5><strong>LOCATION</strong></h5>
+    </a>
+    <a href="/contact" style="text-decoration: none; color: black">
+      <h5><strong>CONTACT US</strong></h5>
+    </a>
   </div>
   <div class="line"></div>
 
@@ -71,7 +81,8 @@
   <div id="myNestedCreator" class="inventorySidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNestedCreator()">&times;</a>
     <div ng-repeat="items in main.creators" class="">
-      <a href="javascript: void(0)" ng-click=" main.creatorFinder(items)" onclick="closeNestedCreator()"> {{ items }}</a>
+      <a href="javascript: void(0)" ng-click=" main.creatorFinder(items)" onclick="closeNestedCreator()">
+        {{ items }}</a>
     </div>
     <a href="javascript:void(0)" onclick="closeNestedCreator(); openInventNav()">Back</a>
   </div>
@@ -86,11 +97,13 @@
     <a href="javascript:void(0)" onclick="openNestedMirrors();closeNestedCategory()">Mirrors</a>
     <a href="javascript:void(0)" onclick="openNestedFolk();closeNestedCategory()">Folk Art</a>
     <a href="javascript:void(0)" onclick="openNestedRugs();closeNestedCategory()">Rugs and Carpets</a>
-    <a href="javascript:void(0)" onclick="openNestedServeware();closeNestedCategory()">Serveware, Ceramics, Silver and Glass</a>
+    <a href="javascript:void(0)" onclick="openNestedServeware();closeNestedCategory()">Serveware, Ceramics, Silver and
+      Glass</a>
     <a href="javascript:void(0)" onclick="openNestedWallDec();closeNestedCategory()">Wall Decorations</a>
     <a href="javascript:void(0)" onclick="openNestedGarden();closeNestedCategory()">Building and Garden Elements</a>
     <a href="javascript:void(0)" onclick="openNestedDecObj();closeNestedCategory()">Decorative Objects</a>
-    <a href="javascript:void(0)" onclick="openNestedMoreFurn();closeNestedCategory()">More Furniture and Collectibles</a>
+    <a href="javascript:void(0)" onclick="openNestedMoreFurn();closeNestedCategory()">More Furniture and
+      Collectibles</a>
     <a href="javascript:void(0)" onclick="closeNestedCategory(); openInventNav()">Back</a>
   </div>
 
@@ -99,17 +112,26 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNestedSeating(); openNestedCategory()">&times;</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('seating')" onclick="closeNestedSeating()">All Seating</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Dining')" onclick="closeNestedSeating()">Dining</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Living')" onclick="closeNestedSeating()">Living Room Chairs</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Living')" onclick="closeNestedSeating()">Living Room
+      Chairs</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Club')" onclick="closeNestedSeating()">Club Chairs</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Rocking')" onclick="closeNestedSeating()">Rocking Chairs</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Swivel')" onclick="closeNestedSeating()">Swivel Chairs</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Slipper')" onclick="closeNestedSeating()">Slipper Chairs</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Lounge')" onclick="closeNestedSeating()">Lounge Chairs</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Sectional')" onclick="closeNestedSeating()">Sectional Sofas</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Rocking')" onclick="closeNestedSeating()">Rocking
+      Chairs</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Swivel')" onclick="closeNestedSeating()">Swivel
+      Chairs</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Slipper')" onclick="closeNestedSeating()">Slipper
+      Chairs</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Lounge')" onclick="closeNestedSeating()">Lounge
+      Chairs</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Sectional')" onclick="closeNestedSeating()">Sectional
+      Sofas</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Sofa')" onclick="closeNestedSeating()">Sofas</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Footstool')" onclick="closeNestedSeating()">Footstools</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Wingback')" onclick="closeNestedSeating()">Wingback Chairs</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Side Chair')" onclick="closeNestedSeating()">Side Chairs</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Footstool')"
+      onclick="closeNestedSeating()">Footstools</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Wingback')" onclick="closeNestedSeating()">Wingback
+      Chairs</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Side Chair')" onclick="closeNestedSeating()">Side
+      Chairs</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Arm')" onclick="closeNestedSeating()">Arm Chairs</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Chairs')" onclick="closeNestedSeating()"> Chairs</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Stools')" onclick="closeNestedSeating()">Stools</a>
@@ -122,15 +144,22 @@
   <!-- This is the nested slide menu for Lighting-->
   <div id="myNestedLighting" class="inventorySidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="openNestedCategory();closeNestedLighting()">&times;</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('lighting')" onclick="closeNestedLighting()">All  Lighting</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Chandelier')" onclick="closeNestedLighting()">Chandeliers</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('lighting')" onclick="closeNestedLighting()">All
+      Lighting</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Chandelier')"
+      onclick="closeNestedLighting()">Chandeliers</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Pendants')" onclick="closeNestedLighting()">Pendants</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Candleholder')" onclick="closeNestedLighting()">Candleholders</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Candelabra')" onclick="closeNestedLighting()">Candelabra</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Wall Light')" onclick="closeNestedLighting()">Wall Lights</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Candleholder')"
+      onclick="closeNestedLighting()">Candleholders</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Candelabra')"
+      onclick="closeNestedLighting()">Candelabra</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Wall Light')" onclick="closeNestedLighting()">Wall
+      Lights</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Sconce')" onclick="closeNestedLighting()">Sconces</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Table Lamp')" onclick="closeNestedLighting()">Table Lamps</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Floor Lamp')" onclick="closeNestedLighting()">Floor Lamps</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Table Lamp')" onclick="closeNestedLighting()">Table
+      Lamps</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Floor Lamp')" onclick="closeNestedLighting()">Floor
+      Lamps</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Lights')" onclick="closeNestedLighting()">More Lights</a>
     <a href="javascript:void(0)" onclick="closeNestedLighting(); openNestedCategory()">Back</a>
   </div>
@@ -138,9 +167,11 @@
   <!-- This is the nested slide menu for Storage-->
   <div id="myNestedStorage" class="inventorySidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="openNestedCategory();closeNestedStorage()">&times;</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('storage')" onclick="closeNestedStorage()">All Case Pieces and Storage</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('storage')" onclick="closeNestedStorage()">All Case Pieces
+      and Storage</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Buffet')" onclick="closeNestedStorage()">Buffets</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Sideboard')" onclick="closeNestedStorage()">Sideboards</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Sideboard')"
+      onclick="closeNestedStorage()">Sideboards</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Shelve')" onclick="closeNestedStorage()">Shelves</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Credenza')" onclick="closeNestedStorage()">Credenzas</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Bookcase')" onclick="closeNestedStorage()">Bookcases</a>
@@ -154,29 +185,44 @@
     <a href="javascript:void(0)" class="closebtn" onclick="openNestedCategory();closeNestedTables()">&times;</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('tables')" onclick="closeNestedTables()">All Tables</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Dining Table')" onclick="closeNestedTables()">Dining</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Center Table')" onclick="closeNestedTables()">Center Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Center Table')" onclick="closeNestedTables()">Center
+      Tables</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Night')" onclick="closeNestedTables()">Night Stands</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Sofa Table')" onclick="closeNestedTables()">Sofa Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Sofa Table')" onclick="closeNestedTables()">Sofa
+      Tables</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Desk')" onclick="closeNestedTables()">Desks</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Writing')" onclick="closeNestedTables()">Writing Tables</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Dessert')" onclick="closeNestedTables()">Dessert Tables</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Tilt-top')" onclick="closeNestedTables()">Tilt-top Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Writing')" onclick="closeNestedTables()">Writing
+      Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Dessert')" onclick="closeNestedTables()">Dessert
+      Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Tilt-top')" onclick="closeNestedTables()">Tilt-top
+      Tables</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Dining Table')" onclick="closeNestedTables()">Dining</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Card Table')" onclick="closeNestedTables()">Card Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Card Table')" onclick="closeNestedTables()">Card
+      Tables</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Tea Table')" onclick="closeNestedTables()">Tea Tables</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Side Table')" onclick="closeNestedTables()">Side Tables</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Tray Table')" onclick="closeNestedTables()">Tray Tables</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Serving Table')" onclick="closeNestedTables()">Serving Tables</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Pedastal')" onclick="closeNestedWallDec()" onclick="closeNestedTables()">Pedestals</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Conference')" onclick="closeNestedTables()">Conference Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Side Table')" onclick="closeNestedTables()">Side
+      Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Tray Table')" onclick="closeNestedTables()">Tray
+      Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Serving Table')" onclick="closeNestedTables()">Serving
+      Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Pedastal')" onclick="closeNestedWallDec()"
+      onclick="closeNestedTables()">Pedestals</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Conference')" onclick="closeNestedTables()">Conference
+      Tables</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Game')" onclick="closeNestedTables()">Game Tables</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Coffee')" onclick="closeNestedTables()">Coffee</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Cocktail')" onclick="closeNestedTables()">Cocktail Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Cocktail')" onclick="closeNestedTables()">Cocktail
+      Tables</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('End Table')" onclick="closeNestedTables()">End Tables</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Console')" onclick="closeNestedTables()">Console Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Console')" onclick="closeNestedTables()">Console
+      Tables</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Bar')" onclick="closeNestedTables()">Bar Carts</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Stacking')" onclick="closeNestedTables()">Stacking Tables</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Nesting')" onclick="closeNestedTables()">Nesting Table</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Stacking')" onclick="closeNestedTables()">Stacking
+      Tables</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Nesting')" onclick="closeNestedTables()">Nesting
+      Table</a>
     <a href="javascript:void(0)" onclick="openNestedCategory();closeNestedTables()">Back</a>
   </div>
 
@@ -184,8 +230,10 @@
   <div id="myNestedMirrors" class="inventorySidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="openNestedCategory();closeNestedMirrors()">&times;</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('mirrors')" onclick="closeNestedMirrors()">All Mirrors</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Table Mirror')" onclick="closeNestedMirrors()">Table Mirrors</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Wall Mirror')" onclick="closeNestedMirrors()">Wall Mirrors</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Table Mirror')" onclick="closeNestedMirrors()">Table
+      Mirrors</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Wall Mirror')" onclick="closeNestedMirrors()">Wall
+      Mirrors</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Mirror')" onclick="closeNestedMirrors()">More Mirrors</a>
     <a href="javascript:void(0)" onclick="closeNestedMirrors(); openNestedCategory()">Back</a>
   </div>
@@ -206,23 +254,29 @@
     <a href="#"></a>
     <a href="#"></a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('rugs')" onclick="closeNestedRugs()">All Rugs</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Rug')" onclick="closeNestedRugs()">North and South American Rugs</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Rug')" onclick="closeNestedRugs()">North and South
+      American Rugs</a>
     <a href="javascript:void(0)" onclick="closeNestedRugs(); openNestedCategory()">Back</a>
   </div>
 
   <!-- This is the nested slide menu for Serveware-->
   <div id="myNestedServeware" class="inventorySidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNestedServeware(); openNestedCategory()">&times;</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('serveware')" onclick="closeNestedServeware()">All Serveware, Ceramics, Silver and Glass</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Serving')" onclick="closeNestedServeware()">Serving Pieces</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('serveware')" onclick="closeNestedServeware()">All
+      Serveware, Ceramics, Silver and Glass</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Serving')" onclick="closeNestedServeware()">Serving
+      Pieces</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Tea Set')" onclick="closeNestedServeware()">Tea Sets</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Vase')" onclick="closeNestedServeware()">Vases</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Entertain')" onclick="closeNestedServeware()">More Dining and Entertaining</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Entertain')" onclick="closeNestedServeware()">More Dining
+      and Entertaining</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Barware')" onclick="closeNestedServeware()">Barware</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Ceramic')" onclick="closeNestedServeware()">Ceramics</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Tableware')" onclick="closeNestedServeware()">Tableware</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Tableware')"
+      onclick="closeNestedServeware()">Tableware</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Glass')" onclick="closeNestedServeware()">Glass</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Porcelain')" onclick="closeNestedServeware()">Porcelain</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Porcelain')"
+      onclick="closeNestedServeware()">Porcelain</a>
     <a href="javascript:void(0)" onclick="closeNestedServeware(); openNestedCategory()">Back</a>
   </div>
 
@@ -230,38 +284,50 @@
   <div id="myNestedWallDec" class="inventorySidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNestedWallDec(); openNestedCategory()">&times;</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('wall')" onclick="closeNestedWallDec()">All Wall Art</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Contemporary')" onclick="closeNestedWallDec()">Contemporary Art</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Wall-Mounted')" onclick="closeNestedWallDec()">Wall-Mounted Sculptures</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Contemporary')"
+      onclick="closeNestedWallDec()">Contemporary Art</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Wall-Mounted')"
+      onclick="closeNestedWallDec()">Wall-Mounted Sculptures</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Painting')" onclick="closeNestedWallDec()">Paintings</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Print')" onclick="closeNestedWallDec()">Prints</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Tapestry')" onclick="closeNestedWallDec()">Tapestries</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Photo')" onclick="closeNestedWallDec()">Photography</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Decorative')" onclick="closeNestedWallDec()">Decorative Art</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Decorative')" onclick="closeNestedWallDec()">Decorative
+      Art</a>
     <a href="javascript:void(0)" onclick="closeNestedWallDec(); openNestedCategory()">Back</a>
   </div>
 
   <!-- This is the nested slide menu for Garden Stuff-->
   <div id="myNestedGarden" class="inventorySidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNestedGarden(); openNestedCategory()">&times;</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('garden')" onclick="closeNestedGarden()">All Building and Garden Elements</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('garden')" onclick="closeNestedGarden()">All Building and
+      Garden Elements</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Fireplace')" onclick="closeNestedGarden()">Fireplaces</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Mantel')" onclick="closeNestedGarden()">Mantels</a>
     <a href="javascript:void(0)" ng-click="main.creatorFinder('Andiron')" onclick="closeNestedGarden()">Andirons</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Garden')" onclick="closeNestedGarden()">Garden Ornaments</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Fireplace Tool')" onclick="closeNestedGarden()">Fireplace Tools</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Chimney Pot')" onclick="closeNestedGarden()">Chimney Pots</a>
-    <a href="javascript:void(0)" ng-click="main.creatorFinder('Architectural')" onclick="closeNestedGarden()">Architectural Elements</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Garden')" onclick="closeNestedGarden()">Garden
+      Ornaments</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Fireplace Tool')" onclick="closeNestedGarden()">Fireplace
+      Tools</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Chimney Pot')" onclick="closeNestedGarden()">Chimney
+      Pots</a>
+    <a href="javascript:void(0)" ng-click="main.creatorFinder('Architectural')"
+      onclick="closeNestedGarden()">Architectural Elements</a>
     <a href="javascript:void(0)" onclick="closeNestedGarden(); openNestedCategory()">Back</a>
   </div>
 
   <!-- This is the nested slide menu for Decorative Objects-->
   <div id="myNestedDecObj" class="inventorySidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNestedDecObj(); openNestedCategory()">&times;</a>
-    <a href="javascript: void(0)" ng-click="main.creatorFinder('decObj')" onclick="closeNestedDecObj()">All Decorative Objects</a>
-    <a href="javascript: void(0)" ng-click="main.creatorFinder('Candle')" onclick="closeNestedDecObj()">Candle Holders</a>
-    <a href="javascript: void(0)" ng-click="main.creatorFinder('Desk Acces')" onclick="closeNestedDecObj()">Desk Accessories</a>
+    <a href="javascript: void(0)" ng-click="main.creatorFinder('decObj')" onclick="closeNestedDecObj()">All Decorative
+      Objects</a>
+    <a href="javascript: void(0)" ng-click="main.creatorFinder('Candle')" onclick="closeNestedDecObj()">Candle
+      Holders</a>
+    <a href="javascript: void(0)" ng-click="main.creatorFinder('Desk Acces')" onclick="closeNestedDecObj()">Desk
+      Accessories</a>
     <a href="javascript: void(0)" ng-click="main.creatorFinder('Box')" onclick="closeNestedDecObj()">Boxes</a>
-    <a href="javascript: void(0)" ng-click="main.creatorFinder('Sculpture')" onclick="closeNestedDecObj()">Sculptures</a>
+    <a href="javascript: void(0)" ng-click="main.creatorFinder('Sculpture')"
+      onclick="closeNestedDecObj()">Sculptures</a>
     <a href="javascript: void(0)" ng-click="main.creatorFinder('Bowl')" onclick="closeNestedDecObj()">Bowls</a>
     <a href="javascript: void(0)" ng-click="main.creatorFinder('Basket')" onclick="closeNestedDecObj()">Baskets</a>
     <a href="javascript: void(0)" ng-click="main.creatorFinder('Vase')" onclick="closeNestedDecObj()">Vases</a>
@@ -272,13 +338,17 @@
   <!-- This is the nested slide menu for More Furniture-->
   <div id="myNestedMoreFurn" class="inventorySidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNestedMoreFurn(); openNestedCategory()">&times;</a>
-    <a href="javascript: void(0)" ng-click="main.creatorFinder('moreFurn')" onclick="closeNestedMoreFurn()">All Other Furniture</a>
-    <a href="javascript: void(0)" ng-click="main.creatorFinder('Objects')" onclick="closeNestedMoreFurn()">Decorative Objects</a>
-    <a href="javascript: void(0)" ng-click="main.creatorFinder('Magazine')" onclick="closeNestedMoreFurn()">Magazine Racks and Stands</a>
+    <a href="javascript: void(0)" ng-click="main.creatorFinder('moreFurn')" onclick="closeNestedMoreFurn()">All Other
+      Furniture</a>
+    <a href="javascript: void(0)" ng-click="main.creatorFinder('Objects')" onclick="closeNestedMoreFurn()">Decorative
+      Objects</a>
+    <a href="javascript: void(0)" ng-click="main.creatorFinder('Magazine')" onclick="closeNestedMoreFurn()">Magazine
+      Racks and Stands</a>
     <a href="javascript: void(0)" ng-click="main.creatorFinder('Box')" onclick="closeNestedMoreFurn()">Boxes</a>
     <a href="javascript: void(0)" ng-click="main.creatorFinder('Screen')" onclick="closeNestedMoreFurn()">Screens</a>
     <a href="javascript: void(0)" ng-click="main.creatorFinder('Cart')" onclick="closeNestedMoreFurn()">Carts</a>
-    <a href="javascript: void(0)" ng-click="main.creatorFinder('Sculpture')" onclick="closeNestedMoreFurn()">Sculptures</a>
+    <a href="javascript: void(0)" ng-click="main.creatorFinder('Sculpture')"
+      onclick="closeNestedMoreFurn()">Sculptures</a>
     <a href="javascript:void(0)" onclick="closeNestedMoreFurn(); openNestedCategory()">Back</a>
   </div>
 
@@ -307,14 +377,18 @@
     <div class="clearField">
       <input class="form-control" type="text" placeholder="Search" ng-model="main.search">
       <a href="JavaScript: void(0)" ng-click="main.resetField()" style="color: black; text-decoration: none">
-        <h5 style="font-family: 'Poiret One', cursive">CLEAR</h5></a>
+        <h5 style="font-family: 'Poiret One', cursive">CLEAR</h5>
+      </a>
     </div>
 
   </form>
 
-  <ul class="invList" dir-paginate="inventory in main.inventoryList | filter: main.search | orderBy: 'dateCreated': true| itemsPerPage: 30">
+  <ul class="invList"
+    dir-paginate="inventory in main.inventoryList | filter: main.search | orderBy: 'dateCreated': true| itemsPerPage: 30">
     <li>
-      <a data-toggle="modal" data-target="#inventModal" ng-click="main.setId(inventory)"><img ng-src="{{ inventory.imageUrl[0] }}" alt="{{ inventory.name }}" style="width: 200px; height: auto; cursor: pointer"></a>
+      <a data-toggle="modal" data-target="#inventModal" ng-click="main.setId(inventory)"><img
+          ng-src="{{ inventory.imageUrl[0] }}" alt="{{ inventory.name }}"
+          style="width: 200px; height: auto; cursor: pointer"></a>
     </li>
     <li style="width: 300px;"> <b>{{ inventory.name }} </b></li>
     <li>
@@ -341,7 +415,8 @@
     <div class="modal-dialog modal-admin" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+          <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">BACK</span></button>
 
           <h4 class="modal-title poiret" id="myModalLabel">{{ main.id.name }}</h4>
         </div>
@@ -352,10 +427,11 @@
           <ul class="invList">
 
             <li>
-              <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: auto; cursor: pointer"></a>
+              <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img
+                  ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?" style="width: 300px; height: auto; cursor: pointer"></a>
             </li>
             <li> <strong>Reference: </strong> {{ main.id._id }}</li>
-            <li class="descriptionContainer"> <strong>Description: </strong> <br/>{{ main.id.description }}</li>
+            <li class="descriptionContainer"> <strong>Description: </strong> <br />{{ main.id.description }}</li>
             <li><b>Condition: </b>{{ main.id.condition }}</li>
             <li><strong>Period: </strong>{{ main.id.period}}</li>
             <li> <strong>Height: </strong> {{ main.id.measurements.height }}</li>
@@ -368,24 +444,30 @@
             <!-- <li><b>Phones:</b> 760-327-0707</li> -->
             <div class="thumbnailHolder">
               <li>
-                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[1])"><img class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
+                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[1])"><img
+                    class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
               </li>
               <li>
-                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[2])"><img class="thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
+                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[2])"><img
+                    class="thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
               </li>
               <li>
-                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[3])"><img class="thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
+                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[3])"><img
+                    class="thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
               </li>
               <li>
-                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])"><img class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
+                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])"><img
+                    class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
               </li>
 
               <!-- This is where we are added the extra photos -->
               <li>
-                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[5])"><img class="thumbnails" ng-src="{{main.id.imageUrl[5]}}" alt="{{ main.id.name }}"></a>
+                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[5])"><img
+                    class="thumbnails" ng-src="{{main.id.imageUrl[5]}}" alt="{{ main.id.name }}"></a>
               </li>
               <li>
-                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[6])"><img class="thumbnails" ng-src="{{main.id.imageUrl[6]}}" alt="{{ main.id.name }}"></a>
+                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[6])"><img
+                    class="thumbnails" ng-src="{{main.id.imageUrl[6]}}" alt="{{ main.id.name }}"></a>
               </li>
             </div>
           </ul>
@@ -413,7 +495,9 @@
 
           <!-- <a target="_blank" href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body={{ main.id.name}}%0D%0A{{ main.id.description}}%0D%0A{{ main.id.price}}%0D%0A{{ main.id.imageUrl[0]}}%0D%0A{{ main.id.imageUrl[1]}}%0D%0A{{ main.id.imageUrl[2]}}%0D%0A{{ main.id.imageUrl[3]}}%0D%0A{{ main.id.imageUrl[4]}}"><button class = "btn questionsButton" type="button">QUESTIONS ABOUT ITEM</button></a> -->
 
-          <a target="_blank" href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body="><button class = "btn questionsButton" type="button">QUESTIONS ABOUT ITEM</button></a>
+          <a target="_blank"
+            href="mailto:alamodps@icloud.com?subject=Questions about item number {{ main.id._id}}, item name {{ main.id.name }}&body="><button
+              class="btn questionsButton" type="button">QUESTIONS ABOUT ITEM</button></a>
           <!-- <textarea class="questionText" ng-model="main.bodyOfQuest" placeholder="Questions here" rows="8" cols="40"></textarea> -->
 
 
@@ -440,13 +524,16 @@
     <div class="modal-dialog modal-admin" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+          <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">BACK</span></button>
         </div>
         <div class="modal-body">
 
           <div id="printStuff" style="width: 100vw; height: auto; position: absolute; text-align: center;">
 
-            <h1 style="text-align: center;font-family: 'Helvetica', 'Arial', sans-serif; color: #5b5b5b; font-size: 45px; margin-bottom: 0">a La MOD INC</h1>
+            <h1
+              style="text-align: center;font-family: 'Helvetica', 'Arial', sans-serif; color: #5b5b5b; font-size: 45px; margin-bottom: 0">
+              a La MOD INC</h1>
 
             <ul class="printList" style="position: relative;
                             left: 45%;
@@ -462,7 +549,9 @@
                             margin-left: 2%;
                             font-size: 1.5em;">
               <li>
-                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img class="printImageMain" style="width: 450px; height: auto" ng-src="{{ main.id.imageUrl[0] }}" alt="Huh?"></a>
+                <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[0])"><img
+                    class="printImageMain" style="width: 450px; height: auto" ng-src="{{ main.id.imageUrl[0] }}"
+                    alt="Huh?"></a>
 
                 <!-- style="width: 300px; height: 300px" -->
               </li>
@@ -496,28 +585,34 @@
                                 text-align: center">
                 <li>
                   <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[1])">
-                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
+                    <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails"
+                      ng-src="{{main.id.imageUrl[1]}}" alt="{{ main.id.name }}"></a>
                 </li>
                 <li>
                   <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[2])">
-                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
+                    <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails"
+                      ng-src="{{main.id.imageUrl[2]}}" alt="{{ main.id.name }}"></a>
                 </li>
                 <li>
                   <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[3])">
-                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
+                    <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails"
+                      ng-src="{{main.id.imageUrl[3]}}" alt="{{ main.id.name }}"></a>
                 </li>
                 <li>
                   <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])">
-                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
+                    <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails"
+                      ng-src="{{main.id.imageUrl[4]}}" alt="{{ main.id.name }}"></a>
                 </li>
                 <!-- Adding extra photos here as well -->
                 <li>
                   <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])">
-                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[5]}}" alt="{{ main.id.name }}"></a>
+                    <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails"
+                      ng-src="{{main.id.imageUrl[5]}}" alt="{{ main.id.name }}"></a>
                 </li>
                 <li>
                   <a data-toggle="modal" data-target="#zoomModal" ng-click="main.setZoom(main.id.imageUrl[4])">
-                                        <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails" ng-src="{{main.id.imageUrl[6]}}" alt="{{ main.id.name }}"></a>
+                    <img style="position: relative; height: auto; width: 250px;     margin: auto;" class="thumbnails"
+                      ng-src="{{main.id.imageUrl[6]}}" alt="{{ main.id.name }}"></a>
                 </li>
 
               </div>
@@ -536,7 +631,8 @@
     <div class="modal-dialog modal-admin" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+          <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">BACK</span></button>
           <!-- &times; -->
           <h4 class="modal-title" id="myModalLabel">{{ main.id.name }}</h4>
         </div>
@@ -545,7 +641,8 @@
           <h5>{{ main.id.price }}</h5>
 
           <ul class="invList">
-            <li><img style="position: relative; text-align: center; width: 700px; height: 700px" ng-src="{{ main.zoomPhoto }}" alt="Huh?">
+            <li><img style="position: relative; text-align: center; width: 700px; height: 700px"
+                ng-src="{{ main.zoomPhoto }}" alt="Huh?">
             </li>
           </ul>
 
@@ -562,7 +659,8 @@
     <div class="modal-dialog modal-admin" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">BACK</span></button>
+          <button type="button" class="close poiret" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">BACK</span></button>
           <!-- &times; -->
           <h4 class="modal-title" id="myModalLabel">{{ main.id.name }}</h4>
         </div>
@@ -589,7 +687,8 @@
 
   <div class="invControlsWrapper">
 
-    <dir-pagination-controls class="invControls" max-size="5" direction-links="true" boundary-links="true" auto-hide="false" ng-click="main.backToTop()"></dir-pagination-controls>
+    <dir-pagination-controls class="invControls" max-size="5" direction-links="true" boundary-links="true"
+      auto-hide="false" ng-click="main.backToTop()"></dir-pagination-controls>
   </div>
 
   <!-- End Control Wrapper -->
