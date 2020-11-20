@@ -7,7 +7,7 @@ var LIST = require("../models/model.newListings.js"),
     auth: {
       type: "login",
       user: "alamodincps@gmail.com",
-      pass: "Mrboo1977$"
+      pass: "Codyjack1977$"
     }
   });
 
