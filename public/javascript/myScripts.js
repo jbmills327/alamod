@@ -359,28 +359,25 @@ function mainController($http, alamodfactory) {
     //     // var comeOn = '<html><head><link rel="stylesheet" type="text/css" href="/public/css/main.css" /><title>Printing Item</title></head><body>' + printContents + '</body></html>'
     //     // popupWin.document.close();
     //
+    var data = {
+      userNames: main.userName,
+      originEmail: main.originEmail,
+      destEmail: main.destEmail,
+      message: printContents
+      // image: main.id.imageUrl[0]
+    };
+    alamodfactory.sendMails(data)
+      .then(function(err, returnData) {
+        if (err) {
+          console.log("This is the sendMail error", err);
+          alert("There was an error sending, please try again or notify us.");
+        } else {
+          console.log("This is the sendMail returnData", returnData);
+          alert("Your email has been sent.  Thank you!");
+        }
+      })
 
-    window.location = `mailto:${main.destEmail}?subject=Check out what I found for you at a La MOD Inc.&body=I found this at a La MOD Inc. What do you think? ${window.location.href}`;
-
-    // var data = {
-    //   userNames: main.userName,
-    //   originEmail: main.originEmail,
-    //   destEmail: main.destEmail,
-    //   message: printContents
-    //   // image: main.id.imageUrl[0]
-    // };
-    // alamodfactory.sendMails(data)
-    //   .then(function(err, returnData) {
-    //     if (err) {
-    //       console.log("This is the sendMail error", err);
-    //       // alert("There was an error sending, please try again or notify us.");
-    //     } else {
-    //       console.log("This is the sendMail returnData", returnData);
-    //       // alert("Your email has been sent.  Thank you!");
-    //     }
-    //   })
-
-    // main.destEmail = "";
+    main.destEmail = "";
   }
 
 
