@@ -360,7 +360,17 @@ function mainController($http, alamodfactory) {
     //     // popupWin.document.close();
     //
 
-    window.location = `mailto:${main.destEmail}?subject:Check out what I found for you at a La MOD Inc.&body=${printContents}`;
+    window.open(`mailto:${main.destEmail}?subject:Check out what I found for you at a La MOD Inc.&body=${printContents}`)
+      .then(function(err, data) {
+        if(err){
+          console.log(`Error sending the email: ${err}`);
+          alert("There was an error sedning your email.");
+        }
+        else{
+          console.log("Email Sent!");
+          alert("Your email has been sent.  Thank you.");
+        }
+      });
 
     // var data = {
     //   userNames: main.userName,
