@@ -367,13 +367,13 @@ function mainController($http, alamodfactory) {
       // image: main.id.imageUrl[0]
     };
     alamodfactory.sendMails(data)
-      .then(function(err, returnData) {
-        if (returnData.status != 200) {
-          console.log("This is the sendMail error", err);
-          alert("There was an error sending, please try again or notify us.");
+      .then(response => {
+        if(response.ok){
+          console.log("Inventory POST successful");
+          alert("Your item has been emailed.  Thank you!");
         } else {
-          console.log("This is the sendMail returnData", returnData);
-          alert("Your email has been sent.  Thank you!");
+          console.log("Error emailing item");
+          alert("I'm sorry, there was an issue emailing your item. Please call us so that we can resolve this issue.");
         }
       })
 
