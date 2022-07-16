@@ -360,7 +360,7 @@ function mainController($http, alamodfactory) {
     //     // popupWin.document.close();
     //
 
-    window.location.href = "mailto:" + main.destEmail + "?subject=Check out what I found for you at a La MOD Inc.&body=" + printContents;
+    window.location = `mailto:${main.destEmail}?subject=Check out what I found for you at a La MOD Inc.&body=I found this at a La MOD Inc. What do you think? ${window.location.href}`;
 
     // var data = {
     //   userNames: main.userName,
