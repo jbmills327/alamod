@@ -368,7 +368,7 @@ function mainController($http, alamodfactory) {
     };
     alamodfactory.sendMails(data)
       .then(response => {
-        if(response.ok){
+        if(response != null){
           console.log("Inventory POST successful");
           alert("Your item has been emailed.  Thank you!");
         } else {
