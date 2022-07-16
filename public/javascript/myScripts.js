@@ -368,7 +368,7 @@ function mainController($http, alamodfactory) {
     };
     alamodfactory.sendMails(data)
       .then(function(err, returnData) {
-        if (err) {
+        if (returnData.status != 200) {
           console.log("This is the sendMail error", err);
           alert("There was an error sending, please try again or notify us.");
         } else {
