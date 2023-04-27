@@ -20,7 +20,7 @@ app.use(express.static("public"));
 
 app.use((req, res, next) => {
   if (req.hostname === "alamodps.com") {
-    return res.redirect(301, 'http://www.alamodps.com');
+    return res.redirect(301, `http://www.${req.hostname}${req.url}`);
   }
   next();
 })
