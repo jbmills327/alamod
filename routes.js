@@ -13,6 +13,13 @@ module.exports = (app) => {
         next();
       });
 
+    app.use((req, res, next) => {
+    if (req.hostname === "http://alamodps.com/") {
+        return res.redirect(301, `http://www.${req.hostname}${req.url}`);
+    }
+    next();
+    });
+
     app.get('/', (req, res) => {
         res.sendFile("newListings.html", {
             root: './public/html'
