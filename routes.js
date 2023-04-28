@@ -5,21 +5,6 @@ var express = require("express"),
 var app = express();
 
 module.exports = (app) => {
-
-    app.use((req, res, next) => {
-        if (req.hostname === "alamodps.com") {
-          return res.redirect(301, `http://www.${req.hostname}${req.url}`);
-        }
-        next();
-      });
-
-    app.use((req, res, next) => {
-    if (req.hostname === "http://alamodps.com/") {
-        return res.redirect(301, `http://www.${req.hostname}${req.url}`);
-    }
-    next();
-    });
-
     app.get('/', (req, res) => {
         res.sendFile("newListings.html", {
             root: './public/html'
