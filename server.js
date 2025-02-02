@@ -2,15 +2,21 @@ var express = require("express"),
   logger = require("morgan")("dev"),
   bodyParser = require("body-parser"),
   mongoose = require("mongoose"),
-  routes = require("./routes");
+  routes = require("./routes"),
+  https = require("https"),
+  fs = require("fs");
 
+// SSL certificate paths
+const options = {
+  key: fs.readFileSync("/etc/letsencrypt/live/alamodps.com/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/alamodps.com/fullchain.pem"),
+};
 
 // test
 // var PORT = process.env.PORT || 3000;
 
 // production
-var PORT = process.env.PORT || 80;
-
+var PORT = process.env.PORT || 443;
 
 var app = express();
 
@@ -22,10 +28,6 @@ app.use(express.static("public"));
 app.use(logger);
 
 // use body-parser to parse the body of our POST requests
-// app.use(bodyParser.urlencoded({
-//     extended: true
-// }));
-// this does the same thing and is slightly more efficient
 app.post('*', bodyParser.urlencoded({
   extended: true
 }));
@@ -35,13 +37,11 @@ app.use(bodyParser.json());
 
 routes(app);
 
-
-
-// create the app listener
-app.listen(PORT, (err) => {
+// create the app listener using HTTPS
+https.createServer(options, app).listen(PORT, (err) => {
   if (err) {
     console.log("Server error: ", err);
     process.exit(1);
   }
-  console.log("Server is up on port", PORT);
+  console.log("HTTPS Server is up on port", PORT);
 });
