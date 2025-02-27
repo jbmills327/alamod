@@ -48,7 +48,9 @@ app.options("*", cors());
 // Force www on HTTPS requests
 app.use((req, res, next) => {
   if (!req.hostname.startsWith("www.")) {
-    return res.redirect(301, `https://www.alamodps.com${req.url}`);
+    // Reconstruct the full URL and forward the request instead of redirecting
+    req.url = `https://www.alamodps.com${req.url}`;
+    return next();
   }
   next();
 });
