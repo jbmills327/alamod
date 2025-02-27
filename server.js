@@ -5,7 +5,8 @@ var express = require("express"),
   routes = require("./routes"),
   https = require("https"),
   http = require("http"),
-  fs = require("fs");
+  fs = require("fs"),
+  cors = require("cors");
 
 // SSL certificate paths
 const options = {
@@ -33,6 +34,16 @@ app.use(express.static("public"));
 app.use(logger);
 app.post('*', bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// Enable CORS
+app.use(cors({
+  origin: ["https://www.alamodps.com", "https://alamodps.com"],
+  methods: "GET,POST,PUT,DELETE,OPTIONS",
+  allowedHeaders: "Content-Type,Authorization"
+}));
+
+// Handle preflight requests
+app.options("*", cors());
 
 // Force www on HTTPS requests
 app.use((req, res, next) => {
