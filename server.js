@@ -58,12 +58,16 @@ app.use(cors({
   methods: "GET,POST,PUT,DELETE,OPTIONS",
   allowedHeaders: "Content-Type,Authorization"
 }));
-
 app.options("*", cors());
 
-// HTTPS domain redirect logic
+// HTTPS domain redirect logic — SKIP for /api routes
 app.use((req, res, next) => {
   const host = req.hostname;
+
+  // ✅ Allow API requests without redirect
+  if (req.url.startsWith("/api")) {
+    return next();
+  }
 
   // Redirect alternate domains
   if (redirectDomains.includes(host)) {
