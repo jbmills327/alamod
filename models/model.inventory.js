@@ -37,7 +37,7 @@ InventorySchema = new mongoose.Schema({
     "category": String,
     "location": {
         type: String,
-        default: "886 N Palm Canyon Dr. Palm Springs, CA 92262 US"
+        default: "870 E Research Dr # 8, Palm Springs, CA 92262"
     },
 
 });
